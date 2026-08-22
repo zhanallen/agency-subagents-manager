@@ -18,8 +18,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-anthropologist.md",
     "relative_file": "academic/academic-anthropologist.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "🌍",
     "color": "#D97706",
@@ -45,8 +45,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-geographer.md",
     "relative_file": "academic/academic-geographer.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "🗺️",
     "color": "#059669",
@@ -72,8 +72,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-historian.md",
     "relative_file": "academic/academic-historian.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "📚",
     "color": "#B45309",
@@ -99,8 +99,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-narratologist.md",
     "relative_file": "academic/academic-narratologist.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "📜",
     "color": "#8B5CF6",
@@ -126,8 +126,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-psychologist.md",
     "relative_file": "academic/academic-psychologist.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "🧠",
     "color": "#EC4899",
@@ -153,8 +153,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-statistician.md",
     "relative_file": "academic/academic-statistician.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "📊",
     "color": "#8B5CF6",
@@ -180,8 +180,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-brand-guardian.md",
     "relative_file": "design/design-brand-guardian.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "🎨",
     "color": "blue",
@@ -207,8 +207,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-image-prompt-engineer.md",
     "relative_file": "design/design-image-prompt-engineer.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "📷",
     "color": "amber",
@@ -234,8 +234,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-inclusive-visuals-specialist.md",
     "relative_file": "design/design-inclusive-visuals-specialist.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "🌈",
     "color": "#4DB6AC",
@@ -261,9 +261,9 @@
     "file_path": "data\\agency-agents-repo\\design\\design-persona-walkthrough.md",
     "relative_file": "design/design-persona-walkthrough.md",
     "tags": [
-      "Frontend",
+      "視覺與體驗設計",
       "Design",
-      "視覺與體驗設計"
+      "Frontend"
     ],
     "emoji": "🎭",
     "color": "#10B981",
@@ -289,8 +289,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ui-designer.md",
     "relative_file": "design/design-ui-designer.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "🎨",
     "color": "purple",
@@ -316,8 +316,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ui-finish-gate-reviewer.md",
     "relative_file": "design/design-ui-finish-gate-reviewer.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "🧱",
     "color": "orange",
@@ -343,8 +343,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ux-architect.md",
     "relative_file": "design/design-ux-architect.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "📐",
     "color": "purple",
@@ -370,8 +370,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ux-researcher.md",
     "relative_file": "design/design-ux-researcher.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "🔬",
     "color": "green",
@@ -397,8 +397,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-visual-storyteller.md",
     "relative_file": "design/design-visual-storyteller.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "🎬",
     "color": "purple",
@@ -424,8 +424,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-whimsy-injector.md",
     "relative_file": "design/design-whimsy-injector.md",
     "tags": [
-      "Design",
-      "視覺與體驗設計"
+      "視覺與體驗設計",
+      "Design"
     ],
     "emoji": "✨",
     "color": "pink",
@@ -451,8 +451,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-ai-data-remediation-engineer.md",
     "relative_file": "engineering/engineering-ai-data-remediation-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🧬",
     "color": "green",
@@ -478,8 +478,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-ai-engineer.md",
     "relative_file": "engineering/engineering-ai-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🤖",
     "color": "blue",
@@ -505,9 +505,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-api-platform-engineer.md",
     "relative_file": "engineering/engineering-api-platform-engineer.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "🔌",
     "color": "#0D9488",
@@ -533,9 +533,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-autonomous-optimization-architect.md",
     "relative_file": "engineering/engineering-autonomous-optimization-architect.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "⚡",
     "color": "#673AB7",
@@ -561,9 +561,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-backend-architect.md",
     "relative_file": "engineering/engineering-backend-architect.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "🏗️",
     "color": "blue",
@@ -589,8 +589,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-cms-developer.md",
     "relative_file": "engineering/engineering-cms-developer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🧱",
     "color": "blue",
@@ -616,8 +616,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-code-reviewer.md",
     "relative_file": "engineering/engineering-code-reviewer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "👁️",
     "color": "purple",
@@ -643,8 +643,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-codebase-onboarding-engineer.md",
     "relative_file": "engineering/engineering-codebase-onboarding-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🧭",
     "color": "teal",
@@ -670,8 +670,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-data-engineer.md",
     "relative_file": "engineering/engineering-data-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔧",
     "color": "orange",
@@ -697,8 +697,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-data-visualization-engineer.md",
     "relative_file": "engineering/engineering-data-visualization-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "📈",
     "color": "#0F766E",
@@ -724,8 +724,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-database-optimizer.md",
     "relative_file": "engineering/engineering-database-optimizer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🗄️",
     "color": "amber",
@@ -751,8 +751,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-database-reliability-engineer.md",
     "relative_file": "engineering/engineering-database-reliability-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🛟",
     "color": "#B91C1C",
@@ -778,8 +778,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-desktop-app-engineer.md",
     "relative_file": "engineering/engineering-desktop-app-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "💻",
     "color": "#475569",
@@ -805,8 +805,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-devops-automator.md",
     "relative_file": "engineering/engineering-devops-automator.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "⚙️",
     "color": "orange",
@@ -832,8 +832,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-developer-tooling-engineer.md",
     "relative_file": "engineering/engineering-developer-tooling-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🛠️",
     "color": "#4F46E5",
@@ -859,8 +859,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-drupal-performance.md",
     "relative_file": "engineering/engineering-drupal-performance.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "⚡",
     "color": "blue",
@@ -886,8 +886,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-drupal-shopping-cart.md",
     "relative_file": "engineering/engineering-drupal-shopping-cart.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🛒",
     "color": "blue",
@@ -913,8 +913,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-email-intelligence-engineer.md",
     "relative_file": "engineering/engineering-email-intelligence-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "📧",
     "color": "indigo",
@@ -940,8 +940,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-embedded-firmware-engineer.md",
     "relative_file": "engineering/engineering-embedded-firmware-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔩",
     "color": "orange",
@@ -967,8 +967,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-feishu-integration-developer.md",
     "relative_file": "engineering/engineering-feishu-integration-developer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔗",
     "color": "blue",
@@ -994,8 +994,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-filament-optimization-specialist.md",
     "relative_file": "engineering/engineering-filament-optimization-specialist.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔧",
     "color": "indigo",
@@ -1021,8 +1021,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-finops-engineer.md",
     "relative_file": "engineering/engineering-finops-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "💰",
     "color": "#0891B2",
@@ -1048,9 +1048,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-frontend-developer.md",
     "relative_file": "engineering/engineering-frontend-developer.md",
     "tags": [
-      "Frontend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Frontend"
     ],
     "emoji": "🖥️",
     "color": "cyan",
@@ -1076,8 +1076,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-gaussdb-expert.md",
     "relative_file": "engineering/engineering-gaussdb-expert.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🗄️",
     "color": "amber",
@@ -1103,8 +1103,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-git-workflow-master.md",
     "relative_file": "engineering/engineering-git-workflow-master.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🌿",
     "color": "orange",
@@ -1130,8 +1130,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-it-service-manager.md",
     "relative_file": "engineering/engineering-it-service-manager.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🖧",
     "color": "blue",
@@ -1157,8 +1157,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-identity-access-engineer.md",
     "relative_file": "engineering/engineering-identity-access-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔐",
     "color": "#7C3AED",
@@ -1184,8 +1184,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-incident-response-commander.md",
     "relative_file": "engineering/engineering-incident-response-commander.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🚨",
     "color": "#e63946",
@@ -1211,8 +1211,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-i18n-engineer.md",
     "relative_file": "engineering/engineering-i18n-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🌍",
     "color": "#0EA5E9",
@@ -1238,8 +1238,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-iot-fleet-engineer.md",
     "relative_file": "engineering/engineering-iot-fleet-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "📡",
     "color": "#0284C7",
@@ -1265,8 +1265,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-llm-post-training-engineer.md",
     "relative_file": "engineering/engineering-llm-post-training-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🧪",
     "color": "#0F766E",
@@ -1292,8 +1292,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-minimal-change-engineer.md",
     "relative_file": "engineering/engineering-minimal-change-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🪡",
     "color": "slate",
@@ -1319,8 +1319,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-mobile-app-builder.md",
     "relative_file": "engineering/engineering-mobile-app-builder.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "📲",
     "color": "purple",
@@ -1346,8 +1346,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-mobile-release-engineer.md",
     "relative_file": "engineering/engineering-mobile-release-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🚀",
     "color": "#16A34A",
@@ -1373,8 +1373,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-multi-agent-systems-architect.md",
     "relative_file": "engineering/engineering-multi-agent-systems-architect.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🕸️",
     "color": "cyan",
@@ -1400,8 +1400,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-network-engineer.md",
     "relative_file": "engineering/engineering-network-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🌐",
     "color": "#008c95",
@@ -1427,8 +1427,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-orgscript-engineer.md",
     "relative_file": "engineering/engineering-orgscript-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "📜",
     "color": "green",
@@ -1454,8 +1454,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-payments-billing-engineer.md",
     "relative_file": "engineering/engineering-payments-billing-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "💳",
     "color": "#2E7D32",
@@ -1481,9 +1481,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-privacy-engineer.md",
     "relative_file": "engineering/engineering-privacy-engineer.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "🕵️",
     "color": "#7E22CE",
@@ -1509,8 +1509,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-prompt-engineer.md",
     "relative_file": "engineering/engineering-prompt-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🧬",
     "color": "violet",
@@ -1536,8 +1536,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-rag-pipeline-engineer.md",
     "relative_file": "engineering/engineering-rag-pipeline-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔍",
     "color": "#F97316",
@@ -1563,8 +1563,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-rapid-prototyper.md",
     "relative_file": "engineering/engineering-rapid-prototyper.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "⚡",
     "color": "green",
@@ -1590,8 +1590,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-realtime-collaboration-engineer.md",
     "relative_file": "engineering/engineering-realtime-collaboration-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🤝",
     "color": "#E11D48",
@@ -1617,8 +1617,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-rust-refactoring-specialist.md",
     "relative_file": "engineering/engineering-rust-refactoring-specialist.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🦀",
     "color": "#991B1B",
@@ -1644,8 +1644,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-sre.md",
     "relative_file": "engineering/engineering-sre.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🛡️",
     "color": "#e63946",
@@ -1671,8 +1671,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-search-relevance-engineer.md",
     "relative_file": "engineering/engineering-search-relevance-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🔎",
     "color": "#00BFB3",
@@ -1698,8 +1698,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-section-508-specialist.md",
     "relative_file": "engineering/engineering-section-508-specialist.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "♿",
     "color": "blue",
@@ -1725,8 +1725,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-senior-developer.md",
     "relative_file": "engineering/engineering-senior-developer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "💎",
     "color": "green",
@@ -1752,8 +1752,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-software-architect.md",
     "relative_file": "engineering/engineering-software-architect.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🏛️",
     "color": "indigo",
@@ -1779,8 +1779,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-solidity-smart-contract-engineer.md",
     "relative_file": "engineering/engineering-solidity-smart-contract-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "⛓️",
     "color": "orange",
@@ -1806,9 +1806,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-technical-writer.md",
     "relative_file": "engineering/engineering-technical-writer.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "📚",
     "color": "teal",
@@ -1834,8 +1834,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-uswds-developer.md",
     "relative_file": "engineering/engineering-uswds-developer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🏛️",
     "color": "blue",
@@ -1861,8 +1861,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-video-streaming-engineer.md",
     "relative_file": "engineering/engineering-video-streaming-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🎬",
     "color": "#DC2626",
@@ -1888,9 +1888,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-voice-ai-integration-engineer.md",
     "relative_file": "engineering/engineering-voice-ai-integration-engineer.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "🎙️",
     "color": "violet",
@@ -1916,9 +1916,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-wechat-mini-program-developer.md",
     "relative_file": "engineering/engineering-wechat-mini-program-developer.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "💬",
     "color": "green",
@@ -1944,8 +1944,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-webassembly-engineer.md",
     "relative_file": "engineering/engineering-webassembly-engineer.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🧩",
     "color": "#6D28D9",
@@ -1971,9 +1971,9 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-wordpress-performance.md",
     "relative_file": "engineering/engineering-wordpress-performance.md",
     "tags": [
-      "Backend",
+      "Engineering",
       "軟體與系統工程",
-      "Engineering"
+      "Backend"
     ],
     "emoji": "⚡",
     "color": "purple",
@@ -1999,8 +1999,8 @@
     "file_path": "data\\agency-agents-repo\\engineering\\engineering-wordpress-shopping-cart.md",
     "relative_file": "engineering/engineering-wordpress-shopping-cart.md",
     "tags": [
-      "軟體與系統工程",
-      "Engineering"
+      "Engineering",
+      "軟體與系統工程"
     ],
     "emoji": "🛍️",
     "color": "purple",
@@ -2946,8 +2946,8 @@
     "relative_file": "marketing/marketing-carousel-growth-engine.md",
     "tags": [
       "行銷推廣與社群",
-      "Backend",
-      "Marketing"
+      "Marketing",
+      "Backend"
     ],
     "emoji": "🎠",
     "color": "#FF0050",
@@ -3108,8 +3108,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-email-strategist.md",
     "relative_file": "marketing/marketing-email-strategist.md",
     "tags": [
-      "行銷推廣與社群",
       "Frontend",
+      "行銷推廣與社群",
       "Marketing"
     ],
     "emoji": "📧",
@@ -3164,8 +3164,8 @@
     "relative_file": "marketing/marketing-growth-hacker.md",
     "tags": [
       "行銷推廣與社群",
-      "Backend",
-      "Marketing"
+      "Marketing",
+      "Backend"
     ],
     "emoji": "🚀",
     "color": "green",
@@ -3731,8 +3731,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-creative-strategist.md",
     "relative_file": "paid-media/paid-media-creative-strategist.md",
     "tags": [
-      "付費媒體與廣告投放",
-      "Paid Media"
+      "Paid Media",
+      "付費媒體與廣告投放"
     ],
     "emoji": "✍️",
     "color": "orange",
@@ -3758,8 +3758,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-ppc-strategist.md",
     "relative_file": "paid-media/paid-media-ppc-strategist.md",
     "tags": [
-      "付費媒體與廣告投放",
-      "Paid Media"
+      "Paid Media",
+      "付費媒體與廣告投放"
     ],
     "emoji": "💰",
     "color": "orange",
@@ -3785,8 +3785,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-auditor.md",
     "relative_file": "paid-media/paid-media-auditor.md",
     "tags": [
-      "付費媒體與廣告投放",
-      "Paid Media"
+      "Paid Media",
+      "付費媒體與廣告投放"
     ],
     "emoji": "📋",
     "color": "orange",
@@ -3812,8 +3812,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-paid-social-strategist.md",
     "relative_file": "paid-media/paid-media-paid-social-strategist.md",
     "tags": [
-      "付費媒體與廣告投放",
-      "Paid Media"
+      "Paid Media",
+      "付費媒體與廣告投放"
     ],
     "emoji": "📱",
     "color": "orange",
@@ -3839,8 +3839,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-programmatic-buyer.md",
     "relative_file": "paid-media/paid-media-programmatic-buyer.md",
     "tags": [
-      "付費媒體與廣告投放",
-      "Paid Media"
+      "Paid Media",
+      "付費媒體與廣告投放"
     ],
     "emoji": "📺",
     "color": "orange",
@@ -3866,8 +3866,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-search-query-analyst.md",
     "relative_file": "paid-media/paid-media-search-query-analyst.md",
     "tags": [
-      "付費媒體與廣告投放",
-      "Paid Media"
+      "Paid Media",
+      "付費媒體與廣告投放"
     ],
     "emoji": "🔍",
     "color": "orange",
@@ -3893,9 +3893,9 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-tracking-specialist.md",
     "relative_file": "paid-media/paid-media-tracking-specialist.md",
     "tags": [
+      "Paid Media",
       "付費媒體與廣告投放",
-      "Backend",
-      "Paid Media"
+      "Backend"
     ],
     "emoji": "📡",
     "color": "orange",
@@ -4056,8 +4056,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-management-experiment-tracker.md",
     "relative_file": "project-management/project-management-experiment-tracker.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "🧪",
     "color": "purple",
@@ -4083,8 +4083,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-management-jira-workflow-steward.md",
     "relative_file": "project-management/project-management-jira-workflow-steward.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "📋",
     "color": "orange",
@@ -4110,8 +4110,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-management-meeting-notes-specialist.md",
     "relative_file": "project-management/project-management-meeting-notes-specialist.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "📋",
     "color": "blue",
@@ -4137,8 +4137,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-management-project-shepherd.md",
     "relative_file": "project-management/project-management-project-shepherd.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "🐑",
     "color": "blue",
@@ -4164,8 +4164,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-manager-senior.md",
     "relative_file": "project-management/project-manager-senior.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "📝",
     "color": "blue",
@@ -4191,8 +4191,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-management-studio-operations.md",
     "relative_file": "project-management/project-management-studio-operations.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "🏭",
     "color": "green",
@@ -4218,8 +4218,8 @@
     "file_path": "data\\agency-agents-repo\\project-management\\project-management-studio-producer.md",
     "relative_file": "project-management/project-management-studio-producer.md",
     "tags": [
-      "專案管理與敏捷",
-      "Project Management"
+      "Project Management",
+      "專案管理與敏捷"
     ],
     "emoji": "🎬",
     "color": "gold",
@@ -4488,8 +4488,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-ai-generated-code-auditor.md",
     "relative_file": "security/security-ai-generated-code-auditor.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🔎",
     "color": "#4F46E5",
@@ -4515,8 +4515,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-appsec-engineer.md",
     "relative_file": "security/security-appsec-engineer.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🔐",
     "color": "#059669",
@@ -4542,8 +4542,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-blockchain-security-auditor.md",
     "relative_file": "security/security-blockchain-security-auditor.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -4569,8 +4569,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-cloud-security-architect.md",
     "relative_file": "security/security-cloud-security-architect.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "☁️",
     "color": "#3b82f6",
@@ -4596,8 +4596,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-compliance-auditor.md",
     "relative_file": "security/security-compliance-auditor.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "📋",
     "color": "orange",
@@ -4623,8 +4623,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-incident-responder.md",
     "relative_file": "security/security-incident-responder.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🚨",
     "color": "#f59e0b",
@@ -4650,8 +4650,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-penetration-tester.md",
     "relative_file": "security/security-penetration-tester.md",
     "tags": [
-      "資訊安全與防護",
       "Security",
+      "資訊安全與防護",
       "Testing"
     ],
     "emoji": "🗡️",
@@ -4678,8 +4678,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-secrets-credential-engineer.md",
     "relative_file": "security/security-secrets-credential-engineer.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🔑",
     "color": "#B45309",
@@ -4705,9 +4705,9 @@
     "file_path": "data\\agency-agents-repo\\security\\security-architect.md",
     "relative_file": "security/security-architect.md",
     "tags": [
+      "Security",
       "資訊安全與防護",
-      "Backend",
-      "Security"
+      "Backend"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -4733,8 +4733,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-senior-secops.md",
     "relative_file": "security/security-senior-secops.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🛡️",
     "color": "#E67E22",
@@ -4760,8 +4760,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-threat-detection-engineer.md",
     "relative_file": "security/security-threat-detection-engineer.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🎯",
     "color": "#7b2d8e",
@@ -4787,8 +4787,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-threat-intelligence-analyst.md",
     "relative_file": "security/security-threat-intelligence-analyst.md",
     "tags": [
-      "資訊安全與防護",
-      "Security"
+      "Security",
+      "資訊安全與防護"
     ],
     "emoji": "🔍",
     "color": "#7c3aed",
@@ -4814,8 +4814,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\terminal-integration-specialist.md",
     "relative_file": "spatial-computing/terminal-integration-specialist.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🖥️",
     "color": "green",
@@ -4841,8 +4841,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\xr-cockpit-interaction-specialist.md",
     "relative_file": "spatial-computing/xr-cockpit-interaction-specialist.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🕹️",
     "color": "orange",
@@ -4868,8 +4868,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\xr-immersive-developer.md",
     "relative_file": "spatial-computing/xr-immersive-developer.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🌐",
     "color": "neon-cyan",
@@ -4895,8 +4895,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\xr-interface-architect.md",
     "relative_file": "spatial-computing/xr-interface-architect.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🫧",
     "color": "neon-green",
@@ -4922,8 +4922,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\macos-spatial-metal-engineer.md",
     "relative_file": "spatial-computing/macos-spatial-metal-engineer.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🍎",
     "color": "metallic-blue",
@@ -4949,8 +4949,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\visionos-spatial-engineer.md",
     "relative_file": "spatial-computing/visionos-spatial-engineer.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🥽",
     "color": "indigo",
@@ -4976,8 +4976,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\accounts-payable-agent.md",
     "relative_file": "specialized/accounts-payable-agent.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "💸",
     "color": "green",
@@ -5003,8 +5003,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\agentic-identity-trust.md",
     "relative_file": "specialized/agentic-identity-trust.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔐",
     "color": "#2d5a27",
@@ -5030,8 +5030,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\agents-orchestrator.md",
     "relative_file": "specialized/agents-orchestrator.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🎛️",
     "color": "cyan",
@@ -5046,19 +5046,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Aging Parent Care Companion",
-    "description_zh": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent's appointments, medications, care team communication, and their own caregiver wellbeing (專精於該領域的專業 AI 子代理專家)",
-    "description": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent's appointments, medications, care team communication, and their own caregiver wellbeing (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Behind every medication list and appointment reminder is a parent who raised you, and a caregiver doing one of the hardest jobs there is. You deserve a steady partner, not another thing to manage.",
-    "vibe": "Behind every medication list and appointment reminder is a parent who raised you, and a caregiver doing one of the hardest jobs there is. You deserve a steady partner, not another thing to manage.",
+    "name_zh": "長輩照護協調管家",
+    "description_zh": "專為照顧年邁父母的家庭照顧者打造之照護協調與決策支援專家，遵循 HIPAA 規範管理就醫行程、藥物提醒、照護團隊溝通與照顧者心理支持。",
+    "description": "專為照顧年邁父母的家庭照顧者打造之照護協調與決策支援專家，遵循 HIPAA 規範管理就醫行程、藥物提醒、照護團隊溝通與照顧者心理支持。",
+    "vibe_zh": "每張藥物清單與就醫提醒背後都是養育你的父母與辛苦的照顧者。你需要的是一位可靠的夥伴，而不是另一件繁重的負擔。",
+    "vibe": "每張藥物清單與就醫提醒背後都是養育你的父母與辛苦的照顧者。你需要的是一位可靠的夥伴，而不是另一件繁重的負擔。",
     "name_en": "Aging Parent Care Companion",
     "description_en": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent's appointments, medications, care team communication, and their own caregiver wellbeing",
     "vibe_en": "Behind every medication list and appointment reminder is a parent who raised you, and a caregiver doing one of the hardest jobs there is. You deserve a steady partner, not another thing to manage.",
     "file_path": "data\\agency-agents-repo\\specialized\\healthcare-aging-parent-care-companion.md",
     "relative_file": "specialized/healthcare-aging-parent-care-companion.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🧡",
     "color": "#0D9488",
@@ -5084,8 +5084,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\automation-governance-architect.md",
     "relative_file": "specialized/automation-governance-architect.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "⚙️",
     "color": "cyan",
@@ -5111,8 +5111,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\business-strategist.md",
     "relative_file": "specialized/business-strategist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "♟️",
     "color": "indigo",
@@ -5138,8 +5138,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\change-management-consultant.md",
     "relative_file": "specialized/change-management-consultant.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔄",
     "color": "amber",
@@ -5154,19 +5154,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Chief Financial Officer",
-    "description_zh": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Thinks in trade-offs, risk-adjusted returns, and long-term value creation — turns financial complexity into a clear decision while protecting the balance sheet, the controls, and the credibility of every number presented.",
-    "vibe": "Thinks in trade-offs, risk-adjusted returns, and long-term value creation — turns financial complexity into a clear decision while protecting the balance sheet, the controls, and the credibility of every number presented.",
+    "name_zh": "財務長 (CFO)",
+    "description_zh": "高階財務策略主管，主導資本配置、資金營運、財務規劃、併購財務分析、投資人關係與董事會報告，將複雜財務數據轉化為清晰的商業決策。",
+    "description": "高階財務策略主管，主導資本配置、資金營運、財務規劃、併購財務分析、投資人關係與董事會報告，將複雜財務數據轉化為清晰的商業決策。",
+    "vibe_zh": "以權衡取捨、風險調整後回報與長期價值為思考核心，在保護資產負債表與內部控制的同時，確保呈現的每個數字都具備公信力。",
+    "vibe": "以權衡取捨、風險調整後回報與長期價值為思考核心，在保護資產負債表與內部控制的同時，確保呈現的每個數字都具備公信力。",
     "name_en": "Chief Financial Officer",
     "description_en": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence.",
     "vibe_en": "Thinks in trade-offs, risk-adjusted returns, and long-term value creation — turns financial complexity into a clear decision while protecting the balance sheet, the controls, and the credibility of every number presented.",
     "file_path": "data\\agency-agents-repo\\specialized\\chief-financial-officer.md",
     "relative_file": "specialized/chief-financial-officer.md",
     "tags": [
-      "Specialized",
       "特殊專家與領域顧問",
+      "Specialized",
       "Backend"
     ],
     "emoji": "💼",
@@ -5182,19 +5182,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Chief of Staff",
-    "description_zh": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "I don't own any function. I own the space between all of them.",
-    "vibe": "I don't own any function. I own the space between all of them.",
+    "name_zh": "幕僚長 (Chief of Staff)",
+    "description_zh": "創辦人與高階主管的核心協調官，負責過濾雜訊、統籌跨部門流程、推動決策落地並優化產出影響力，協助領導者保持清晰思考。",
+    "description": "創辦人與高階主管的核心協調官，負責過濾雜訊、統籌跨部門流程、推動決策落地並優化產出影響力，協助領導者保持清晰思考。",
+    "vibe_zh": "我不獨自擁有任何單一職能，我主導所有職能之間的協作空間。",
+    "vibe": "我不獨自擁有任何單一職能，我主導所有職能之間的協作空間。",
     "name_en": "Chief of Staff",
     "description_en": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly.",
     "vibe_en": "I don't own any function. I own the space between all of them.",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-chief-of-staff.md",
     "relative_file": "specialized/specialized-chief-of-staff.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🧭",
     "color": "#6B7280",
@@ -5220,8 +5220,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-civil-engineer.md",
     "relative_file": "specialized/specialized-civil-engineer.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏗️",
     "color": "yellow",
@@ -5236,19 +5236,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Codebase Archaeologist",
-    "description_zh": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cursor, Copilot, Windsurf, etc.) over time, finding silent logic mismatches, dead code, and doc-vs-code divergence that no single session would ever notice on its own. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cursor, Copilot, Windsurf, etc.) over time, finding silent logic mismatches, dead code, and doc-vs-code divergence that no single session would ever notice on its own. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "I read code like tree rings — I can tell you which layer was written by which hand, and what got left half-finished when the next one took over.",
-    "vibe": "I read code like tree rings — I can tell you which layer was written by which hand, and what got left half-finished when the next one took over.",
+    "name_zh": "程式碼考古與漂移檢測專家",
+    "description_zh": "專精於跨工作階段與多種 AI 工具（Claude、Cursor、Copilot、Windsurf）的程式碼漂移審計，找出單次對話無法察覺的邏輯脫節、死代碼與文件代碼分歧。",
+    "description": "專精於跨工作階段與多種 AI 工具（Claude、Cursor、Copilot、Windsurf）的程式碼漂移審計，找出單次對話無法察覺的邏輯脫節、死代碼與文件代碼分歧。",
+    "vibe_zh": "我像解讀年輪般審視程式碼——能告訴你每一層是由哪雙手寫下，以及下一個人接手時留下了哪些未竟之處。",
+    "vibe": "我像解讀年輪般審視程式碼——能告訴你每一層是由哪雙手寫下，以及下一個人接手時留下了哪些未竟之處。",
     "name_en": "Codebase Archaeologist",
     "description_en": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cursor, Copilot, Windsurf, etc.) over time, finding silent logic mismatches, dead code, and doc-vs-code divergence that no single session would ever notice on its own.",
     "vibe_en": "I read code like tree rings — I can tell you which layer was written by which hand, and what got left half-finished when the next one took over.",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-codebase-archaeologist.md",
     "relative_file": "specialized/specialized-codebase-archaeologist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏺",
     "color": "amber",
@@ -5274,8 +5274,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\corporate-training-designer.md",
     "relative_file": "specialized/corporate-training-designer.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "📚",
     "color": "orange",
@@ -5301,8 +5301,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-cultural-intelligence-strategist.md",
     "relative_file": "specialized/specialized-cultural-intelligence-strategist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🌍",
     "color": "#FFA000",
@@ -5317,19 +5317,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Customer Service",
-    "description_zh": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction (專精於該領域的專業 AI 子代理專家)",
-    "description": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every customer interaction is a chance to turn a problem into loyalty — handle it with care, speed, and a human touch.",
-    "vibe": "Every customer interaction is a chance to turn a problem into loyalty — handle it with care, speed, and a human touch.",
+    "name_zh": "全方位客戶服務專家",
+    "description_zh": "專業跨行業客服專案經理，以熱忱、高效與以客為尊的態度處理客戶諮詢、客訴處理、帳戶支援、常見問題解答與無縫工單升級。",
+    "description": "專業跨行業客服專案經理，以熱忱、高效與以客為尊的態度處理客戶諮詢、客訴處理、帳戶支援、常見問題解答與無縫工單升級。",
+    "vibe_zh": "每一次與客戶的互動都是將問題轉化為忠誠度的契機——以細心、速度與人性溫度妥善處理。",
+    "vibe": "每一次與客戶的互動都是將問題轉化為忠誠度的契機——以細心、速度與人性溫度妥善處理。",
     "name_en": "Customer Service",
     "description_en": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction",
     "vibe_en": "Every customer interaction is a chance to turn a problem into loyalty — handle it with care, speed, and a human touch.",
     "file_path": "data\\agency-agents-repo\\specialized\\customer-service.md",
     "relative_file": "specialized/customer-service.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🎧",
     "color": "teal",
@@ -5355,8 +5355,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\customer-success-manager.md",
     "relative_file": "specialized/customer-success-manager.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🌟",
     "color": "green",
@@ -5371,19 +5371,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Data Consolidation Agent",
-    "description_zh": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries (專精於該領域的專業 AI 子代理專家)",
-    "description": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Consolidates scattered sales data into live reporting dashboards.",
-    "vibe": "Consolidates scattered sales data into live reporting dashboards.",
+    "name_zh": "銷售數據整合與報表代理",
+    "description_zh": "將分散的銷售數據彙整為即時視覺化儀表板，提供區域、業務代表與商機管道 (Pipeline) 的即時統整摘要。",
+    "description": "將分散的銷售數據彙整為即時視覺化儀表板，提供區域、業務代表與商機管道 (Pipeline) 的即時統整摘要。",
+    "vibe_zh": "將零散的銷售數據轉化為清晰有力的即時決策儀表板。",
+    "vibe": "將零散的銷售數據轉化為清晰有力的即時決策儀表板。",
     "name_en": "Data Consolidation Agent",
     "description_en": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries",
     "vibe_en": "Consolidates scattered sales data into live reporting dashboards.",
     "file_path": "data\\agency-agents-repo\\specialized\\data-consolidation-agent.md",
     "relative_file": "specialized/data-consolidation-agent.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🗄️",
     "color": "#38a169",
@@ -5398,19 +5398,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Data Privacy Officer",
-    "description_zh": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Treats personal data as a liability to be minimized rather than an asset to be hoarded — reads the regulation precisely, designs privacy in from the start, and assumes a regulator will one day ask to see the records.",
-    "vibe": "Treats personal data as a liability to be minimized rather than an asset to be hoarded — reads the regulation precisely, designs privacy in from the start, and assumes a regulator will one day ask to see the records.",
+    "name_zh": "資料隱私長 (DPO)",
+    "description_zh": "企業資料隱私與合規主管，建構符合 GDPR、CCPA 與全球法規之隱私合規計畫，涵蓋資料對應、隱私影響評估、同意權管理與外包商盡職調查。",
+    "description": "企業資料隱私與合規主管，建構符合 GDPR、CCPA 與全球法規之隱私合規計畫，涵蓋資料對應、隱私影響評估、同意權管理與外包商盡職調查。",
+    "vibe_zh": "將個人資料視為應盡量最小化的潛在風險而非隨意囤積的資產——從架構之初即融入隱私設計，隨時做好接受監管機構審查的準備。",
+    "vibe": "將個人資料視為應盡量最小化的潛在風險而非隨意囤積的資產——從架構之初即融入隱私設計，隨時做好接受監管機構審查的準備。",
     "name_en": "Data Privacy Officer",
     "description_en": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement.",
     "vibe_en": "Treats personal data as a liability to be minimized rather than an asset to be hoarded — reads the regulation precisely, designs privacy in from the start, and assumes a regulator will one day ask to see the records.",
     "file_path": "data\\agency-agents-repo\\specialized\\data-privacy-officer.md",
     "relative_file": "specialized/data-privacy-officer.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔐",
     "color": "purple",
@@ -5436,8 +5436,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-developer-advocate.md",
     "relative_file": "specialized/specialized-developer-advocate.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🗣️",
     "color": "purple",
@@ -5452,19 +5452,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Document Generator",
-    "description_zh": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Professional documents from code — PDFs, slides, spreadsheets, and reports.",
-    "vibe": "Professional documents from code — PDFs, slides, spreadsheets, and reports.",
+    "name_zh": "專業文件與報表生成專家",
+    "description_zh": "程式化文件生成專家，透過代碼自動化產出排版精美、內嵌圖表與資料視覺化之專業 PDF、PPTX、DOCX 與 XLSX 報表文件。",
+    "description": "程式化文件生成專家，透過代碼自動化產出排版精美、內嵌圖表與資料視覺化之專業 PDF、PPTX、DOCX 與 XLSX 報表文件。",
+    "vibe_zh": "用代碼生成極致專業的文件——簡報、試算表、PDF 與分析報告一氣呵成。",
+    "vibe": "用代碼生成極致專業的文件——簡報、試算表、PDF 與分析報告一氣呵成。",
     "name_en": "Document Generator",
     "description_en": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization.",
     "vibe_en": "Professional documents from code — PDFs, slides, spreadsheets, and reports.",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-document-generator.md",
     "relative_file": "specialized/specialized-document-generator.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "📄",
     "color": "blue",
@@ -5479,19 +5479,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "ESG & Sustainability Officer",
-    "description_zh": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Builds sustainability programs that hold up to scrutiny — grounds every claim in audited data and recognized frameworks, because a target without a credible path or a disclosure without evidence is greenwashing waiting to be exposed.",
-    "vibe": "Builds sustainability programs that hold up to scrutiny — grounds every claim in audited data and recognized frameworks, because a target without a credible path or a disclosure without evidence is greenwashing waiting to be exposed.",
+    "name_zh": "ESG 與企業永續長",
+    "description_zh": "企業永續發展策略與 ESG 報告專家，建立環境、社會與公司治理計畫，主導減碳專案，並確保永續揭露符合國際框架與利害關係人期待。",
+    "description": "企業永續發展策略與 ESG 報告專家，建立環境、社會與公司治理計畫，主導減碳專案，並確保永續揭露符合國際框架與利害關係人期待。",
+    "vibe_zh": "打造經得起嚴格檢驗的永續計畫——每項聲明皆有審計數據與國際框架佐證，杜絕任何漂綠風險。",
+    "vibe": "打造經得起嚴格檢驗的永續計畫——每項聲明皆有審計數據與國際框架佐證，杜絕任何漂綠風險。",
     "name_en": "ESG & Sustainability Officer",
     "description_en": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations.",
     "vibe_en": "Builds sustainability programs that hold up to scrutiny — grounds every claim in audited data and recognized frameworks, because a target without a credible path or a disclosure without evidence is greenwashing waiting to be exposed.",
     "file_path": "data\\agency-agents-repo\\specialized\\esg-sustainability-officer.md",
     "relative_file": "specialized/esg-sustainability-officer.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🌱",
     "color": "green",
@@ -5517,8 +5517,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-fedramp-rmf-compliance.md",
     "relative_file": "specialized/specialized-fedramp-rmf-compliance.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -5533,19 +5533,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "French Consulting Market Navigator",
-    "description_zh": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities (專精於該領域的專業 AI 子代理專家)",
-    "description": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "The insider who decodes the opaque French consulting food chain so freelancers stop leaving money on the table",
-    "vibe": "The insider who decodes the opaque French consulting food chain so freelancers stop leaving money on the table",
+    "name_zh": "法國顧問諮詢市場導航專家",
+    "description_zh": "解鎖法國 ESN/SI 自由接案與顧問生態系，精通利潤抽成模型、接案平台機制 (Malt, collective.work)、受薪承攬 (Portage Salarial) 與費率定價策略。",
+    "description": "解鎖法國 ESN/SI 自由接案與顧問生態系，精通利潤抽成模型、接案平台機制 (Malt, collective.work)、受薪承攬 (Portage Salarial) 與費率定價策略。",
+    "vibe_zh": "深諳法國諮詢產業鏈的內部人士，讓自由工作者與顧問不再因為資訊不對稱而少賺收入。",
+    "vibe": "深諳法國諮詢產業鏈的內部人士，讓自由工作者與顧問不再因為資訊不對稱而少賺收入。",
     "name_en": "French Consulting Market Navigator",
     "description_en": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities",
     "vibe_en": "The insider who decodes the opaque French consulting food chain so freelancers stop leaving money on the table",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-french-consulting-market.md",
     "relative_file": "specialized/specialized-french-consulting-market.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🇫🇷",
     "color": "#002395",
@@ -5571,8 +5571,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\government-digital-presales-consultant.md",
     "relative_file": "specialized/government-digital-presales-consultant.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏛️",
     "color": "#8B0000",
@@ -5587,19 +5587,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Grant Writer",
-    "description_zh": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every grant is a conversation between your mission and a funder's priorities. The best grant writers don't beg — they build a compelling case that a funder's investment in your work is the highest-leverage use of their dollars.",
-    "vibe": "Every grant is a conversation between your mission and a funder's priorities. The best grant writers don't beg — they build a compelling case that a funder's investment in your work is the highest-leverage use of their dollars.",
+    "name_zh": "補助款與基金專案企劃師",
+    "description_zh": "專為非營利組織、研究機構與社會企業撰寫補助申請書，涵蓋潛在資助方研究、意向書、完整企劃書、預算編列與獲獎後進度報告。",
+    "description": "專為非營利組織、研究機構與社會企業撰寫補助申請書，涵蓋潛在資助方研究、意向書、完整企劃書、預算編列與獲獎後進度報告。",
+    "vibe_zh": "申請補助不是乞求，而是建立一場使命與資源的對話——向資助方證明將資金投入在你的專案上是效益最高的投資。",
+    "vibe": "申請補助不是乞求，而是建立一場使命與資源的對話——向資助方證明將資金投入在你的專案上是效益最高的投資。",
     "name_en": "Grant Writer",
     "description_en": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success",
     "vibe_en": "Every grant is a conversation between your mission and a funder's priorities. The best grant writers don't beg — they build a compelling case that a funder's investment in your work is the highest-leverage use of their dollars.",
     "file_path": "data\\agency-agents-repo\\specialized\\grant-writer.md",
     "relative_file": "specialized/grant-writer.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "📝",
     "color": "purple",
@@ -5614,19 +5614,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "HR Onboarding",
-    "description_zh": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "The first 90 days determine whether a new hire becomes a long-term contributor or a regrettable turnover. Get it right from day one.",
-    "vibe": "The first 90 days determine whether a new hire becomes a long-term contributor or a regrettable turnover. Get it right from day one.",
+    "name_zh": "人資入職與人才引導專家",
+    "description_zh": "全方位 HR 入職流程專家，主導新人培訓引導、合規文件簽署、福利登記、企業文化融入與第一年留任追蹤，打造卓越的新人入職體驗。",
+    "description": "全方位 HR 入職流程專家，主導新人培訓引導、合規文件簽署、福利登記、企業文化融入與第一年留任追蹤，打造卓越的新人入職體驗。",
+    "vibe_zh": "前 90 天決定了一位新進同仁會成為長期核心貢獻者還是遺憾離職。從第一天起就把體驗做到極致。",
+    "vibe": "前 90 天決定了一位新進同仁會成為長期核心貢獻者還是遺憾離職。從第一天起就把體驗做到極致。",
     "name_en": "HR Onboarding",
     "description_en": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity",
     "vibe_en": "The first 90 days determine whether a new hire becomes a long-term contributor or a regrettable turnover. Get it right from day one.",
     "file_path": "data\\agency-agents-repo\\specialized\\hr-onboarding.md",
     "relative_file": "specialized/hr-onboarding.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🤝",
     "color": "green",
@@ -5641,19 +5641,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Healthcare Customer Service",
-    "description_zh": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff (專精於該領域的專業 AI 子代理專家)",
-    "description": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every patient deserves to feel heard, respected, and supported — especially when they're scared, confused, or frustrated.",
-    "vibe": "Every patient deserves to feel heard, respected, and supported — especially when they're scared, confused, or frustrated.",
+    "name_zh": "醫療體系病患關懷專員",
+    "description_zh": "具同理心的醫療客服專家，處理病患諮詢、醫療帳單疑問、掛號與排程管理、保險理賠解答與向臨床/行政團隊無縫轉介。",
+    "description": "具同理心的醫療客服專家，處理病患諮詢、醫療帳單疑問、掛號與排程管理、保險理賠解答與向臨床/行政團隊無縫轉介。",
+    "vibe_zh": "每位病患都值得被傾聽、尊重與支持——尤其在他們感到焦慮、困惑或身體不適時。",
+    "vibe": "每位病患都值得被傾聽、尊重與支持——尤其在他們感到焦慮、困惑或身體不適時。",
     "name_en": "Healthcare Customer Service",
     "description_en": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff",
     "vibe_en": "Every patient deserves to feel heard, respected, and supported — especially when they're scared, confused, or frustrated.",
     "file_path": "data\\agency-agents-repo\\specialized\\healthcare-customer-service.md",
     "relative_file": "specialized/healthcare-customer-service.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏥",
     "color": "teal",
@@ -5679,8 +5679,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\healthcare-marketing-compliance.md",
     "relative_file": "specialized/healthcare-marketing-compliance.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "⚕️",
     "color": "#2E8B57",
@@ -5695,19 +5695,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Hospitality Guest Services",
-    "description_zh": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Hospitality is not a transaction — it's a feeling. Every guest interaction is an opportunity to create a memory, earn a return visit, and generate a five-star review.",
-    "vibe": "Hospitality is not a transaction — it's a feeling. Every guest interaction is an opportunity to create a memory, earn a return visit, and generate a five-star review.",
+    "name_zh": "飯店與款待業賓客服務專家",
+    "description_zh": "飯店、度假村、餐飲與活動場地的貴賓服務主管，統籌預訂、入住/退房接待、禮賓管家服務、客訴處置、會員忠誠計畫與滿意度追蹤。",
+    "description": "飯店、度假村、餐飲與活動場地的貴賓服務主管，統籌預訂、入住/退房接待、禮賓管家服務、客訴處置、會員忠誠計畫與滿意度追蹤。",
+    "vibe_zh": "款待不是冰冷的交易，而是一種溫暖的感受。每一次互動都是創造美好記憶與收穫五星好評的契機。",
+    "vibe": "款待不是冰冷的交易，而是一種溫暖的感受。每一次互動都是創造美好記憶與收穫五星好評的契機。",
     "name_en": "Hospitality Guest Services",
     "description_en": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue",
     "vibe_en": "Hospitality is not a transaction — it's a feeling. Every guest interaction is an opportunity to create a memory, earn a return visit, and generate a five-star review.",
     "file_path": "data\\agency-agents-repo\\specialized\\hospitality-guest-services.md",
     "relative_file": "specialized/hospitality-guest-services.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏨",
     "color": "teal",
@@ -5722,19 +5722,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Identity Graph Operator",
-    "description_zh": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this?",
-    "vibe": "Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this?",
+    "name_zh": "身分識別圖譜運營官",
+    "description_zh": "維護多 AI 代理協同系統之共享身分圖譜，確保多代理在並行寫入與複雜查詢下，對「這個實體是誰」始終獲得具備一致性與確定性的權威解答。",
+    "description": "維護多 AI 代理協同系統之共享身分圖譜，確保多代理在並行寫入與複雜查詢下，對「這個實體是誰」始終獲得具備一致性與確定性的權威解答。",
+    "vibe_zh": "確保多代理架構中的每位成員對身分實體擁有絕對統一的認知標準。",
+    "vibe": "確保多代理架構中的每位成員對身分實體擁有絕對統一的認知標準。",
     "name_en": "Identity Graph Operator",
     "description_en": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes.",
     "vibe_en": "Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this?",
     "file_path": "data\\agency-agents-repo\\specialized\\identity-graph-operator.md",
     "relative_file": "specialized/identity-graph-operator.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🕸️",
     "color": "#C5A572",
@@ -5749,19 +5749,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Korean Business Navigator",
-    "description_zh": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics (專精於該領域的專業 AI 子代理專家)",
-    "description": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "The bridge between Western directness and Korean relationship dynamics — reads the room so you don't torch the deal",
-    "vibe": "The bridge between Western directness and Korean relationship dynamics — reads the room so you don't torch the deal",
+    "name_zh": "韓國商業文化與談判導航專家",
+    "description_zh": "為外籍專業人士解析韓國商業文化，掌握「稟議 (Pummi)」決策流程、「眼色 (Nunchi)」察言觀色、KakaoTalk 商務禮儀、階級體系與關係導向交易談判。",
+    "description": "為外籍專業人士解析韓國商業文化，掌握「稟議 (Pummi)」決策流程、「眼色 (Nunchi)」察言觀色、KakaoTalk 商務禮儀、階級體系與關係導向交易談判。",
+    "vibe_zh": "西方直接風格與韓國人際動態之間的橋樑——精準閱讀現場氣氛，確保商業合作圓滿成交。",
+    "vibe": "西方直接風格與韓國人際動態之間的橋樑——精準閱讀現場氣氛，確保商業合作圓滿成交。",
     "name_en": "Korean Business Navigator",
     "description_en": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics",
     "vibe_en": "The bridge between Western directness and Korean relationship dynamics — reads the room so you don't torch the deal",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-korean-business-navigator.md",
     "relative_file": "specialized/specialized-korean-business-navigator.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🇰🇷",
     "color": "#003478",
@@ -5787,8 +5787,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\lsp-index-engineer.md",
     "relative_file": "specialized/lsp-index-engineer.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔎",
     "color": "orange",
@@ -5803,19 +5803,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Language Translator",
-    "description_zh": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations (專精於該領域的專業 AI 子代理專家)",
-    "description": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Bridges languages with precision, cultural respect, and the fluency of a native speaker who's lived in both worlds.",
-    "vibe": "Bridges languages with precision, cultural respect, and the fluency of a native speaker who's lived in both worlds.",
+    "name_zh": "即時語言翻譯與在地化專家",
+    "description_zh": "西班牙文 ↔ 英文即時翻譯專家，具備深厚文化語境理解、區域方言洞察與語氣調整能力，適用於商務談判、旅遊導覽與緊急應對情境。",
+    "description": "西班牙文 ↔ 英文即時翻譯專家，具備深厚文化語境理解、區域方言洞察與語氣調整能力，適用於商務談判、旅遊導覽與緊急應對情境。",
+    "vibe_zh": "以母語者的敏銳度精準跨越語言與文化隔閡，在不同世界之間無縫傳遞意圖。",
+    "vibe": "以母語者的敏銳度精準跨越語言與文化隔閡，在不同世界之間無縫傳遞意圖。",
     "name_en": "Language Translator",
     "description_en": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations",
     "vibe_en": "Bridges languages with precision, cultural respect, and the fluency of a native speaker who's lived in both worlds.",
     "file_path": "data\\agency-agents-repo\\specialized\\language-translator.md",
     "relative_file": "specialized/language-translator.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🌐",
     "color": "teal",
@@ -5830,19 +5830,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Legal Billing & Time Tracking",
-    "description_zh": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every six minutes of unbilled time is money left on the table. Every unclear billing narrative is a client dispute waiting to happen. Capture it all. Describe it clearly. Collect it professionally.",
-    "vibe": "Every six minutes of unbilled time is money left on the table. Every unclear billing narrative is a client dispute waiting to happen. Capture it all. Describe it clearly. Collect it professionally.",
+    "name_zh": "法律工時紀錄與帳單管理專家",
+    "description_zh": "專精於法律從業人員的精確工時記錄、帳單敘述撰寫、發票生成、款項催收與信託帳戶合規，在保障客戶關係的同時實現營收最大化。",
+    "description": "專精於法律從業人員的精確工時記錄、帳單敘述撰寫、發票生成、款項催收與信託帳戶合規，在保障客戶關係的同時實現營收最大化。",
+    "vibe_zh": "每 6 分鐘未計費的工時都是損失的價值。每筆模糊的帳單敘述都是未來的糾紛。精準記錄、清晰描述、專業請款。",
+    "vibe": "每 6 分鐘未計費的工時都是損失的價值。每筆模糊的帳單敘述都是未來的糾紛。精準記錄、清晰描述、專業請款。",
     "name_en": "Legal Billing & Time Tracking",
     "description_en": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model",
     "vibe_en": "Every six minutes of unbilled time is money left on the table. Every unclear billing narrative is a client dispute waiting to happen. Capture it all. Describe it clearly. Collect it professionally.",
     "file_path": "data\\agency-agents-repo\\specialized\\legal-billing-time-tracking.md",
     "relative_file": "specialized/legal-billing-time-tracking.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "⏱️",
     "color": "green",
@@ -5857,19 +5857,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Legal Client Intake",
-    "description_zh": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "The first conversation with a potential client sets the tone for the entire attorney-client relationship. Get it right — warm, professional, and thorough — from the very first touch.",
-    "vibe": "The first conversation with a potential client sets the tone for the entire attorney-client relationship. Get it right — warm, professional, and thorough — from the very first touch.",
+    "name_zh": "法律諮詢初審與客戶接案專家",
+    "description_zh": "律所接案初審專員，負責潛在客戶資格篩選、案情資訊收集、律師諮詢預約、利益衝突審查並產出律師立即可用的接案摘要報告。",
+    "description": "律所接案初審專員，負責潛在客戶資格篩選、案情資訊收集、律師諮詢預約、利益衝突審查並產出律師立即可用的接案摘要報告。",
+    "vibe_zh": "與潛在客戶的第一次對話奠定了整個委任關係的基調。從一開始就做到溫暖、專業且滴水不漏。",
+    "vibe": "與潛在客戶的第一次對話奠定了整個委任關係的基調。從一開始就做到溫暖、專業且滴水不漏。",
     "name_en": "Legal Client Intake",
     "description_en": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size",
     "vibe_en": "The first conversation with a potential client sets the tone for the entire attorney-client relationship. Get it right — warm, professional, and thorough — from the very first touch.",
     "file_path": "data\\agency-agents-repo\\specialized\\legal-client-intake.md",
     "relative_file": "specialized/legal-client-intake.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "📋",
     "color": "blue",
@@ -5884,19 +5884,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Legal Document Review",
-    "description_zh": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every word in a legal document matters. Every missed clause is a liability. Every risk caught early is a client protected.",
-    "vibe": "Every word in a legal document matters. Every missed clause is a liability. Every risk caught early is a client protected.",
+    "name_zh": "法律合約與訴訟文件審查專家",
+    "description_zh": "合約、訴訟文件與不動產協議審查專家，產出精準摘要、標註高風險條款、比對合約修訂版本並驗證法律合規性。",
+    "description": "合約、訴訟文件與不動產協議審查專家，產出精準摘要、標註高風險條款、比對合約修訂版本並驗證法律合規性。",
+    "vibe_zh": "法律文件中的每個字都至關重要。每個漏掉的條款都是潛在責任；及早發現的風險就是對客戶的最佳保護。",
+    "vibe": "法律文件中的每個字都至關重要。每個漏掉的條款都是潛在責任；及早發現的風險就是對客戶的最佳保護。",
     "name_en": "Legal Document Review",
     "description_en": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area",
     "vibe_en": "Every word in a legal document matters. Every missed clause is a liability. Every risk caught early is a client protected.",
     "file_path": "data\\agency-agents-repo\\specialized\\legal-document-review.md",
     "relative_file": "specialized/legal-document-review.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "⚖️",
     "color": "blue",
@@ -5911,19 +5911,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Loan Officer Assistant",
-    "description_zh": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every loan is someone's dream — a home, a business, a fresh start. Move it through the pipeline with precision, compliance, and genuine care for the person behind the application.",
-    "vibe": "Every loan is someone's dream — a home, a business, a fresh start. Move it through the pipeline with precision, compliance, and genuine care for the person behind the application.",
+    "name_zh": "房貸與授信審查助理",
+    "description_zh": "房貸與金融借貸專家助理，協助借款人初審、資格預審、文件收集、進度管線追蹤、法規遵循、利率報價與對保撥款協調。",
+    "description": "房貸與金融借貸專家助理，協助借款人初審、資格預審、文件收集、進度管線追蹤、法規遵循、利率報價與對保撥款協調。",
+    "vibe_zh": "每筆貸款都承載著客戶的成家或創業夢想。以精確度、合規性與真誠關懷推動案件順利核貸。",
+    "vibe": "每筆貸款都承載著客戶的成家或創業夢想。以精確度、合規性與真誠關懷推動案件順利核貸。",
     "name_en": "Loan Officer Assistant",
     "description_en": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending",
     "vibe_en": "Every loan is someone's dream — a home, a business, a fresh start. Move it through the pipeline with precision, compliance, and genuine care for the person behind the application.",
     "file_path": "data\\agency-agents-repo\\specialized\\loan-officer-assistant.md",
     "relative_file": "specialized/loan-officer-assistant.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏦",
     "color": "blue",
@@ -5949,8 +5949,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\ma-integration-manager.md",
     "relative_file": "specialized/ma-integration-manager.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🤝",
     "color": "indigo",
@@ -5965,19 +5965,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "MCP Builder",
-    "description_zh": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Builds the tools that make AI agents actually useful in the real world.",
-    "vibe": "Builds the tools that make AI agents actually useful in the real world.",
+    "name_zh": "Model Context Protocol (MCP) 開發專家",
+    "description_zh": "精通 Anthropic MCP 協議之專家，設計、構建與測試 MCP 伺服器，為 AI 代理串接自訂工具、資源存取與動態提示詞擴充能力。",
+    "description": "精通 Anthropic MCP 協議之專家，設計、構建與測試 MCP 伺服器，為 AI 代理串接自訂工具、資源存取與動態提示詞擴充能力。",
+    "vibe_zh": "打造能讓 AI 代理真正與現實世界工具無縫互動的關鍵連接器。",
+    "vibe": "打造能讓 AI 代理真正與現實世界工具無縫互動的關鍵連接器。",
     "name_en": "MCP Builder",
     "description_en": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts.",
     "vibe_en": "Builds the tools that make AI agents actually useful in the real world.",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-mcp-builder.md",
     "relative_file": "specialized/specialized-mcp-builder.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔌",
     "color": "indigo",
@@ -6003,8 +6003,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\medical-billing-coding-specialist.md",
     "relative_file": "specialized/medical-billing-coding-specialist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏥",
     "color": "blue",
@@ -6030,8 +6030,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-model-qa.md",
     "relative_file": "specialized/specialized-model-qa.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔬",
     "color": "#B22222",
@@ -6057,8 +6057,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\operations-manager.md",
     "relative_file": "specialized/operations-manager.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "⚙️",
     "color": "slate",
@@ -6073,19 +6073,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Organizational Psychologist",
-    "description_zh": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Treats team dysfunction like a clinician reads symptoms — grounds every diagnosis and intervention in peer-reviewed evidence, names the invisible pattern leaders can't see, and never mistakes pop psychology for the real thing.",
-    "vibe": "Treats team dysfunction like a clinician reads symptoms — grounds every diagnosis and intervention in peer-reviewed evidence, names the invisible pattern leaders can't see, and never mistakes pop psychology for the real thing.",
+    "name_zh": "組織心理學與團隊健康顧問",
+    "description_zh": "應用組織心理學專家，診斷團隊動態、心理安全感、職場倦怠風險與組織文化健康，運用實證框架協助領導者打造高績效且具韌性的組織。",
+    "description": "應用組織心理學專家，診斷團隊動態、心理安全感、職場倦怠風險與組織文化健康，運用實證框架協助領導者打造高績效且具韌性的組織。",
+    "vibe_zh": "像臨床醫師般診斷團隊功能失調——以同行評審的實證為依據，指出領導者未察覺的隱形盲點。",
+    "vibe": "像臨床醫師般診斷團隊功能失調——以同行評審的實證為依據，指出領導者未察覺的隱形盲點。",
     "name_en": "Organizational Psychologist",
     "description_en": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations.",
     "vibe_en": "Treats team dysfunction like a clinician reads symptoms — grounds every diagnosis and intervention in peer-reviewed evidence, names the invisible pattern leaders can't see, and never mistakes pop psychology for the real thing.",
     "file_path": "data\\agency-agents-repo\\specialized\\organizational-psychologist.md",
     "relative_file": "specialized/organizational-psychologist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🧠",
     "color": "teal",
@@ -6100,19 +6100,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Personal Growth Mentor",
-    "description_zh": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Systems over slogans. Clarity before action. Execution over inspiration.",
-    "vibe": "Systems over slogans. Clarity before action. Execution over inspiration.",
+    "name_zh": "個人成長與習慣策略導師",
+    "description_zh": "跨領域個人成長教練，專注於目標釐清、習慣建立、重大策略決策與執行當責，拒絕空泛心靈雞湯，落實具體行動成果。",
+    "description": "跨領域個人成長教練，專注於目標釐清、習慣建立、重大策略決策與執行當責，拒絕空泛心靈雞湯，落實具體行動成果。",
+    "vibe_zh": "系統重於口號，釐清先於行動，執行力勝過短暫的靈感。",
+    "vibe": "系統重於口號，釐清先於行動，執行力勝過短暫的靈感。",
     "name_en": "Personal Growth Mentor",
     "description_en": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff.",
     "vibe_en": "Systems over slogans. Clarity before action. Execution over inspiration.",
     "file_path": "data\\agency-agents-repo\\specialized\\personal-growth-mentor.md",
     "relative_file": "specialized/personal-growth-mentor.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🌱",
     "color": "teal",
@@ -6138,8 +6138,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-pricing-analyst.md",
     "relative_file": "specialized/specialized-pricing-analyst.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "💰",
     "color": "gold",
@@ -6154,19 +6154,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Real Estate Buyer & Seller",
-    "description_zh": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Every transaction is someone's biggest financial decision. Every client deserves an agent who is organized, responsive, and genuinely invested in their outcome — not just the commission check.",
-    "vibe": "Every transaction is someone's biggest financial decision. Every client deserves an agent who is organized, responsive, and genuinely invested in their outcome — not just the commission check.",
+    "name_zh": "不動產買賣與交易協調經紀人",
+    "description_zh": "房地產買賣專屬經紀人助理，協助買方/賣方代理、物件刊登管理、出價談判、交易流程協調與交屋過戶，提供世界級的置產體驗。",
+    "description": "房地產買賣專屬經紀人助理，協助買方/賣方代理、物件刊登管理、出價談判、交易流程協調與交屋過戶，提供世界級的置產體驗。",
+    "vibe_zh": "每筆不動產交易都是客戶人生中最重大的財務決策之一。始終以專業、迅速回應與客戶最佳利益為最高原則。",
+    "vibe": "每筆不動產交易都是客戶人生中最重大的財務決策之一。始終以專業、迅速回應與客戶最佳利益為最高原則。",
     "name_en": "Real Estate Buyer & Seller",
     "description_en": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate",
     "vibe_en": "Every transaction is someone's biggest financial decision. Every client deserves an agent who is organized, responsive, and genuinely invested in their outcome — not just the commission check.",
     "file_path": "data\\agency-agents-repo\\specialized\\real-estate-buyer-seller.md",
     "relative_file": "specialized/real-estate-buyer-seller.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🏠",
     "color": "teal",
@@ -6192,8 +6192,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\recruitment-specialist.md",
     "relative_file": "specialized/recruitment-specialist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🎯",
     "color": "blue",
@@ -6208,19 +6208,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Report Distribution Agent",
-    "description_zh": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters (專精於該領域的專業 AI 子代理專家)",
-    "description": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Automates delivery of consolidated sales reports to the right reps.",
-    "vibe": "Automates delivery of consolidated sales reports to the right reps.",
+    "name_zh": "業務報表自動分發代理",
+    "description_zh": "依據業務區域、團隊權限與排程參數，自動將統整後的銷售與營運報表精準分發給指定業務代表與主管。",
+    "description": "依據業務區域、團隊權限與排程參數，自動將統整後的銷售與營運報表精準分發給指定業務代表與主管。",
+    "vibe_zh": "在對的時間，將最關鍵的整合報表自動送達對的人手中。",
+    "vibe": "在對的時間，將最關鍵的整合報表自動送達對的人手中。",
     "name_en": "Report Distribution Agent",
     "description_en": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters",
     "vibe_en": "Automates delivery of consolidated sales reports to the right reps.",
     "file_path": "data\\agency-agents-repo\\specialized\\report-distribution-agent.md",
     "relative_file": "specialized/report-distribution-agent.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "📤",
     "color": "#d69e2e",
@@ -6235,19 +6235,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Resume Tailor",
-    "description_zh": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Tailors the resume to the role without tailoring the truth.",
-    "vibe": "Tailors the resume to the role without tailoring the truth.",
+    "name_zh": "求職履歷客製優化專家",
+    "description_zh": "求職者導向的履歷優化師，深度解析職缺描述 (JD)，將真實經驗對齊職位要求，提高 ATS 關鍵字匹配度，在不捏造資歷的前提下打磨亮點。",
+    "description": "求職者導向的履歷優化師，深度解析職缺描述 (JD)，將真實經驗對齊職位要求，提高 ATS 關鍵字匹配度，在不捏造資歷的前提下打磨亮點。",
+    "vibe_zh": "為職位量身打造最吸睛的履歷，絕不扭曲事實，只讓你的真實價值大放異彩。",
+    "vibe": "為職位量身打造最吸睛的履歷，絕不扭曲事實，只讓你的真實價值大放異彩。",
     "name_en": "Resume Tailor",
     "description_en": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications.",
     "vibe_en": "Tailors the resume to the role without tailoring the truth.",
     "file_path": "data\\agency-agents-repo\\specialized\\resume-tailor.md",
     "relative_file": "specialized/resume-tailor.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🧾",
     "color": "teal",
@@ -6262,19 +6262,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Retail Customer Returns",
-    "description_zh": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty (專精於該領域的專業 AI 子代理專家)",
-    "description": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "A return is not a failure — it's an opportunity. Handle it with speed, fairness, and genuine care, and you'll turn a disappointed customer into a loyal one.",
-    "vibe": "A return is not a failure — it's an opportunity. Handle it with speed, fairness, and genuine care, and you'll turn a disappointed customer into a loyal one.",
+    "name_zh": "零售退換貨與逆向物流專員",
+    "description_zh": "零售實體與全通路退換貨專員，處理退款流程、退貨政策執行、防範詐欺、顧客留存與逆向物流分析，在降低損失的同時維護品牌忠誠度。",
+    "description": "零售實體與全通路退換貨專員，處理退款流程、退貨政策執行、防範詐欺、顧客留存與逆向物流分析，在降低損失的同時維護品牌忠誠度。",
+    "vibe_zh": "退貨不是失敗，而是一次機會。以速度、公平與誠意妥善處理，失望的顧客也能轉化為忠實鐵粉。",
+    "vibe": "退貨不是失敗，而是一次機會。以速度、公平與誠意妥善處理，失望的顧客也能轉化為忠實鐵粉。",
     "name_en": "Retail Customer Returns",
     "description_en": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty",
     "vibe_en": "A return is not a failure — it's an opportunity. Handle it with speed, fairness, and genuine care, and you'll turn a disappointed customer into a loyal one.",
     "file_path": "data\\agency-agents-repo\\specialized\\retail-customer-returns.md",
     "relative_file": "specialized/retail-customer-returns.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🛒",
     "color": "amber",
@@ -6289,19 +6289,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Sales Data Extraction Agent",
-    "description_zh": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting (專精於該領域的專業 AI 子代理專家)",
-    "description": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Watches your Excel files and extracts the metrics that matter.",
-    "vibe": "Watches your Excel files and extracts the metrics that matter.",
+    "name_zh": "Excel 銷售數據提取與監控代理",
+    "description_zh": "專門監控各業務單位 Excel 試算表，自動提取關鍵銷售指標（當月 MTD、年初至今 YTD、全年度預估）以供即時營運分析。",
+    "description": "專門監控各業務單位 Excel 試算表，自動提取關鍵銷售指標（當月 MTD、年初至今 YTD、全年度預估）以供即時營運分析。",
+    "vibe_zh": "緊盯你的 Excel 檔案，精準提取最重要的營運與銷售數據。",
+    "vibe": "緊盯你的 Excel 檔案，精準提取最重要的營運與銷售數據。",
     "name_en": "Sales Data Extraction Agent",
     "description_en": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting",
     "vibe_en": "Watches your Excel files and extracts the metrics that matter.",
     "file_path": "data\\agency-agents-repo\\specialized\\sales-data-extraction-agent.md",
     "relative_file": "specialized/sales-data-extraction-agent.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "📊",
     "color": "#2b6cb0",
@@ -6327,8 +6327,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\sales-outreach.md",
     "relative_file": "specialized/sales-outreach.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🎯",
     "color": "amber",
@@ -6354,8 +6354,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-salesforce-architect.md",
     "relative_file": "specialized/specialized-salesforce-architect.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "☁️",
     "color": "#00A1E0",
@@ -6370,19 +6370,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Strategy Duel Agent",
-    "description_zh": "Conducts live strategy duels using game theory and the 36 Chinese stratagems (專精於該領域的專業 AI 子代理專家)",
-    "description": "Conducts live strategy duels using game theory and the 36 Chinese stratagems (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Orchestrates high-stakes, turn-based strategy battles with sharp analysis and memorable commentary",
-    "vibe": "Orchestrates high-stakes, turn-based strategy battles with sharp analysis and memorable commentary",
+    "name_zh": "博弈論與三十六計策略對決專家",
+    "description_zh": "運用現代博弈論與東方三十六計智慧，展開即時商業與戰略兵棋推演對決，提供辛辣深刻的局勢分析與決策點評。",
+    "description": "運用現代博弈論與東方三十六計智慧，展開即時商業與戰略兵棋推演對決，提供辛辣深刻的局勢分析與決策點評。",
+    "vibe_zh": "以回合制策略對決拆解高難度戰局，為複雜競爭情勢提供犀利的推演視角。",
+    "vibe": "以回合制策略對決拆解高難度戰局，為複雜競爭情勢提供犀利的推演視角。",
     "name_en": "Strategy Duel Agent",
     "description_en": "Conducts live strategy duels using game theory and the 36 Chinese stratagems",
     "vibe_en": "Orchestrates high-stakes, turn-based strategy battles with sharp analysis and memorable commentary",
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-strategy-duel-agent.md",
     "relative_file": "specialized/specialized-strategy-duel-agent.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "⚔️",
     "color": "#1e90ff",
@@ -6397,19 +6397,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "Study Abroad Advisor",
-    "description_zh": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Guides Chinese students through the entire study abroad journey — from school selection and essays to visas — with data-driven advice and zero anxiety selling.",
-    "vibe": "Guides Chinese students through the entire study abroad journey — from school selection and essays to visas — with data-driven advice and zero anxiety selling.",
+    "name_zh": "全方位留學申請與職涯規劃顧問",
+    "description_zh": "涵蓋美、英、加、澳、歐、港、星的留學專家，精通本碩博申請策略、落點選校、自傳文書編修、背景提升、標化考試規劃與海外生活適應。",
+    "description": "涵蓋美、英、加、澳、歐、港、星的留學專家，精通本碩博申請策略、落點選校、自傳文書編修、背景提升、標化考試規劃與海外生活適應。",
+    "vibe_zh": "以數據與實戰經驗引導學生走過留學申請的每一步——零焦慮行銷，全心專注於最適合的升學路徑。",
+    "vibe": "以數據與實戰經驗引導學生走過留學申請的每一步——零焦慮行銷，全心專注於最適合的升學路徑。",
     "name_en": "Study Abroad Advisor",
     "description_en": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans.",
     "vibe_en": "Guides Chinese students through the entire study abroad journey — from school selection and essays to visas — with data-driven advice and zero anxiety selling.",
     "file_path": "data\\agency-agents-repo\\specialized\\study-abroad-advisor.md",
     "relative_file": "specialized/study-abroad-advisor.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🎓",
     "color": "#1B4D3E",
@@ -6435,8 +6435,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\supply-chain-strategist.md",
     "relative_file": "specialized/supply-chain-strategist.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🔗",
     "color": "blue",
@@ -6462,8 +6462,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-workflow-architect.md",
     "relative_file": "specialized/specialized-workflow-architect.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🗺️",
     "color": "orange",
@@ -6478,19 +6478,19 @@
     "division_name_en": "Specialized",
     "division_icon": "Sparkles",
     "division_color": "#6366F1",
-    "name_zh": "ZK Steward",
-    "description_zh": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Channels Luhmann's Zettelkasten to build connected, validated knowledge bases.",
-    "vibe": "Channels Luhmann's Zettelkasten to build connected, validated knowledge bases.",
+    "name_zh": "卡片盒筆記法 (Zettelkasten) 知識管家",
+    "description_zh": "依循盧曼 (Niklas Luhmann) 卡片盒筆記法哲學打造之知識庫管家，落實原子筆記、雙向連結與知識驗證閉環，支援跨領域複雜決策思考。",
+    "description": "依循盧曼 (Niklas Luhmann) 卡片盒筆記法哲學打造之知識庫管家，落實原子筆記、雙向連結與知識驗證閉環，支援跨領域複雜決策思考。",
+    "vibe_zh": "化身盧曼的卡片盒思維，構建具備生命力、相互連結且經得起驗證的個人外腦知識庫。",
+    "vibe": "化身盧曼的卡片盒思維，構建具備生命力、相互連結且經得起驗證的個人外腦知識庫。",
     "name_en": "ZK Steward",
     "description_en": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support.",
     "vibe_en": "Channels Luhmann's Zettelkasten to build connected, validated knowledge bases.",
     "file_path": "data\\agency-agents-repo\\specialized\\zk-steward.md",
     "relative_file": "specialized/zk-steward.md",
     "tags": [
-      "Specialized",
-      "特殊專家與領域顧問"
+      "特殊專家與領域顧問",
+      "Specialized"
     ],
     "emoji": "🗃️",
     "color": "teal",
@@ -6505,11 +6505,11 @@
     "division_name_en": "Support",
     "division_icon": "LifeBuoy",
     "division_color": "#84CC16",
-    "name_zh": "Analytics Reporter",
-    "description_zh": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Transforms raw data into the insights that drive your next decision.",
-    "vibe": "Transforms raw data into the insights that drive your next decision.",
+    "name_zh": "營運數據分析與視覺化專家",
+    "description_zh": "將原始營運資料轉化為可執行的商業洞察，設計即時儀表板、執行統計分析、追蹤 KPI 指標並提供策略決策視覺化報告。",
+    "description": "將原始營運資料轉化為可執行的商業洞察，設計即時儀表板、執行統計分析、追蹤 KPI 指標並提供策略決策視覺化報告。",
+    "vibe_zh": "將冰冷的原始數據轉化為推動下一個關鍵決策的有力洞察。",
+    "vibe": "將冰冷的原始數據轉化為推動下一個關鍵決策的有力洞察。",
     "name_en": "Analytics Reporter",
     "description_en": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting.",
     "vibe_en": "Transforms raw data into the insights that drive your next decision.",
@@ -6532,11 +6532,11 @@
     "division_name_en": "Support",
     "division_icon": "LifeBuoy",
     "division_color": "#84CC16",
-    "name_zh": "Executive Summary Generator",
-    "description_zh": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Thinks like a McKinsey consultant, writes for the C-suite.",
-    "vibe": "Thinks like a McKinsey consultant, writes for the C-suite.",
+    "name_zh": "高階主管摘要與決策報告生成器",
+    "description_zh": "具備頂級顧問思維之 AI 專家，運用麥肯錫 SCQA、BCG 金字塔原理與 Bain 分析框架，將龐雜商業資訊濃縮為精煉的決策摘要。",
+    "description": "具備頂級顧問思維之 AI 專家，運用麥肯錫 SCQA、BCG 金字塔原理與 Bain 分析框架，將龐雜商業資訊濃縮為精煉的決策摘要。",
+    "vibe_zh": "以麥肯錫資深顧問的邏輯思考，寫出讓執行長與董事會一目了然的決策精華。",
+    "vibe": "以麥肯錫資深顧問的邏輯思考，寫出讓執行長與董事會一目了然的決策精華。",
     "name_en": "Executive Summary Generator",
     "description_en": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers.",
     "vibe_en": "Thinks like a McKinsey consultant, writes for the C-suite.",
@@ -6559,11 +6559,11 @@
     "division_name_en": "Support",
     "division_icon": "LifeBuoy",
     "division_color": "#84CC16",
-    "name_zh": "Finance Tracker",
-    "description_zh": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Keeps the books clean, the cash flowing, and the forecasts honest.",
-    "vibe": "Keeps the books clean, the cash flowing, and the forecasts honest.",
+    "name_zh": "財務追蹤與預算控制顧問",
+    "description_zh": "專精於財務規劃、預算管控、現金流優化與企業營運績效分析，守護企業財務健康並提供成長預測建議。",
+    "description": "專精於財務規劃、預算管控、現金流優化與企業營運績效分析，守護企業財務健康並提供成長預測建議。",
+    "vibe_zh": "維持清晰健全的帳目，確保現金流順暢，並給予最誠實可靠的財務預測。",
+    "vibe": "維持清晰健全的帳目，確保現金流順暢，並給予最誠實可靠的財務預測。",
     "name_en": "Finance Tracker",
     "description_en": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth.",
     "vibe_en": "Keeps the books clean, the cash flowing, and the forecasts honest.",
@@ -6586,11 +6586,11 @@
     "division_name_en": "Support",
     "division_icon": "LifeBuoy",
     "division_color": "#84CC16",
-    "name_zh": "Infrastructure Maintainer",
-    "description_zh": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Keeps the lights on, the servers humming, and the alerts quiet.",
-    "vibe": "Keeps the lights on, the servers humming, and the alerts quiet.",
+    "name_zh": "雲端基礎架構維運與可靠性專家",
+    "description_zh": "專注於系統高可用性、效能調優與營運架構管理，維護具備彈性、可擴展且成本效益卓越的雲端與地端運算環境。",
+    "description": "專注於系統高可用性、效能調優與營運架構管理，維護具備彈性、可擴展且成本效益卓越的雲端與地端運算環境。",
+    "vibe_zh": "確保伺服器穩定運轉、系統不中斷，並讓無效警報降到最低。",
+    "vibe": "確保伺服器穩定運轉、系統不中斷，並讓無效警報降到最低。",
     "name_en": "Infrastructure Maintainer",
     "description_en": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency.",
     "vibe_en": "Keeps the lights on, the servers humming, and the alerts quiet.",
@@ -6613,11 +6613,11 @@
     "division_name_en": "Support",
     "division_icon": "LifeBuoy",
     "division_color": "#84CC16",
-    "name_zh": "Legal Compliance Checker",
-    "description_zh": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Ensures your operations comply with the law across every jurisdiction that matters.",
-    "vibe": "Ensures your operations comply with the law across every jurisdiction that matters.",
+    "name_zh": "法律與法規合規性審查專員",
+    "description_zh": "跨司法管轄區的法律合規審查專家，確保企業營運、資料處理、商務合約與產出內容完全符合各國法規與產業安全標準。",
+    "description": "跨司法管轄區的法律合規審查專家，確保企業營運、資料處理、商務合約與產出內容完全符合各國法規與產業安全標準。",
+    "vibe_zh": "嚴格把關每一項營運環節，確保在所有關鍵市場均站穩合規防線。",
+    "vibe": "嚴格把關每一項營運環節，確保在所有關鍵市場均站穩合規防線。",
     "name_en": "Legal Compliance Checker",
     "description_en": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions.",
     "vibe_en": "Ensures your operations comply with the law across every jurisdiction that matters.",
@@ -6640,11 +6640,11 @@
     "division_name_en": "Support",
     "division_icon": "LifeBuoy",
     "division_color": "#84CC16",
-    "name_zh": "Support Responder",
-    "description_zh": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences. (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences. (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Turns frustrated users into loyal advocates, one interaction at a time.",
-    "vibe": "Turns frustrated users into loyal advocates, one interaction at a time.",
+    "name_zh": "全方位客戶支援與滿意度專家",
+    "description_zh": "專門提供多通路客戶支援、疑難排解與使用者體驗優化，將每次客戶反饋轉化為對品牌的信任與正面評價。",
+    "description": "專門提供多通路客戶支援、疑難排解與使用者體驗優化，將每次客戶反饋轉化為對品牌的信任與正面評價。",
+    "vibe_zh": "在每次溝通中解決問題，將受挫的使用者轉化為最忠實的品牌擁護者。",
+    "vibe": "在每次溝通中解決問題，將受挫的使用者轉化為最忠實的品牌擁護者。",
     "name_en": "Support Responder",
     "description_en": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences.",
     "vibe_en": "Turns frustrated users into loyal advocates, one interaction at a time.",
@@ -6667,20 +6667,20 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "API Tester",
-    "description_zh": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Breaks your API before your users do.",
-    "vibe": "Breaks your API before your users do.",
+    "name_zh": "API 介面自動化測試工程師",
+    "description_zh": "API 驗證與介面效能專家，專注於端點功能測試、負載壓力評估、邊界條件校驗與第三方整合介面的品質防線。",
+    "description": "API 驗證與介面效能專家，專注於端點功能測試、負載壓力評估、邊界條件校驗與第三方整合介面的品質防線。",
+    "vibe_zh": "在使用者遇到問題之前，先替你找出 API 中的每一個脆弱環節。",
+    "vibe": "在使用者遇到問題之前，先替你找出 API 中的每一個脆弱環節。",
     "name_en": "API Tester",
     "description_en": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations",
     "vibe_en": "Breaks your API before your users do.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-api-tester.md",
     "relative_file": "testing/testing-api-tester.md",
     "tags": [
-      "Backend",
+      "Testing",
       "測試與品質保證 (QA)",
-      "Testing"
+      "Backend"
     ],
     "emoji": "🔌",
     "color": "purple",
@@ -6706,8 +6706,8 @@
     "file_path": "data\\agency-agents-repo\\testing\\testing-accessibility-auditor.md",
     "relative_file": "testing/testing-accessibility-auditor.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "♿",
     "color": "#0077B6",
@@ -6722,19 +6722,19 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "Evidence Collector",
-    "description_zh": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything (專精於該領域的專業 AI 子代理專家)",
-    "description": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Screenshot-obsessed QA who won't approve anything without visual proof.",
-    "vibe": "Screenshot-obsessed QA who won't approve anything without visual proof.",
+    "name_zh": "視覺證據與驗收測試專家",
+    "description_zh": "以視覺截圖為依據的嚴格 QA 專家，拒絕空泛通過，預設找出 3~5 個潛在瑕疵，為所有功能驗收提供確鑿的視覺與執行證據。",
+    "description": "以視覺截圖為依據的嚴格 QA 專家，拒絕空泛通過，預設找出 3~5 個潛在瑕疵，為所有功能驗收提供確鑿的視覺與執行證據。",
+    "vibe_zh": "沒有截圖與日誌證明就不算完成——只對有憑有據的品質點頭。",
+    "vibe": "沒有截圖與日誌證明就不算完成——只對有憑有據的品質點頭。",
     "name_en": "Evidence Collector",
     "description_en": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything",
     "vibe_en": "Screenshot-obsessed QA who won't approve anything without visual proof.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-evidence-collector.md",
     "relative_file": "testing/testing-evidence-collector.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "📸",
     "color": "orange",
@@ -6749,19 +6749,19 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "Performance Benchmarker",
-    "description_zh": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Measures everything, optimizes what matters, and proves the improvement.",
-    "vibe": "Measures everything, optimizes what matters, and proves the improvement.",
+    "name_zh": "系統效能基準評測與優化專家",
+    "description_zh": "專門衡量、分析並提升應用程式與底層架構的效能表現，執行壓力測試、延遲分析與資源瓶頸診斷。",
+    "description": "專門衡量、分析並提升應用程式與底層架構的效能表現，執行壓力測試、延遲分析與資源瓶頸診斷。",
+    "vibe_zh": "量測所有關鍵指標，優化真正重要的瓶頸，並用數據證明改善成效。",
+    "vibe": "量測所有關鍵指標，優化真正重要的瓶頸，並用數據證明改善成效。",
     "name_en": "Performance Benchmarker",
     "description_en": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure",
     "vibe_en": "Measures everything, optimizes what matters, and proves the improvement.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-performance-benchmarker.md",
     "relative_file": "testing/testing-performance-benchmarker.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "⏱️",
     "color": "orange",
@@ -6776,19 +6776,19 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "Reality Checker",
-    "description_zh": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness (專精於該領域的專業 AI 子代理專家)",
-    "description": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Defaults to \"NEEDS WORK\" — requires overwhelming proof for production readiness.",
-    "vibe": "Defaults to \"NEEDS WORK\" — requires overwhelming proof for production readiness.",
+    "name_zh": "上線門檻與實際上線驗收審查官",
+    "description_zh": "專門阻止盲目上線的最終品質守門員，預設維持「仍需修改 (NEEDS WORK)」標準，要求提供充分證據才允許部署至生產環境。",
+    "description": "專門阻止盲目上線的最終品質守門員，預設維持「仍需修改 (NEEDS WORK)」標準，要求提供充分證據才允許部署至生產環境。",
+    "vibe_zh": "預設保持懷疑態度——唯有經過壓倒性測試證明的代碼才配得上生產環境。",
+    "vibe": "預設保持懷疑態度——唯有經過壓倒性測試證明的代碼才配得上生產環境。",
     "name_en": "Reality Checker",
     "description_en": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness",
     "vibe_en": "Defaults to \"NEEDS WORK\" — requires overwhelming proof for production readiness.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-reality-checker.md",
     "relative_file": "testing/testing-reality-checker.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "🧐",
     "color": "red",
@@ -6814,8 +6814,8 @@
     "file_path": "data\\agency-agents-repo\\testing\\testing-test-automation-engineer.md",
     "relative_file": "testing/testing-test-automation-engineer.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "🎭",
     "color": "#2EAD33",
@@ -6830,19 +6830,19 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "Test Results Analyzer",
-    "description_zh": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Reads test results like a detective reads evidence — nothing gets past.",
-    "vibe": "Reads test results like a detective reads evidence — nothing gets past.",
+    "name_zh": "測試結果深度分析與品質洞察師",
+    "description_zh": "評估各項測試結果數據，分析品質指標分佈，從測試覆蓋率、錯誤日誌與回歸測試中提煉出可行的修復方針。",
+    "description": "評估各項測試結果數據，分析品質指標分佈，從測試覆蓋率、錯誤日誌與回歸測試中提煉出可行的修復方針。",
+    "vibe_zh": "像偵探解讀線索般剖析測試報告——不放過任何隱藏的系統弱點。",
+    "vibe": "像偵探解讀線索般剖析測試報告——不放過任何隱藏的系統弱點。",
     "name_en": "Test Results Analyzer",
     "description_en": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities",
     "vibe_en": "Reads test results like a detective reads evidence — nothing gets past.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-test-results-analyzer.md",
     "relative_file": "testing/testing-test-results-analyzer.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "📋",
     "color": "indigo",
@@ -6857,19 +6857,19 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "Tool Evaluator",
-    "description_zh": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Tests and recommends the right tools so your team doesn't waste time on the wrong ones.",
-    "vibe": "Tests and recommends the right tools so your team doesn't waste time on the wrong ones.",
+    "name_zh": "技術工具與軟體選型評估專家",
+    "description_zh": "評估、測試並推薦最合適的軟體工具與開發平台，協助團隊提升生產力並避免在不合適的工具上浪費資源。",
+    "description": "評估、測試並推薦最合適的軟體工具與開發平台，協助團隊提升生產力並避免在不合適的工具上浪費資源。",
+    "vibe_zh": "嚴謹測試並推薦最適工具，讓團隊不再把寶貴時間浪費在錯誤的技術選型上。",
+    "vibe": "嚴謹測試並推薦最適工具，讓團隊不再把寶貴時間浪費在錯誤的技術選型上。",
     "name_en": "Tool Evaluator",
     "description_en": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization",
     "vibe_en": "Tests and recommends the right tools so your team doesn't waste time on the wrong ones.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-tool-evaluator.md",
     "relative_file": "testing/testing-tool-evaluator.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "🔧",
     "color": "teal",
@@ -6884,19 +6884,19 @@
     "division_name_en": "Testing",
     "division_icon": "FlaskConical",
     "division_color": "#F59E0B",
-    "name_zh": "Workflow Optimizer",
-    "description_zh": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency (專精於該領域的專業 AI 子代理專家)",
-    "description": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency (專精於該領域的專業 AI 子代理專家)",
-    "vibe_zh": "Finds the bottleneck, fixes the process, automates the rest.",
-    "vibe": "Finds the bottleneck, fixes the process, automates the rest.",
+    "name_zh": "開發與維運工作流程優化師",
+    "description_zh": "分析、簡化並自動化跨部門業務與開發工作流程，消除溝通阻礙與手動瓶頸，實現生產力最大化。",
+    "description": "分析、簡化並自動化跨部門業務與開發工作流程，消除溝通阻礙與手動瓶頸，實現生產力最大化。",
+    "vibe_zh": "找出瓶頸、重塑流程、將重複作業全面自動化。",
+    "vibe": "找出瓶頸、重塑流程、將重複作業全面自動化。",
     "name_en": "Workflow Optimizer",
     "description_en": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency",
     "vibe_en": "Finds the bottleneck, fixes the process, automates the rest.",
     "file_path": "data\\agency-agents-repo\\testing\\testing-workflow-optimizer.md",
     "relative_file": "testing/testing-workflow-optimizer.md",
     "tags": [
-      "測試與品質保證 (QA)",
-      "Testing"
+      "Testing",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "⚡",
     "color": "green",

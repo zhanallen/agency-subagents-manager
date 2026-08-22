@@ -156,7 +156,7 @@ async function loadAgents() {
   try {
     const params = new URLSearchParams({
       query: '',
-      division: state.currentDivision,
+      division: 'all',
       target_type: state.targetType,
       filter_status: 'all'
     });
