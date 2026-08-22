@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agency Subagents 2.0 - 專家子代理與協作規範管理器</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Marked.js (Markdown 解析器) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-[#09090b] text-zinc-100 min-h-screen flex flex-col font-sans transition-colors duration-200 antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+
+  <!-- 頂部簡約導航列 (Minimalist TopNav) -->
+  <header class="sticky top-0 z-40 bg-[#09090b]/80 backdrop-blur-xl border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
+      
+      <!-- 左側：Logo + 麵包屑專案切換器 -->
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-lg shadow-sm shadow-indigo-500/20">
+            🎭
+          </div>
+          <span class="font-bold text-sm tracking-tight text-white hidden sm:inline">Agency Subagents</span>
+        </div>
+
+        <span class="text-zinc-600 font-light hidden sm:inline">/</span>
+
+        <!-- 專案切換下拉選單 (Breadcrumb Project Picker) -->
+        <div class="relative min-w-0" id="project-picker-wrapper">
+          <button onclick="toggleProjectDropdown()" class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-900/80 hover:bg-zinc-800 border border-white/[0.06] hover:border-white/[0.12] text-xs text-zinc-300 transition max-w-[220px]">
+            <i data-lucide="folder-git-2" class="w-3.5 h-3.5 text-indigo-400 flex-shrink-0"></i>
+            <span id="current-project-name" class="font-mono font-medium text-zinc-200 truncate">流程管理</span>
+            <i data-lucide="chevron-down" class="w-3 h-3 text-zinc-500 flex-shrink-0"></i>
+          </button>
+
+          <!-- 展開之最近專案選單 -->
+          <div id="project-dropdown-menu" class="hidden absolute left-0 mt-1.5 w-80 rounded-xl bg-zinc-900 border border-white/[0.08] shadow-2xl p-2 z-50 animate-in fade-in zoom-in-95">
+            <div class="px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-400 flex items-center justify-between">
+              <span>最近使用專案</span>
+              <span class="text-zinc-500 font-mono">MRU</span>
+            </div>
+            <div id="recent-projects-list" class="flex flex-col gap-0.5 max-h-48 overflow-y-auto custom-scroll my-1">
+              <!-- 動態插入最近專案 -->
+            </div>
+            <div class="pt-1.5 border-t border-white/[0.06]">
+              <button onclick="browseProjectFolder()" class="w-full text-xs py-1.5 rounded-lg bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-300 font-medium flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="folder-plus" class="w-3.5 h-3.5"></i>
+                <span>瀏覽選擇其他專案...</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：簡約數據膠囊 + 輕量功能按鈕群 -->
+      <div class="flex items-center gap-2">
+        
+        <!-- 簡約統計膠囊 -->
+        <div class="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 border border-white/[0.06] text-xs text-zinc-400">
+          <span id="total-count-badge" class="font-mono font-semibold text-zinc-200">0</span>
+          <span>位專家</span>
+          <span class="text-zinc-600">·</span>
+          <span id="installed-count-badge" class="font-mono font-semibold text-emerald-400">0</span>
+          <span>已安裝</span>
+        </div>
+
+        <!-- 協作 Rule 狀態呼吸燈按鈕 -->
+        <button onclick="openRuleModal()" id="btn-top-rule-status" class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-white/[0.06] text-xs font-medium text-zinc-300 transition" title="Subagent 專家協作規範 (Loop Engineering Rule)">
+          <span id="top-rule-indicator" class="w-2 h-2 rounded-full bg-zinc-500"></span>
+          <span class="hidden sm:inline">協作 Rule</span>
+        </button>
+
+        <!-- 輕量 Icon 按鈕群 -->
+        <div class="flex items-center gap-1 pl-1 border-l border-white/[0.06]">
+          <!-- 專家套裝 -->
+          <button onclick="openPresetModal()" class="p-1.5 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" title="推薦專家組合套裝">
+            <i data-lucide="package" class="w-4 h-4"></i>
+          </button>
+          <!-- 匯出/匯入 -->
+          <button onclick="openBundleModal()" class="p-1.5 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" title="專案配置匯出 / 匯入">
+            <i data-lucide="arrow-up-down" class="w-4 h-4"></i>
+          </button>
+          <!-- 新手指南 -->
+          <button onclick="openGuideModal()" class="p-1.5 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" title="使用說明與 Antigravity 指南">
+            <i data-lucide="help-circle" class="w-4 h-4"></i>
+          </button>
+          <!-- 同步官方 -->
+          <button id="btn-sync-github" onclick="syncGithub()" class="p-1.5 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" title="同步官方最新 Agent">
+            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+          </button>
+          <!-- 主題切換 -->
+          <button onclick="toggleTheme()" class="p-1.5 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition" title="切換深色 / 淺色主題">
+            <i id="theme-icon" data-lucide="sun" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 主版面容器 (Main Layout) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 flex flex-col md:flex-row gap-8 w-full">
+    
+    <!-- 左側邊欄：無框簡潔分區 (Borderless Minimalist Sidebar) -->
+    <aside class="w-full md:w-60 flex-shrink-0 flex flex-col gap-6 text-zinc-300">
+      
+      <!-- 區塊 1: 協作工作流規範 (Rule) -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between text-[11px] font-semibold uppercase tracking-wider text-zinc-400 px-1">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-indigo-400"></i>
+            協作規範 (Rule)
+          </span>
+          <span id="sidebar-rule-badge" class="text-[10px] text-zinc-500 font-mono">未啟用</span>
+        </div>
+        
+        <div class="p-3 rounded-xl bg-[#121215] border border-white/[0.06] space-y-2">
+          <p class="text-[11px] text-zinc-400 leading-snug">
+            強制 Main Agent 透過 5 階段閉環工程 (Loop Engineering) 先行諮詢並測試。
+          </p>
+          <div class="flex items-center gap-1.5 pt-0.5">
+            <button id="btn-sidebar-rule-action" onclick="toggleQuickRuleInstall()" class="flex-1 py-1 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition flex items-center justify-center gap-1 shadow-sm">
+              <i data-lucide="sparkles" class="w-3 h-3"></i>
+              <span id="btn-sidebar-rule-text">一鍵啟用 Rule</span>
+            </button>
+            <button onclick="openRuleModal()" class="p-1 rounded-lg bg-zinc-800/80 hover:bg-zinc-700 text-zinc-400 hover:text-zinc-200 transition" title="預覽規範內容">
+              <i data-lucide="settings" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 區塊 2: 安裝目標與平台 -->
+      <div class="space-y-2">
+        <div class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 px-1 flex items-center gap-1.5">
+          <i data-lucide="folder-cog" class="w-3.5 h-3.5 text-indigo-400"></i>
+          安裝目標
+        </div>
+        <select id="select-destination" onchange="onDestinationChange()" class="w-full text-xs bg-[#121215] border border-white/[0.08] rounded-xl px-2.5 py-2 text-zinc-200 focus:outline-none focus:border-indigo-500/60 font-medium">
+          <option value="antigravity_project">Antigravity 專案 Subagent (.agents/agents)</option>
+          <option value="antigravity_global">Antigravity 全域 Subagent (~/.gemini/config/agents)</option>
+          <option value="claude_code">Claude Code 全域 (~/.claude/agents)</option>
+          <option value="cursor">Cursor Rules 專案規則 (.cursor/rules)</option>
+          <option value="opencode">OpenCode 專案 Agent (.opencode/agents)</option>
+          <option value="qwen">Qwen Code 全域 (~/.qwen/agents)</option>
+          <option value="codex">Codex 自訂 Agent (~/.codex/agents)</option>
+          <option value="custom">自訂目錄 (Custom Path)</option>
+        </select>
+
+        <!-- 專案路徑容器 -->
+        <div id="project-path-container" class="flex flex-col gap-1.5 p-2 rounded-xl bg-[#121215]/60 border border-white/[0.04]">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-medium text-zinc-400">專案目錄：</span>
+            <button onclick="browseProjectFolder()" class="text-[10px] text-indigo-400 hover:text-indigo-300 flex items-center gap-0.5">
+              <i data-lucide="folder-open" class="w-3 h-3"></i> 瀏覽
+            </button>
+          </div>
+          <input 
+            id="input-project-path" 
+            type="text" 
+            placeholder="專案資料夾路徑..." 
+            onchange="onManualProjectPathChange()"
+            class="text-[11px] bg-zinc-950 border border-white/[0.06] rounded-lg px-2 py-1 text-zinc-300 focus:outline-none focus:border-indigo-500 font-mono truncate" 
+          />
+        </div>
+        
+        <!-- 自訂路徑容器 -->
+        <div id="custom-path-container" class="hidden flex-col gap-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-medium text-zinc-400">自訂安裝路徑：</span>
+            <button onclick="browseCustomFolder()" class="text-[10px] text-indigo-400 hover:text-indigo-300 flex items-center gap-0.5">
+              <i data-lucide="folder-open" class="w-3 h-3"></i> 選擇
+            </button>
+          </div>
+          <input id="input-custom-path" type="text" placeholder="本機絕對路徑..." class="text-[11px] bg-zinc-950 border border-white/[0.06] rounded-lg px-2 py-1 text-zinc-300 font-mono" />
+          <button onclick="applyCustomPath()" class="text-[11px] py-1 bg-indigo-600/80 hover:bg-indigo-600 text-white rounded-lg transition font-medium">套用自訂路徑</button>
+        </div>
+
+        <div class="text-[10px] font-mono text-zinc-400 break-all px-1" id="dest-path-hint">
+          .agents/agents/
+        </div>
+      </div>
+
+      <!-- 區塊 3: 專家分類導航 -->
+      <div class="space-y-1.5 flex-1">
+        <div class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 px-1 mb-1 flex items-center justify-between">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-400"></i>
+            部門分類
+          </span>
+        </div>
+        
+        <div id="divisions-list" class="space-y-0.5 max-h-[460px] overflow-y-auto custom-scroll pr-1">
+          <!-- 全部部門 -->
+          <button onclick="selectDivision('all')" id="div-btn-all" class="div-tab active-div-tab w-full flex items-center justify-between px-2.5 py-1.5 text-xs font-medium transition">
+            <span class="flex items-center gap-2">
+              <i data-lucide="grid" class="w-3.5 h-3.5 text-indigo-400"></i>
+              全部部門專家
+            </span>
+            <span id="div-count-all" class="px-1.5 py-0.2 rounded-full bg-white/[0.06] text-[10px] text-zinc-400 font-mono">0</span>
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- 右側專家展示主區 (Main Content Section) -->
+    <section class="flex-1 flex flex-col gap-5 min-w-0">
+      
+      <!-- 精簡控制列 (Clean Unified Toolbar) -->
+      <div class="flex flex-col gap-3">
+        
+        <!-- 第一排：搜尋列 + 分段控制器 + 排序 -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+          
+          <!-- 寬敞搜尋框 -->
+          <div class="relative flex-1 group">
+            <i data-lucide="search" class="w-4 h-4 text-zinc-500 absolute left-3.5 top-1/2 -translate-y-1/2 group-focus-within:text-indigo-400 transition-colors"></i>
+            <input 
+              id="search-input" 
+              type="text" 
+              placeholder="搜尋專家名稱、關鍵字、技術或 Vibe..." 
+              oninput="debounceSearch()" 
+              class="w-full pl-9 pr-16 py-2 rounded-xl bg-[#121215] border border-white/[0.08] text-xs sm:text-sm text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/20 transition font-medium"
+            />
+            <div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1">
+              <button id="btn-clear-search" onclick="clearSearch()" class="hidden p-0.5 rounded text-zinc-500 hover:text-white" title="清除搜尋">
+                <i data-lucide="x" class="w-3.5 h-3.5"></i>
+              </button>
+              <kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[9px] font-mono text-zinc-400 bg-zinc-800/80 border border-white/[0.06] rounded">
+                Ctrl K
+              </kbd>
+            </div>
+          </div>
+
+          <!-- 分段控制器 (Segmented Control Filter) -->
+          <div class="flex items-center gap-2.5 flex-wrap justify-between lg:justify-end">
+            <div class="segmented-control">
+              <div onclick="setStatusFilter('all')" id="status-filter-all" class="segmented-item active">
+                <span>全部</span>
+                <span id="pill-count-all" class="segmented-badge">0</span>
+              </div>
+              <div onclick="setStatusFilter('installed')" id="status-filter-installed" class="segmented-item">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>已安裝</span>
+                <span id="pill-count-installed" class="segmented-badge">0</span>
+              </div>
+              <div onclick="setStatusFilter('favorites')" id="status-filter-favorites" class="segmented-item">
+                <span class="text-amber-400">⭐</span>
+                <span>收藏</span>
+                <span id="pill-count-favorites" class="segmented-badge">0</span>
+              </div>
+            </div>
+
+            <!-- 排序選單 -->
+            <div class="relative">
+              <select 
+                id="sort-select" 
+                onchange="onSortChange(this.value)" 
+                class="appearance-none text-xs bg-[#121215] border border-white/[0.08] rounded-xl pl-3 pr-7 py-2 text-zinc-300 focus:outline-none focus:border-indigo-500/60 font-medium cursor-pointer hover:border-white/[0.14] transition"
+              >
+                <option value="favorite_first">⭐ 收藏優先</option>
+                <option value="installed_first">🟢 已安裝優先</option>
+                <option value="name_asc">🔤 名稱 (A-Z)</option>
+                <option value="division">📂 部門分類</option>
+              </select>
+              <i data-lucide="chevron-down" class="w-3 h-3 text-zinc-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 第二排：熱門領域標籤晶片 (Tag Chips Carousel) -->
+        <div class="flex items-center gap-1.5 overflow-x-auto py-0.5 custom-scroll">
+          <span class="text-[10px] uppercase font-semibold text-zinc-400 flex-shrink-0">標籤：</span>
+          <button onclick="setTagFilter('')" class="tag-chip active-tag-chip" id="tag-chip-all">全部</button>
+          <button onclick="setTagFilter('Frontend')" class="tag-chip" id="tag-chip-Frontend">#前端開發</button>
+          <button onclick="setTagFilter('Backend')" class="tag-chip" id="tag-chip-Backend">#後端架構</button>
+          <button onclick="setTagFilter('Security')" class="tag-chip" id="tag-chip-Security">#資安防護</button>
+          <button onclick="setTagFilter('Testing')" class="tag-chip" id="tag-chip-Testing">#測試與QA</button>
+          <button onclick="setTagFilter('Design')" class="tag-chip" id="tag-chip-Design">#UI/UX設計</button>
+          <button onclick="setTagFilter('Product')" class="tag-chip" id="tag-chip-Product">#產品管理</button>
+          <button onclick="setTagFilter('Marketing')" class="tag-chip" id="tag-chip-Marketing">#行銷增長</button>
+          <div class="ml-auto text-[11px] text-zinc-400 font-mono whitespace-nowrap pl-2">
+            共 <span id="filtered-count-badge" class="font-bold text-zinc-300">0</span> 位
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 專家卡片列表 Grid (寬敞通透排版) -->
+      <div id="agents-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <!-- 卡片由 JS 動態生成 -->
+      </div>
+
+      <!-- 空狀態 -->
+      <div id="empty-state" class="hidden py-16 px-6 flex flex-col items-center justify-center text-center gap-3 bg-[#121215]/50 border border-dashed border-white/[0.08] rounded-2xl animate-in fade-in duration-300">
+        <div class="w-12 h-12 rounded-xl bg-zinc-800/80 flex items-center justify-center text-2xl">
+          🔭
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-sm font-semibold text-zinc-300">查無符合條件的專家</h3>
+          <p class="text-xs text-zinc-500 max-w-sm">
+            找不到符合關鍵字或篩選條件的專家。
+          </p>
+        </div>
+        <button onclick="resetAllFilters()" class="px-3.5 py-1.5 rounded-lg bg-indigo-600/15 hover:bg-indigo-600/25 text-indigo-300 border border-indigo-500/25 text-xs font-medium transition flex items-center gap-1.5">
+          <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+          <span>重設所有篩選條件</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- 浮動批次操作 Dock (Floating Batch Dock) -->
+  <div id="floating-batch-dock" class="floating-batch-dock flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-zinc-900/95 border border-zinc-700/80 shadow-2xl backdrop-blur-xl">
+    <div class="flex items-center gap-2 text-xs font-medium text-zinc-200">
+      <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+      <span>已選取 <strong id="dock-selected-count" class="text-indigo-400 font-mono">0</strong> 位專家</span>
+    </div>
+    <div class="h-4 w-px bg-zinc-700"></div>
+    <div class="flex items-center gap-2">
+      <button onclick="installSelected()" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition flex items-center gap-1.5 shadow-sm">
+        <i data-lucide="download" class="w-3.5 h-3.5"></i> 批次安裝
+      </button>
+      <button onclick="uninstallSelected()" class="px-3 py-1.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-600/30 text-xs font-medium transition flex items-center gap-1.5">
+        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> 批次卸載
+      </button>
+      <button onclick="toggleSelectAll(false)" class="p-1.5 rounded-lg text-zinc-400 hover:text-white transition" title="取消選取">
+        <i data-lucide="x" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 專家詳情視窗 (Detail Modal) - 三分頁升級版 -->
+  <div id="detail-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all duration-300">
+    <div class="bg-[#121215] border border-white/[0.08] rounded-2xl w-full max-w-3xl max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-5 sm:p-6 border-b border-white/[0.06] flex items-start justify-between gap-4 bg-zinc-950/40">
+        <div class="flex items-center gap-4 min-w-0">
+          <div id="modal-emoji" class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-white/[0.08] flex items-center justify-center text-3xl shadow-sm flex-shrink-0">
+            🤖
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2.5 flex-wrap">
+              <h2 id="modal-name-zh" class="text-lg sm:text-xl font-bold text-white tracking-tight break-words">前端開發工程師</h2>
+              <span id="modal-division-badge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/15 text-indigo-300 border border-indigo-500/20">軟體與系統工程</span>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <p id="modal-name-en" class="text-xs text-zinc-400 font-mono break-all">engineering-frontend-developer</p>
+              <button onclick="copyCurrentModalSlug()" class="text-zinc-500 hover:text-indigo-300 text-xs flex items-center gap-0.5 flex-shrink-0" title="複製 @slug">
+                <i data-lucide="copy" class="w-3 h-3"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 收藏與關閉按鈕 -->
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <button id="modal-favorite-btn" onclick="toggleModalFavorite()" class="p-2 rounded-lg bg-zinc-800/60 hover:bg-zinc-700 text-zinc-400 hover:text-amber-400 transition" title="收藏">
+            <i data-lucide="star" class="w-4 h-4"></i>
+          </button>
+          <button onclick="closeDetailModal()" class="p-2 rounded-lg bg-zinc-800/60 hover:bg-zinc-700 text-zinc-400 hover:text-white transition" title="關閉 (ESC)">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 導航列 -->
+      <div class="px-6 border-b border-white/[0.06] bg-zinc-950/20 flex items-center gap-2 text-xs font-medium">
+        <button onclick="switchModalTab('overview')" id="modal-tab-overview" class="modal-tab active-modal-tab">
+          <i data-lucide="layout" class="w-3.5 h-3.5"></i>
+          <span>角色總覽 (Overview)</span>
+        </button>
+        <button onclick="switchModalTab('prompt')" id="modal-tab-prompt" class="modal-tab">
+          <i data-lucide="file-code" class="w-3.5 h-3.5"></i>
+          <span>完整系統提示詞 (Persona)</span>
+        </button>
+        <button onclick="switchModalTab('usage')" id="modal-tab-usage" class="modal-tab">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>呼叫教學與範例 (Usage)</span>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 flex-1 overflow-y-auto space-y-5 text-xs sm:text-sm custom-scroll bg-[#121215]/50">
+        
+        <!-- Tab 1: 角色總覽 -->
+        <div id="tab-content-overview" class="space-y-4">
+          <div class="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] space-y-2">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400">職責與使命</h3>
+            <p id="modal-description" class="text-zinc-200 leading-relaxed"></p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] space-y-2">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1">
+              <span>✨</span>
+              <span>特色 Vibe</span>
+            </h3>
+            <p id="modal-vibe" class="text-zinc-300 italic"></p>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400">領域標籤</h3>
+            <div id="modal-tags-container" class="flex flex-wrap gap-1.5"></div>
+          </div>
+        </div>
+
+        <!-- Tab 2: 完整提示詞 -->
+        <div id="tab-content-prompt" class="hidden space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-zinc-400">Antigravity / Claude 原生 Markdown 提示詞</span>
+            <button onclick="copyFullPrompt()" class="px-3 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-medium transition flex items-center gap-1">
+              <i data-lucide="copy" class="w-3 h-3"></i> 複製完整提示詞
+            </button>
+          </div>
+          <div id="modal-markdown-content" class="prose prose-invert max-w-none text-xs sm:text-sm font-sans leading-relaxed"></div>
+        </div>
+
+        <!-- Tab 3: 呼叫教學 -->
+        <div id="tab-content-usage" class="hidden space-y-4">
+          <div class="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-indigo-300 flex items-center gap-1.5">
+                <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                Antigravity 對話呼叫語法
+              </span>
+              <button onclick="copyUsageSnippet('usage-code-agy')" class="text-[11px] text-zinc-400 hover:text-white flex items-center gap-1">
+                <i data-lucide="copy" class="w-3 h-3"></i> 複製
+              </button>
+            </div>
+            <pre class="p-3 bg-zinc-900 rounded-xl text-zinc-200 font-mono text-xs border border-white/[0.06] overflow-x-auto"><code id="usage-code-agy">@agent-slug 請協助完成此模組的設計與實作，並執行完整測試驗證。</code></pre>
+          </div>
+
+          <div class="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-300 flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                Claude Code / OpenCode 子代理呼叫
+              </span>
+              <button onclick="copyUsageSnippet('usage-code-claude')" class="text-[11px] text-zinc-400 hover:text-white flex items-center gap-1">
+                <i data-lucide="copy" class="w-3 h-3"></i> 複製
+              </button>
+            </div>
+            <pre class="p-3 bg-zinc-900 rounded-xl text-zinc-200 font-mono text-xs border border-white/[0.06] overflow-x-auto"><code id="usage-code-claude">/subagent agent-slug Please analyze this requirement and provide implementation code.</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-5 border-t border-white/[0.06] bg-zinc-950/60 backdrop-blur flex items-center justify-between gap-3">
+        <div id="modal-status-badge" class="flex items-center gap-2 text-xs">
+          <span class="w-2 h-2 rounded-full bg-zinc-500"></span>
+          <span class="text-zinc-400 font-medium">尚未安裝</span>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <button onclick="copyCurrentModalSlug()" class="px-3.5 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-mono transition flex items-center gap-1.5">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span>複製 @指令</span>
+          </button>
+          <button id="modal-action-btn" onclick="toggleModalAgentInstall()" class="flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>一鍵安裝為 Subagent</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Subagent 協作工作流規範 (Rule) Modal -->
+  <div id="rule-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all">
+    <div class="bg-[#121215] border border-white/[0.08] rounded-2xl w-full max-w-3xl max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
+      
+      <div class="p-5 sm:p-6 border-b border-white/[0.06] flex items-start justify-between gap-4 bg-zinc-950/40">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-xl text-indigo-400">
+            🛡️
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">Subagent Loop Engineering 協作規範 (Rule)</h2>
+            <p class="text-xs text-zinc-400 mt-0.5">英文高密度規範 · 強制諮詢先行 · 自動化測試閉環反饋</p>
+          </div>
+        </div>
+        <button onclick="closeRuleModal()" class="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 flex-1 overflow-y-auto space-y-4 text-xs sm:text-sm custom-scroll">
+        <div class="p-3.5 rounded-xl bg-indigo-950/30 border border-indigo-900/40 text-indigo-200 text-xs flex items-start gap-2.5">
+          <i data-lucide="info" class="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <strong>為什麼採用英文 Loop Engineering 規範？</strong><br>
+            英文語料密度高，相較中文可為每次互動**節省 60%~70% Token**；同時英文控制動詞具有最高約束力，確保 Main Agent 遵循「諮詢 ➔ 委派 ➔ 測試 ➔ 迭代閉環」之原則。
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-400">規範檔案即時內容預覽</h3>
+            <span id="rule-file-path-badge" class="text-[11px] font-mono text-zinc-500">.agents/rules/subagent-collaboration.md</span>
+          </div>
+          <div id="rule-preview-content" class="prose prose-invert max-w-none bg-zinc-950 p-4 rounded-xl border border-white/[0.06] font-mono text-xs"></div>
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-5 border-t border-white/[0.06] bg-zinc-950/60 flex items-center justify-between">
+        <div id="modal-rule-status" class="flex items-center gap-2 text-xs">
+          <span class="w-2 h-2 rounded-full bg-zinc-500"></span>
+          <span class="text-zinc-400 font-medium">尚未安裝</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="closeRuleModal()" class="px-4 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition">
+            關閉
+          </button>
+          <button id="modal-rule-action-btn" onclick="toggleModalRuleInstall()" class="flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>一鍵安裝協作 Rule</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 推薦專家組合包 (Preset Packs) Modal -->
+  <div id="preset-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all">
+    <div class="bg-[#121215] border border-white/[0.08] rounded-2xl w-full max-w-3xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
+      
+      <div class="p-5 sm:p-6 border-b border-white/[0.06] flex items-start justify-between gap-4 bg-zinc-950/40">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-xl text-indigo-400">
+            📦
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">推薦專家組合套裝 (Preset Packs)</h2>
+            <p class="text-xs text-zinc-400 mt-0.5">針對常見開發場景精選的專家組合，支援一鍵打包安裝</p>
+          </div>
+        </div>
+        <button onclick="closePresetModal()" class="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 flex-1 overflow-y-auto space-y-4 custom-scroll" id="preset-packs-container">
+        <!-- 組合套件清單 -->
+      </div>
+
+      <div class="p-4 border-t border-white/[0.06] bg-zinc-950/60 flex justify-end">
+        <button onclick="closePresetModal()" class="px-4 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition">
+          關閉
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 專案配置匯出 / 匯入 (Bundle) Modal -->
+  <div id="bundle-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all">
+    <div class="bg-[#121215] border border-white/[0.08] rounded-2xl w-full max-w-xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
+      
+      <div class="p-5 sm:p-6 border-b border-white/[0.06] flex items-start justify-between gap-4 bg-zinc-950/40">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-xl text-indigo-400">
+            📋
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">專案 Subagent 配置匯出 / 匯入</h2>
+            <p class="text-xs text-zinc-400 mt-0.5">將目前專案的專家清單匯出為 JSON，或在其他專案快速匯入</p>
+          </div>
+        </div>
+        <button onclick="closeBundleModal()" class="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 flex-1 overflow-y-auto space-y-4 text-xs sm:text-sm custom-scroll">
+        <div class="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] space-y-2">
+          <h3 class="font-semibold text-zinc-200 flex items-center gap-2">
+            <i data-lucide="upload" class="w-4 h-4 text-indigo-400"></i>
+            匯出目前專案已安裝清單
+          </h3>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            將目前專案已安裝的所有 Subagent ID 清單匯出為 JSON 格式檔案。
+          </p>
+          <button onclick="exportProjectBundle()" class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-sm">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>匯出 .json 設定檔</span>
+          </button>
+        </div>
+
+        <div class="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] space-y-2">
+          <h3 class="font-semibold text-zinc-200 flex items-center gap-2">
+            <i data-lucide="download" class="w-4 h-4 text-emerald-400"></i>
+            匯入並一鍵批次安裝
+          </h3>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            選擇之前匯出的 JSON 設定檔，自動為目標專案批次安裝對應的所有專家。
+          </p>
+          <input type="file" id="bundle-file-input" accept=".json" class="hidden" onchange="handleBundleFileImport(event)" />
+          <button onclick="document.getElementById('bundle-file-input').click()" class="px-3.5 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-semibold transition flex items-center gap-1.5 border border-white/[0.06]">
+            <i data-lucide="folder-open" class="w-3.5 h-3.5"></i>
+            <span>選擇 JSON 檔案匯入...</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-white/[0.06] bg-zinc-950/60 flex justify-end">
+        <button onclick="closeBundleModal()" class="px-4 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-medium transition">
+          關閉
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 新手教學與 Antigravity 使用指南 (Guide) Modal -->
+  <div id="guide-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all">
+    <div class="bg-[#121215] border border-white/[0.08] rounded-2xl w-full max-w-3xl max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
+      
+      <div class="p-5 sm:p-6 border-b border-white/[0.06] flex items-start justify-between gap-4 bg-zinc-950/40">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-xl text-indigo-400">
+            💡
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">Agency Subagents 使用與整合指南</h2>
+            <p class="text-xs text-zinc-400 mt-0.5">了解 Antigravity 原生 Subagent 運作機制與呼叫技巧</p>
+          </div>
+        </div>
+        <button onclick="closeGuideModal()" class="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 flex-1 overflow-y-auto space-y-4 text-xs sm:text-sm custom-scroll">
+        <div class="space-y-1.5">
+          <h3 class="font-semibold text-white text-sm flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs">1</span>
+            Subagent 是如何被 Antigravity 載入的？
+          </h3>
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="font-bold text-white text-sm flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs">2</span>
+            如何在對話中呼叫 Subagent？
+          </h3>
+          <p class="text-slate-300 leading-relaxed bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+            在 Antigravity 聊天視窗中，直接使用 <code class="text-indigo-300">@&lt;slug&gt;</code> 即可指定專家！例如：<br>
+            <span class="font-mono text-indigo-200 mt-1 block">「請 @engineering-frontend-developer 幫我將這組按鈕重構為 Tailwind 元件並加入無障礙規範」</span><br>
+            子代理將在獨立 Context 中執行，並將完成的成果回傳給主代理與你。
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="font-bold text-white text-sm flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs">3</span>
+            協作工作流規範 (Rule) 的威力
+          </h3>
+          <p class="text-slate-300 leading-relaxed bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+            點擊「一鍵啟用 Rule」後，專案將寫入 <code class="text-indigo-300">.agents/rules/subagent-collaboration.md</code>。這會強制 Main Agent 不得獨攬所有任務，遇到複雜需求時必須先主動向對應 Subagent 諮詢、拆解任務指派並進行測試驗證，確保程式碼品質與架構一致性！
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-slate-800 bg-slate-950/80 flex justify-end">
+        <button onclick="closeGuideModal()" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition">
+          我知道了
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast 訊息通知 -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- 載入 JS 邏輯 -->
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.spec
+
+# Binary executables & PyInstaller build artifacts
+*.exe
+build/
+dist/
+
+# Local agents installation (generated at runtime)
+.agents/
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local runtime logs
+*.log
+noconsole_err.log

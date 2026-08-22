@@ -1,0 +1,312 @@
+/* ==========================================================================
+   Agency Subagents Manager 2.0 — Minimalist Visual System (Linear / Vercel Style)
+   ========================================================================== */
+
+/* 1. Design Tokens & CSS Variables */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* 暗色主題 (Minimalist Dark) */
+  --bg-app: #09090b;
+  --bg-surface: #121215;
+  --bg-surface-elevated: #18181b;
+  --bg-subtle: #0e0e11;
+  
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-prominent: rgba(255, 255, 255, 0.14);
+  --border-highlight: rgba(255, 255, 255, 0.04);
+
+  --brand-50: #eef2ff;
+  --brand-100: #e0e7ff;
+  --brand-400: #818cf8;
+  --brand-500: #6366f1;
+  --brand-600: #4f46e5;
+  --brand-700: #4338ca;
+  --brand-glow: rgba(99, 102, 241, 0.2);
+
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #f43f5e;
+  --color-star: #fbbf24;
+}
+
+/* 2. 淺色主題相容 (Light Theme) */
+html:not(.dark) {
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --bg-subtle: #f8fafc;
+
+  --border-subtle: #e2e8f0;
+  --border-prominent: #cbd5e1;
+  --border-highlight: rgba(0, 0, 0, 0.04);
+}
+
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+html:not(.dark) header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: #e2e8f0;
+}
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+html:not(.dark) .bg-slate-950 {
+  background-color: #f8fafc;
+  border-color: #e2e8f0;
+  color: #0f172a;
+}
+html:not(.dark) .agent-card {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+html:not(.dark) .segmented-control {
+  background-color: #e2e8f0;
+  border-color: #cbd5e1;
+}
+html:not(.dark) .segmented-item.active {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* 3. 捲軸美化 (Custom Scrollbar) */
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* 4. 分段控制器 (Segmented Control Filter) */
+.segmented-control {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  background-color: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.segmented-item {
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a1a1aa;
+  border-radius: 9px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.segmented-item:hover {
+  color: #f4f4f5;
+}
+
+.segmented-item.active {
+  background-color: #27272a;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.segmented-badge {
+  padding: 0.05rem 0.4rem;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+/* 5. 標籤晶片 (Tag Chips) */
+.tag-chip {
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #71717a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tag-chip:hover {
+  color: #e4e4e7;
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.active-tag-chip {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  color: #818cf8 !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+  font-weight: 600;
+}
+
+/* 6. 部門選單項目 (Division Tabs) */
+.div-tab {
+  color: #a1a1aa;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+.div-tab:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #f4f4f5;
+}
+.active-div-tab {
+  background-color: rgba(99, 102, 241, 0.14) !important;
+  color: #c7d2fe !important;
+  font-weight: 600;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* 7. 極簡專家卡片 (Minimalist Agent Card) */
+.agent-card {
+  background-color: #121215;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.agent-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background-color: #141418;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.6);
+}
+
+.agent-card.selected {
+  border-color: #6366f1;
+  background-color: rgba(99, 102, 241, 0.04);
+}
+
+/* 防截斷文字專用類別 */
+.agent-slug {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #71717a;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+/* 星標點擊彈跳動畫 */
+.star-popping {
+  animation: starPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes starPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4) rotate(15deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* 8. 浮動批次操作 Dock (Floating Batch Dock) */
+.floating-batch-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 50;
+}
+
+.floating-batch-dock.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 9. 搜尋關鍵字高亮 (Search Mark) */
+mark.search-highlight {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #e0e7ff;
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+/* 10. Modal Tabs (詳情視窗分頁) */
+.modal-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #71717a;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+.modal-tab:hover {
+  color: #f4f4f5;
+}
+.active-modal-tab {
+  color: #818cf8 !important;
+  border-bottom-color: #6366f1 !important;
+  font-weight: 600;
+}
+
+/* 11. Markdown 排版 */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #f8fafc;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.prose p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+.prose li {
+  margin-bottom: 0.25rem;
+  color: #cbd5e1;
+}
+.prose pre {
+  background-color: #09090b !important;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.prose code {
+  color: #a5b4fc;
+  font-family: var(--font-mono);
+}
+
+/* 12. Toast 倒數進度條 */
+@keyframes toastProgress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+.toast-progress {
+  animation: toastProgress 3.5s linear forwards;
+}
+
+/* 13. 浮動批次條動畫 */
+@keyframes slideUpFloat {
+  from { transform: translate(-50%, 100%); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
