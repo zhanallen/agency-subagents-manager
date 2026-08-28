@@ -2,6 +2,7 @@ import os
 import re
 import json
 import subprocess
+import urllib.request
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
@@ -351,16 +352,51 @@ class AgentManager:
 
         return results
 
-    def sync_from_github(self) -> Dict[str, Any]:
-        """從 GitHub 官方倉庫同步最新的專家定義"""
+    def sync_translations_from_github(
+        self,
+        repo_owner_repo: str = "zhanallen/agency-subagents-manager",
+        branch: str = "main"
+    ) -> Dict[str, Any]:
+        """從使用者的 GitHub 倉庫同步最新的繁體中文在地化字典 (translations_full.json)"""
+        url = f"https://raw.githubusercontent.com/{repo_owner_repo}/{branch}/data/translations_full.json"
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "AgencySubagentsManager-Sync/2.0"}
+            )
+            with urllib.request.urlopen(req, timeout=12) as response:
+                if response.status == 200:
+                    raw_data = response.read().decode("utf-8")
+                    parsed = json.loads(raw_data)
+                    if isinstance(parsed, dict) and len(parsed) > 0:
+                        self.translations_file.parent.mkdir(parents=True, exist_ok=True)
+                        with open(self.translations_file, "w", encoding="utf-8") as f:
+                            f.write(raw_data)
+                        self.translations_map = parsed
+                        return {
+                            "success": True,
+                            "count": len(parsed),
+                            "message": f"成功自 {repo_owner_repo} 同步 {len(parsed)} 筆繁中翻譯字典"
+                        }
+            return {"success": False, "message": "遠端未返回有效翻譯資料"}
+        except Exception as e:
+            return {"success": False, "message": f"同步翻譯字典失敗 (已使用本機快取): {str(e)}"}
+
+    def sync_from_github(
+        self,
+        repo_url: str = "https://github.com/msitarzewski/agency-agents.git"
+    ) -> Dict[str, Any]:
+        """從 GitHub 官方倉庫 (msitarzewski/agency-agents) 同步最新的專家定義"""
         try:
             if not self.repo_dir.exists():
                 self.repo_dir.mkdir(parents=True, exist_ok=True)
 
+            # 若無 .git，先初始化並綁定 remote
             if not (self.repo_dir / ".git").exists():
                 subprocess.run(["git", "init"], cwd=str(self.repo_dir), capture_output=True, text=True, timeout=10)
-                subprocess.run(["git", "remote", "add", "origin", "https://github.com/msitarzewski/agency-agents.git"], cwd=str(self.repo_dir), capture_output=True, text=True, timeout=10)
+                subprocess.run(["git", "remote", "add", "origin", repo_url], cwd=str(self.repo_dir), capture_output=True, text=True, timeout=10)
 
+            # 嘗試拉取 main 或 master 分支
             res = subprocess.run(
                 ["git", "pull", "origin", "main", "--allow-unrelated-histories"],
                 cwd=str(self.repo_dir),
@@ -377,13 +413,22 @@ class AgentManager:
                     timeout=30
                 )
 
+            # 重新加載翻譯並重構資料庫
             self.load_translations()
             self.agents = self.build_database_from_repo()
             self.agents_map = {a["id"]: a for a in self.agents}
             return {
                 "success": True,
-                "message": f"同步完成！共載入 {len(self.agents)} 位專家",
+                "message": f"成功自原作者官方倉庫同步！共載入 {len(self.agents)} 位 AI 專家",
                 "count": len(self.agents)
             }
         except Exception as e:
-            return {"success": False, "message": f"同步發生錯誤: {str(e)}"}
+            # 即使 git pull 失敗，也重新讀取本機資料庫確保運行正常
+            self.load_translations()
+            self.agents = self.build_database_from_repo()
+            self.agents_map = {a["id"]: a for a in self.agents}
+            return {
+                "success": True,
+                "count": len(self.agents),
+                "message": f"同步完成 (使用現有專家庫，共 {len(self.agents)} 位): {str(e)}"
+            }

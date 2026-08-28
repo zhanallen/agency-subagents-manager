@@ -1,5 +1,7 @@
 import os
 import re
+import json
+import urllib.request
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
@@ -9,6 +11,7 @@ class SubagentInstaller:
     def __init__(self, default_project_root: str):
         self.default_project_root = Path(default_project_root)
         self.home_dir = Path.home()
+        self.rules_dir = self.default_project_root / "data" / "rules"
 
     def get_destinations(self, current_project_path: Optional[str] = None) -> List[Dict[str, Any]]:
         """獲取所有支援的安裝目標與其路徑"""
@@ -386,7 +389,20 @@ subagent: true
         }
 
     def get_default_rule_content(self, target_type: str = "antigravity_project") -> str:
-        """獲取高密度、節省 Token 且具備 Loop Engineering 閉環機制的 Subagent 協作規範 (English Rule)"""
+        """獲取高密度、節省 Token 且具備 Loop Engineering 閉環機制的 Subagent 協作規範 (優先自 data/rules 讀取已同步最新範本)"""
+        # 1. 優先嘗試讀取本機已同步的最新 Rule 檔案
+        if self.rules_dir.exists():
+            rule_file = self.rules_dir / ("cursor-collaboration.mdc" if target_type == "cursor" else "subagent-collaboration.md")
+            if rule_file.exists():
+                try:
+                    with open(rule_file, "r", encoding="utf-8") as f:
+                        content = f.read().strip()
+                        if content:
+                            return content
+                except Exception:
+                    pass
+
+        # 2. 內建預設模板降級回退 (Fallback)
         if target_type == "cursor":
             return """---
 description: "Enforce Subagent-First Orchestration & Loop Engineering (Consult -> Delegate -> Automated Test -> Iteration Loop -> Quality Gate Delivery)."
@@ -495,6 +511,56 @@ The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Age
 - ❌ **Blind Delivery**: Claiming a task is complete without running verification commands.
 - ❌ **Skipping Consultation**: Starting implementation without expert Subagent input.
 """
+
+    def sync_rules_from_github(
+        self,
+        repo_owner_repo: str = "zhanallen/agency-subagents-manager",
+        branch: str = "main"
+    ) -> Dict[str, Any]:
+        """從使用者的 GitHub 倉庫同步最新協作規範 (Rule 模板)"""
+        self.rules_dir.mkdir(parents=True, exist_ok=True)
+        files_to_sync = [
+            "subagent-collaboration.md",
+            "cursor-collaboration.mdc"
+        ]
+        
+        updated = []
+        errors = []
+        
+        for fname in files_to_sync:
+            url = f"https://raw.githubusercontent.com/{repo_owner_repo}/{branch}/data/rules/{fname}"
+            try:
+                req = urllib.request.Request(
+                    url,
+                    headers={"User-Agent": "AgencySubagentsManager-Sync/2.0"}
+                )
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    if response.status == 200:
+                        content = response.read().decode("utf-8")
+                        target_file = self.rules_dir / fname
+                        with open(target_file, "w", encoding="utf-8") as f:
+                            f.write(content)
+                        updated.append(fname)
+                    else:
+                        errors.append(f"{fname}: HTTP {response.status}")
+            except Exception as e:
+                errors.append(f"{fname}: {str(e)}")
+        
+        if updated:
+            return {
+                "success": True,
+                "updated_files": updated,
+                "message": f"成功自 {repo_owner_repo} 同步 {len(updated)} 個協作規範模板",
+                "errors": errors
+            }
+        else:
+            return {
+                "success": False,
+                "updated_files": [],
+                "message": f"同步協作規範失敗 (將使用本機快取規範): {'; '.join(errors)}",
+                "errors": errors
+            }
+
 
     def get_rule_file_path(self, target_type: str = "antigravity_project", project_path: Optional[str] = None) -> Path:
         """獲取目標專案之協作 Rule 檔案完整路徑"""

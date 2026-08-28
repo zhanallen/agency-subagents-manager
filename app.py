@@ -93,6 +93,13 @@ class RuleUninstallRequest(BaseModel):
     target_type: str = "antigravity_project"
     project_path: Optional[str] = None
 
+class SyncRequest(BaseModel):
+    user_repo: Optional[str] = "zhanallen/agency-subagents-manager"
+    author_repo_url: Optional[str] = "https://github.com/msitarzewski/agency-agents.git"
+    update_project_rule: Optional[bool] = False
+    project_path: Optional[str] = None
+    target_type: Optional[str] = "antigravity_project"
+
 @app.get("/api/browse-folder")
 async def browse_folder():
     """呼叫原生資料夾選擇視窗"""
@@ -261,11 +268,52 @@ async def uninstall_batch_endpoint(req: UninstallBatchRequest):
     )
     return res
 
+@app.get("/api/sync/info")
+async def get_sync_info():
+    """獲取同步來源配置與狀態"""
+    return {
+        "success": True,
+        "user_repo": "zhanallen/agency-subagents-manager",
+        "author_repo": "msitarzewski/agency-agents",
+        "total_agents": len(agent_manager.agents),
+        "total_translations": len(agent_manager.translations_map)
+    }
+
 @app.post("/api/sync")
-async def sync_github():
-    """從 GitHub 官方倉庫同步最新專家"""
-    res = agent_manager.sync_from_github()
-    return res
+async def sync_all_sources(req: Optional[SyncRequest] = None):
+    """
+    雙向雲端智慧同步：
+    1. 從使用者 GitHub 倉庫 (zhanallen/agency-subagents-manager) 同步最新協作規範 (Rule) 與在地翻譯 (translations)
+    2. 從原作者 GitHub 倉庫 (msitarzewski/agency-agents) 同步最新 255+ 位 AI 專家定義
+    3. 若啟用 update_project_rule 且當前專案已安裝 Rule，自動將專案內 Rule 升級為最新版
+    """
+    user_repo = req.user_repo if (req and req.user_repo) else "zhanallen/agency-subagents-manager"
+    author_repo_url = req.author_repo_url if (req and req.author_repo_url) else "https://github.com/msitarzewski/agency-agents.git"
+
+    # Step 1: 從使用者倉庫同步協作規範與在地翻譯
+    rule_sync_res = installer.sync_rules_from_github(repo_owner_repo=user_repo)
+    trans_sync_res = agent_manager.sync_translations_from_github(repo_owner_repo=user_repo)
+
+    # Step 2: 從原作者倉庫同步專家定義並重建資料庫
+    agent_sync_res = agent_manager.sync_from_github(repo_url=author_repo_url)
+
+    # Step 3: 若指定自動更新專案中的 Rule
+    rule_updated_in_project = False
+    if req and req.update_project_rule and req.project_path:
+        status = installer.check_rule_status(target_type=req.target_type, project_path=req.project_path)
+        if status.get("is_installed"):
+            installer.install_collaboration_rule(target_type=req.target_type, project_path=req.project_path)
+            rule_updated_in_project = True
+
+    return {
+        "success": True,
+        "rules_sync": rule_sync_res,
+        "translations_sync": trans_sync_res,
+        "agents_sync": agent_sync_res,
+        "total_agents": len(agent_manager.agents),
+        "rule_updated_in_project": rule_updated_in_project,
+        "message": f"同步完成！協作規範已自 {user_repo} 更新，專家庫已自 msitarzewski/agency-agents 更新 (共 {len(agent_manager.agents)} 位專家)"
+    }
 
 # 協作工作流規範 (Rule) 相關 API
 @app.get("/api/rule/status")

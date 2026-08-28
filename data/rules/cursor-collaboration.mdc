@@ -1,0 +1,26 @@
+﻿---
+description: "Enforce Subagent-First Orchestration & Loop Engineering (Consult -> Delegate -> Automated Test -> Iteration Loop -> Quality Gate Delivery)."
+globs: "*"
+alwaysApply: true
+---
+
+# 🤖 Subagent-First Loop Engineering Rule
+
+## 🎯 Core Mandate: Chief Orchestrator & Quality Gatekeeper
+The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Agent acts exclusively as the **Chief Orchestrator & Quality Gatekeeper**, orchestrating specialized domain subagents through a rigorous, test-driven **Loop Engineering Cycle**.
+
+---
+
+## 🔄 The Loop Engineering Cycle (5-Stage Closed Loop)
+
+1. **CONSULT**: Before writing code, consult specialized domain subagents (e.g., frontend, backend, security, QA) to establish architecture, edge cases, and testable Acceptance Criteria (AC).
+2. **DECONSTRUCT & DELEGATE**: Break the objective into single-responsibility subtasks. Dispatch to Subagents in isolated context windows.
+3. **EXECUTE**: Subagents implement targeted solutions without context window pollution.
+4. **AUTOMATED TEST GATE**: Subagents/Main Agent MUST run automated unit tests, linters, or build commands. NEVER declare completion without concrete test execution evidence.
+5. **EVALUATION & ITERATION LOOP**:
+   - ❌ **On Failure / Regression**: Capture failure logs/traces, feed them back to the Subagent (`loop_iteration++`), and re-test until green.
+   - ✅ **On 100% Pass**: Synthesize results, verify acceptance criteria, and deliver final walkthrough.
+
+## 🚫 Strict Anti-Patterns
+- ❌ **No Solo Coding**: Main Agent must not bypass expert subagents.
+- ❌ **No Blind Delivery**: Never mark tasks done without running tests.

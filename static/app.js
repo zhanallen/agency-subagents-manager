@@ -105,6 +105,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   await checkRuleStatus();
   renderPresetPacks();
   lucide.createIcons();
+
+  // 啟動 3 秒後非同步在背景檢查雲端更新 (雙向同步最新規範與專家庫)
+  setTimeout(() => {
+    silentSyncCheck();
+  }, 3000);
 });
 
 // ==========================================================================
@@ -1390,7 +1395,9 @@ function closeGuideModal() {
 }
 
 // ==========================================================================
-// 同步官方 GitHub
+// 雙向雲端同步 (Dual-Source Cloud Sync)
+// 1. 協作規範與翻譯：自使用者 GitHub 倉庫 (zhanallen/agency-subagents-manager) 更新
+// 2. 專家內容與提示詞：自原作者 GitHub 倉庫 (msitarzewski/agency-agents) 更新
 // ==========================================================================
 async function syncGithub() {
   const btn = document.getElementById('btn-sync-github');
@@ -1398,22 +1405,63 @@ async function syncGithub() {
   btn.innerHTML = `<i data-lucide="loader" class="w-4 h-4 animate-spin"></i>`;
   lucide.createIcons();
 
+  showToast('正在執行雲端雙向同步 (規範/翻譯: 您的倉庫 · 專家庫: 原作者倉庫)...', 'info');
+
   try {
-    const res = await fetch('/api/sync', { method: 'POST' });
+    const res = await fetch('/api/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        user_repo: 'zhanallen/agency-subagents-manager',
+        author_repo_url: 'https://github.com/msitarzewski/agency-agents.git',
+        update_project_rule: true,
+        project_path: state.projectPath,
+        target_type: state.targetType
+      })
+    });
     const data = await res.json();
     if (data.success) {
-      showToast(data.message, 'success');
+      if (data.rule_updated_in_project) {
+        showToast('✅ 雙向同步完成！當前專案的協作規範已自動升級為最新版！', 'success');
+      } else {
+        showToast(data.message || '✅ 雲端雙向同步完成！', 'success');
+      }
       await loadDivisions();
       await loadAgents();
+      await checkRuleStatus();
     } else {
-      showToast(data.message, 'error');
+      showToast(data.message || '同步過程中發生問題', 'warning');
     }
   } catch (err) {
-    showToast('同步連線失敗', 'error');
+    showToast('同步連線失敗，已自動使用本機離線快取資料', 'error');
   } finally {
     btn.disabled = false;
     btn.innerHTML = `<i data-lucide="refresh-cw" class="w-4 h-4"></i>`;
     lucide.createIcons();
+  }
+}
+
+// 背景靜默更新檢查
+async function silentSyncCheck() {
+  try {
+    const res = await fetch('/api/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        user_repo: 'zhanallen/agency-subagents-manager',
+        author_repo_url: 'https://github.com/msitarzewski/agency-agents.git',
+        update_project_rule: false
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      console.log('背景雲端同步完成', data);
+      // 若拉取到新資料則無干擾刷新清單
+      await loadDivisions();
+      await loadAgents();
+    }
+  } catch (e) {
+    console.log('背景檢查更新跳過 (離線或網路不通)');
   }
 }
 
