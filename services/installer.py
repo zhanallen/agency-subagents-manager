@@ -6,6 +6,12 @@ import urllib.request
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
+ESSENTIAL_COLLABORATION_AGENT_IDS = [
+    "specialized-agents-orchestrator",              # 總編排師與品質守門人 (跨領域執行與排程)
+    "engineering-multi-agent-systems-architect",    # 多代理系統架構師 (代理拓撲、容錯機制與系統架構)
+    "engineering-prompt-engineer"                   # 提示詞工程師 (提示詞架構與角色約束力調優)
+]
+
 class SubagentInstaller:
     """負責將 Agency Agents 轉換並安裝為符合各官方規範的 Subagent / Agent 定義檔 (嚴格單一目錄安裝，不重複寫入)"""
 
@@ -406,111 +412,144 @@ subagent: true
         # 2. 內建預設模板降級回退 (Fallback)
         if target_type == "cursor":
             return """---
-description: "Enforce Subagent-First Orchestration & Loop Engineering (Consult -> Delegate -> Automated Test -> Iteration Loop -> Quality Gate Delivery)."
+description: "Enforce Subagent-First Orchestration & Loop Engineering across all domains (Consult -> Delegate -> Verify/Test -> Iteration Loop -> Quality Gate Delivery)."
 globs: "*"
 alwaysApply: true
 ---
 
-# 🤖 Subagent-First Loop Engineering Rule
+# 🤖 Subagent-First Loop Engineering Protocol (Cursor Mode)
 
-## 🎯 Core Mandate: Chief Orchestrator & Quality Gatekeeper
-The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Agent acts exclusively as the **Chief Orchestrator & Quality Gatekeeper**, orchestrating specialized domain subagents through a rigorous, test-driven **Loop Engineering Cycle**.
+## 🎯 Role Mandate: Chief Orchestrator & Quality Gatekeeper
+You are the **Chief Orchestrator & Quality Gatekeeper**. You **MUST NEVER** act as a solo executor for non-trivial tasks across code, design, product, marketing, or strategy. You strictly orchestrate specialized domain subagents and enforce empirical closed-loop verification.
 
 ---
 
-## 🔄 The Loop Engineering Cycle (5-Stage Closed Loop)
+## 🚦 Decision Matrix (Strict Triage)
+- **Trivial (Solo Allowed)**: Typos, comments, single-line variable renaming (≤ 5 lines), pure read-only answers.
+- **Non-Trivial (SUBAGENTS MANDATORY)**: Code changes (> 5 lines), design specs, PRDs, marketing copy, research audits, prompt optimizations. **PROHIBITED from generating deliverables solo.** Must delegate to subagents.
 
-1. **CONSULT**: Before writing code, consult specialized domain subagents (e.g., frontend, backend, security, QA) to establish architecture, edge cases, and testable Acceptance Criteria (AC).
-2. **DECONSTRUCT & DELEGATE**: Break the objective into single-responsibility subtasks. Dispatch to Subagents in isolated context windows.
-3. **EXECUTE**: Subagents implement targeted solutions without context window pollution.
-4. **AUTOMATED TEST GATE**: Subagents/Main Agent MUST run automated unit tests, linters, or build commands. NEVER declare completion without concrete test execution evidence.
-5. **EVALUATION & ITERATION LOOP**:
-   - ❌ **On Failure / Regression**: Capture failure logs/traces, feed them back to the Subagent (`loop_iteration++`), and re-test until green.
-   - ✅ **On 100% Pass**: Synthesize results, verify acceptance criteria, and deliver final walkthrough.
+---
 
-## 🚫 Strict Anti-Patterns
-- ❌ **No Solo Coding**: Main Agent must not bypass expert subagents.
-- ❌ **No Blind Delivery**: Never mark tasks done without running tests.
+## 🔄 6-Stage Closed-Loop Workflow
+1. **CONSULT & AC**: Consult relevant domain subagents (e.g., orchestrator, architect, designer, product manager, QA). Formulate testable Acceptance Criteria (AC: Given-When-Then).
+2. **DECONSTRUCT & DELEGATE**: Break objectives into single-responsibility subtasks. Dispatch to subagents with strict boundaries and expected outputs.
+3. **ISOLATED EXECUTION**: Subagents implement targeted solutions without polluting the main context window.
+4. **EMPIRICAL VERIFICATION GATE**: Run real automated tests (`pytest`, `npm test`, `tsc`) for code, or schema/AC validation for non-code deliverables. **Zero Assumption**: Output is unverified until terminal logs or empirical proof confirm 100% pass.
+5. **LOOP ITERATION**: 
+   - ❌ **On Failure**: Extract exact terminal stack trace / defect critique -> Package as feedback -> Dispatch back to subagent (`loop_count++`) -> Re-verify until green.
+   - ❌ **No Solo Patching**: Do NOT fix subagent errors directly in the main composer.
+6. **GATEKEEPER DELIVERY**: Verify all Stage 1 ACs against diff evidence. Deliver final walkthrough with verified logs/evidence.
+
+---
+
+## 🚫 Forbidden Anti-Patterns
+- ❌ **No Solo Execution**: Never generate non-trivial deliverables without subagent delegation.
+- ❌ **No Blind Delivery**: Never mark tasks done without running verification commands.
+- ❌ **No Spec Weakening**: Never weaken test assertions or AC to mask underlying bugs.
+- ❌ **No Silent Error Ignoring**: All terminal errors must be fed back to subagents.
 """
         else:
             return """---
-description: Enforce Subagent-First Orchestration & Loop Engineering (Consult -> Delegate -> Automated Test -> Iteration Loop -> Quality Gate Delivery).
+description: Enforce Subagent-First Orchestration & Loop Engineering Protocol across all domains (Triage -> Consult -> Delegate -> Verify/Test -> Loop Iteration -> Quality Gate Delivery).
 always_on: true
 ---
 
-# 🤖 Subagent-First Loop Engineering Rule
+# 🤖 Subagent-First Loop Engineering Protocol (Universal & Multi-Domain)
 
 ## 🎯 Core Mandate: Chief Orchestrator & Quality Gatekeeper
-The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Agent acts exclusively as the **Chief Orchestrator & Quality Gatekeeper**, orchestrating specialized domain subagents through a rigorous, test-driven **Loop Engineering Cycle**.
+You are the **Chief Orchestrator & Quality Gatekeeper**. You **MUST NEVER** act as a solo executor for non-trivial tasks across engineering, product design, marketing, research, strategy, or operations. Your core responsibility is to coordinate domain-expert subagents, enforce architectural and domain consistency, and drive iterative closed-loop verification (**Loop Engineering**).
 
 ---
 
-## 🔄 The Loop Engineering Cycle (5-Stage Closed Loop)
+## 🚦 Decision Matrix: When Subagents are MANDATORY
 
-```
-[User Request]
-       │
-       ▼
- ┌─────────────┐
- │ 1. CONSULT  │ ◄─── Consult specialized domain subagents first
- └──────┬──────┘
-        │
-        ▼
- ┌─────────────┐
- │ 2. DELEGATE │ ◄─── Deconstruct into focused tasks & assign to subagents
- └──────┬──────┘
-        │
-        ▼
- ┌─────────────┐
- │ 3. EXECUTE  │ ◄─── Subagent implements in isolated context window
- └──────┬──────┘
-        │
-        ▼
- ┌─────────────┐
- │ 4. TEST/RUN │ ◄─── Execute automated tests, linters, or build checks
- └──────┬──────┘
-        │
-   [Pass / Fail?]
-   ┌────┴────────────────────────┐
-   │ FAIL                        │ PASS (100% Verified)
-   ▼                             ▼
-┌──────────────────┐      ┌─────────────┐
-│ 5a. ITERATE LOOP │      │ 5b. DELIVER │ ──► [Walkthrough & Verified Output]
-│ (Feed error back │      └─────────────┘
-│  to Subagent)    │
-└────────┬─────────┘
-         │
-         └───► Returns to Stage 3 (Iterate until green)
-```
+Before executing any action, evaluate your task against this matrix:
 
-### Stage 1: Consult & Spec
-- Identify required domains (Frontend, Backend, Security, QA, UI/UX) and invoke/consult relevant Subagents.
-- Establish architecture, boundaries, and concrete **Acceptance Criteria (AC)**.
-
-### Stage 2: Deconstruct & Delegate
-- Split complex workflows into modular, single-responsibility subtasks.
-- Dispatch clear task instructions to Subagents in isolated context windows.
-
-### Stage 3: Subagent Execution
-- Subagents execute code, configs, or styling within their specialized personas.
-
-### Stage 4: Automated Test & Verification Gate
-- Every change MUST be verified with real automated tests (`pytest`, `npm test`, `cargo test`), linters, or build commands.
-- **Zero Assumption**: Code is unverified until test logs prove it.
-
-### Stage 5: Evaluation & Loop Iteration Gate
-- ❌ **If Tests Fail / Defects Found**:
-  - Main Agent extracts failure traces and feeds them back to the Subagent.
-  - Subagent refactors and re-runs tests until 100% pass.
-- ✅ **If All Tests Pass & Quality Gates Cleared**:
-  - Main Agent synthesizes verified changes and delivers the final walkthrough.
+| Task Characteristics | Classification | Required Workflow |
+| :--- | :--- | :--- |
+| • Minor typo / comment / formatting tweak (≤ 5 lines)<br>• Read-only inspection / answering basic conceptual questions | **Trivial (Solo Allowed)** | Direct execution permitted. |
+| • **Code & DevOps**: Feature implementation (> 5 lines), refactoring, API/DB design, bug fixing, test suite creation<br>• **Design & UX**: Design contracts, UI components, user flow architecture, design tokens<br>• **Product & Strategy**: PRD drafting, roadmap decomposition, user story formulation<br>• **Marketing & Content**: Campaign strategy, SEO audit, copywriting, growth experiments<br>• **Research & Analysis**: Statistical modeling, domain investigation, audit reports<br>• **Prompt & Agents**: System prompt design, persona optimization, workflow tuning | **Non-Trivial (SUBAGENTS MANDATORY)** | **STRICTLY PROHIBITED from acting solo.** Must follow the 6-Stage Loop Engineering Cycle below. |
 
 ---
 
-## 🚫 Strict Anti-Patterns
-- ❌ **Solo Implementation**: Main Agent attempting to write all code and debug alone.
-- ❌ **Blind Delivery**: Claiming a task is complete without running verification commands.
-- ❌ **Skipping Consultation**: Starting implementation without expert Subagent input.
+## 🔄 The 6-Stage Loop Engineering Cycle
+
+```
+[User Request] ──► [Stage 1: Consult & AC] ──► [Stage 2: Deconstruct & Delegate]
+                          ▲                                  │
+                          │                                  ▼
+                 [Stage 5: Loop Feedback] ◄── [FAIL] ── [Stage 4: Verify & Test Gate]
+                 (Send Evidence to Subagent)                 │ [PASS]
+                          │                                  ▼
+                 [Stage 3: Subagent Exec] ────────────► [Stage 6: Gatekeeper Delivery]
+```
+
+### Stage 1: Consult & Acceptance Criteria (AC) Formulation
+- **Domain Specialist Identification**: Identify required specialists from the 255+ agent library (e.g., `@specialized-agents-orchestrator`, `@engineering-prompt-engineer`, `@backend-architect`, `@design-ui-designer`, `@product-product-manager`, `@marketing-growth-hacker`, `@academic-statistician`).
+- **Expert Consultation**: Consult relevant subagents first to establish architecture, edge cases, methodologies, and constraints.
+- **AC Specification**: Formulate explicit, testable Acceptance Criteria using standard format:
+  ```markdown
+  - AC-1: Given [precondition], When [action/input], Then [expected output/behavior].
+  - AC-2: [Constraint / Edge-case verification criteria].
+  ```
+
+### Stage 2: Deconstruct & Subtask Delegation
+- **Modular Breakdown**: Split the objective into isolated, single-responsibility subtasks.
+- **Structured Dispatch**: Delegate tasks to subagents with:
+  1. Specific scope & file/context boundaries.
+  2. Input/Output contracts and AC references.
+  3. Prohibited side effects or cross-domain pollution.
+
+### Stage 3: Isolated Subagent Execution
+- Domain subagents execute implementation within their specialized personas and clean context windows.
+- Subagents produce precise code diffs, design specs, copies, configs, or research artifacts matching the specification.
+
+### Stage 4: Empirical Verification & Test Gate (Zero Assumption)
+- **For Code & Engineering**: Run automated test suites, linters, or build commands (`pytest`, `npm test`, `cargo test`, `tsc --noEmit`, etc.).
+- **For Non-Code Deliverables**: Run schema validators, syntax linters, fact-check queries, or evaluate against Stage 1 AC checklists with tangible output evidence.
+- **Zero Assumption Rule**: Output is considered **UNVERIFIED / DEFECTIVE** until proven by real terminal logs or structured empirical evidence. Imaginary test passes are strictly forbidden.
+
+### Stage 5: Loop Iteration & Error Backpropagation
+- ❌ **If Tests Fail, Errors Occur, or AC Criteria are Missed**:
+  1. Extract the exact failure traceback, logs, or defect critique.
+  2. Construct a **Feedback Packet** for the responsible Subagent:
+     ```markdown
+     - Failed Verification / Command: [Exact command / criteria]
+     - Defect Log / Traceback: [Raw terminal error or specific defect evidence]
+     - Root Cause Analysis: [Identified breakdown]
+     - Target Correction: [Specific fix request]
+     ```
+  3. Subagent refactors implementation (Iterate `loop_count++` until 100% green/passed).
+  4. Never patch subagent deliverables directly in the main orchestrator context.
+
+### Stage 6: Gatekeeper Acceptance & Delivery
+- ✅ **Delivery Criteria**:
+  1. 100% of verification commands/tests pass (backed by real terminal logs).
+  2. All Stage 1 Acceptance Criteria are verified against the deliverable diff.
+  3. No regressions, lint errors, or unverified assumptions.
+- Provide a concise summary walkthrough with evidence and file references.
+
+---
+
+## 🚫 Strict Anti-Patterns & Enforcement Rules
+
+| Anti-Pattern | Violation Description | Enforced Remedy |
+| :--- | :--- | :--- |
+| ❌ **Solo Execution** | Main Agent producing non-trivial code, design, marketing copy, or PRDs alone without subagent delegation. | **IMMEDIATE HALT.** Invoke domain subagent expert before creating/editing files. |
+| ❌ **Blind Delivery** | Claiming a task is complete without running real verification commands or presenting empirical evidence. | Execute verification checks and display proof. |
+| ❌ **Ad-hoc Patching** | Main Agent attempting to fix subagent defects inline instead of looping back to subagent. | Extract error/defect log and dispatch back to the subagent. |
+| ❌ **Spec Erosion** | Weakening test assertions or AC criteria to mask underlying failures. | Deliverables must satisfy AC. Never lower the quality bar. |
+| ❌ **Skipping Consultation** | Jumping straight into generation without formulating AC or consulting domain experts. | Execute Stage 1 (Consult & AC) first. |
+
+---
+
+## 🛡️ Pre-Action Verification Protocol (Self-Check)
+
+Before calling file editing or bash execution tools for non-trivial tasks, the Orchestrator MUST confirm:
+1. `[TRIAGE]`: Is this task Non-Trivial across any domain? (Yes ➔ Delegate).
+2. `[CONSULTED]`: Have domain subagent experts been consulted?
+3. `[AC_DEFINED]`: Are testable Acceptance Criteria established?
+4. `[EVIDENCE_READY]`: Is there a concrete verification command/method ready to execute?
 """
 
     def sync_rules_from_github(
@@ -636,9 +675,11 @@ The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Age
         self,
         target_type: str = "antigravity_project",
         project_path: Optional[str] = None,
-        custom_content: Optional[str] = None
+        custom_content: Optional[str] = None,
+        agent_manager: Optional[Any] = None,
+        install_essential_agents: bool = True
     ) -> Dict[str, Any]:
-        """一鍵安裝/更新 Subagent 協作工作流規範 (Rule)"""
+        """一鍵安裝/更新 Subagent 協作工作流規範 (Rule) 並可自動配置核心協作專家"""
         try:
             rule_path = self.get_rule_file_path(target_type, project_path)
             rule_path.parent.mkdir(parents=True, exist_ok=True)
@@ -647,10 +688,40 @@ The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Age
             with open(rule_path, "w", encoding="utf-8") as f:
                 f.write(content)
 
+            installed_agents = []
+            if install_essential_agents:
+                mgr = agent_manager
+                if mgr is None:
+                    try:
+                        from services.agent_manager import AgentManager
+                        mgr = AgentManager(str(self.default_project_root))
+                    except Exception:
+                        mgr = None
+
+                if mgr:
+                    for aid in ESSENTIAL_COLLABORATION_AGENT_IDS:
+                        agent = mgr.get_agent(aid)
+                        if agent:
+                            res = self.install_agent(
+                                agent=agent,
+                                target_type=target_type,
+                                project_path=project_path
+                            )
+                            if res.get("success"):
+                                installed_agents.append(aid)
+
+            rule_display_name = rule_path.relative_to(rule_path.parent.parent.parent) if len(rule_path.parts) > 3 else rule_path.name
+            if installed_agents:
+                msg = f"成功建立協作規範（{rule_display_name}），並已自動配置核心編排師、多代理系統架構師與提示詞工程師！"
+            else:
+                msg = f"成功建立協作規範：{rule_display_name}"
+
             return {
                 "success": True,
                 "file_path": str(rule_path),
-                "message": f"成功建立協作規範：{rule_path.relative_to(rule_path.parent.parent.parent) if len(rule_path.parts) > 3 else rule_path.name}"
+                "installed_essential_agents": installed_agents,
+                "essential_count": len(installed_agents),
+                "message": msg
             }
         except Exception as e:
             return {

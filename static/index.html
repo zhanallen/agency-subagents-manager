@@ -140,7 +140,7 @@
         
         <div class="p-3 rounded-xl bg-[#121215] border border-white/[0.06] space-y-2">
           <p class="text-[11px] text-zinc-400 leading-snug">
-            強制 Main Agent 透過 5 階段閉環工程 (Loop Engineering) 先行諮詢並測試。
+            強制 Main Agent 遵循跨領域 6 階段閉環工程 (Loop Engineering)，啟用時自動配置核心編排師。
           </p>
           <div class="flex items-center gap-1.5 pt-0.5">
             <button id="btn-sidebar-rule-action" onclick="toggleQuickRuleInstall()" class="flex-1 py-1 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition flex items-center justify-center gap-1 shadow-sm">
@@ -520,8 +520,8 @@
         <div class="p-3.5 rounded-xl bg-indigo-950/30 border border-indigo-900/40 text-indigo-200 text-xs flex items-start gap-2.5">
           <i data-lucide="info" class="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5"></i>
           <div>
-            <strong>為什麼採用英文 Loop Engineering 規範？</strong><br>
-            英文語料密度高，相較中文可為每次互動**節省 60%~70% Token**；同時英文控制動詞具有最高約束力，確保 Main Agent 遵循「諮詢 ➔ 委派 ➔ 測試 ➔ 迭代閉環」之原則。
+            <strong>為什麼採用通用英文 Loop Engineering 規範與自動配置？</strong><br>
+            英文語料密度高，可為每次互動**節省 60%~70% Token**；規範全面涵蓋程式碼、視覺設計、產品管理、行銷增長與研究等跨領域任務，啟用時會**自動配置核心多代理架構三人組**（總編排師 `specialized-agents-orchestrator`、多代理架構師 `engineering-multi-agent-systems-architect` 與提示詞工程師 `engineering-prompt-engineer`），確保 Main Agent 遵循「諮詢 ➔ 委派 ➔ 驗證 ➔ 迭代閉環」之原則。
           </div>
         </div>
 
@@ -688,10 +688,10 @@
         <div class="space-y-2">
           <h3 class="font-bold text-white text-sm flex items-center gap-2">
             <span class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs">3</span>
-            協作工作流規範 (Rule) 的威力
+            跨領域協作工作流規範 (Rule) 與核心架構組配置
           </h3>
           <p class="text-slate-300 leading-relaxed bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
-            點擊「一鍵啟用 Rule」後，專案將寫入 <code class="text-indigo-300">.agents/rules/subagent-collaboration.md</code>。這會強制 Main Agent 不得獨攬所有任務，遇到複雜需求時必須先主動向對應 Subagent 諮詢、拆解任務指派並進行測試驗證，確保程式碼品質與架構一致性！
+            點擊「一鍵啟用 Rule」後，專案將寫入通用英文協作規範 <code class="text-indigo-300">.agents/rules/subagent-collaboration.md</code> 並**自動配置核心架構三人組**（總編排師、多代理系統架構師與提示詞工程師）。這套規則涵蓋程式開發、設計、產品、行銷與研究等多元場景，強制 Main Agent 不得獨攬非單行微調任務，遇到複雜需求時必須先主動向對應領域的 Subagent 諮詢、拆解任務指派並進行測試驗證，確保產出品質！
           </p>
         </div>
       </div>

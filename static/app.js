@@ -843,13 +843,15 @@ async function installCollaborationRule(customContent = null) {
       body: JSON.stringify({
         target_type: state.targetType,
         project_path: state.projectPath,
-        custom_content: customContent
+        custom_content: customContent,
+        install_essential_agents: true
       })
     });
     const data = await res.json();
     if (data.success) {
-      showToast(data.message || 'Loop Engineering 協作規範已啟用！', 'success');
+      showToast(data.message || 'Loop Engineering 協作規範與核心子代理已配置！', 'success');
       await checkRuleStatus();
+      await loadAgents();
       if (!document.getElementById('rule-modal').classList.contains('hidden')) {
         openRuleModal();
       }

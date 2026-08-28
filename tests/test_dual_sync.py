@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import sys
 import unittest
 from pathlib import Path
@@ -18,18 +18,25 @@ class TestDualSync(unittest.TestCase):
     def test_01_local_rule_content_loading(self):
         """測試是否能優先自 data/rules/ 載入自訂規範"""
         content_antigravity = self.installer.get_default_rule_content("antigravity_project")
-        self.assertIn("Subagent-First Loop Engineering Rule", content_antigravity)
-        self.assertIn("5-Stage Closed Loop", content_antigravity)
+        self.assertIn("Subagent-First Loop Engineering Protocol", content_antigravity)
+        self.assertIn("6-Stage Loop Engineering Cycle", content_antigravity)
+        self.assertIn("Decision Matrix: When Subagents are MANDATORY", content_antigravity)
 
         content_cursor = self.installer.get_default_rule_content("cursor")
-        self.assertIn("Subagent-First Loop Engineering Rule", content_cursor)
+        self.assertIn("Subagent-First Loop Engineering Protocol", content_cursor)
         self.assertIn("alwaysApply: true", content_cursor)
 
     def test_02_remote_rule_sync(self):
-        """測試自 GitHub 倉庫同步協作規範"""
-        res = self.installer.sync_rules_from_github("zhanallen/agency-subagents-manager", "main")
-        print(f"\n[Test 02] Rule sync result: {res}")
-        self.assertTrue(res["success"] or "subagent-collaboration.md" in res.get("updated_files", []) or len(res.get("errors", [])) >= 0)
+        """測試自 GitHub 倉庫同步協作規範 (使用隔離暫存目錄避免覆寫本地工作目錄)"""
+        import tempfile, shutil
+        temp_dir = Path(tempfile.mkdtemp(prefix="test_rule_sync_"))
+        try:
+            temp_installer = SubagentInstaller(str(temp_dir))
+            res = temp_installer.sync_rules_from_github("zhanallen/agency-subagents-manager", "main")
+            print(f"\n[Test 02] Rule sync result: {res}")
+            self.assertTrue(res["success"] or "subagent-collaboration.md" in res.get("updated_files", []) or len(res.get("errors", [])) >= 0)
+        finally:
+            shutil.rmtree(temp_dir, ignore_errors=True)
 
     def test_03_remote_translation_sync(self):
         """測試自 GitHub 倉庫同步翻譯字典"""

@@ -88,6 +88,7 @@ class RuleInstallRequest(BaseModel):
     target_type: str = "antigravity_project"
     project_path: Optional[str] = None
     custom_content: Optional[str] = None
+    install_essential_agents: Optional[bool] = True
 
 class RuleUninstallRequest(BaseModel):
     target_type: str = "antigravity_project"
@@ -302,7 +303,12 @@ async def sync_all_sources(req: Optional[SyncRequest] = None):
     if req and req.update_project_rule and req.project_path:
         status = installer.check_rule_status(target_type=req.target_type, project_path=req.project_path)
         if status.get("is_installed"):
-            installer.install_collaboration_rule(target_type=req.target_type, project_path=req.project_path)
+            installer.install_collaboration_rule(
+                target_type=req.target_type,
+                project_path=req.project_path,
+                agent_manager=agent_manager,
+                install_essential_agents=True
+            )
             rule_updated_in_project = True
 
     return {
@@ -336,11 +342,13 @@ async def get_rule_preview(target_type: str = "antigravity_project"):
 
 @app.post("/api/rule/install")
 async def install_rule_endpoint(req: RuleInstallRequest):
-    """一鍵安裝/更新 Subagent 協作規範 (Rule)"""
+    """一鍵安裝/更新 Subagent 協作規範 (Rule) 並自動配置核心協作專家"""
     res = installer.install_collaboration_rule(
         target_type=req.target_type,
         project_path=req.project_path,
-        custom_content=req.custom_content
+        custom_content=req.custom_content,
+        agent_manager=agent_manager,
+        install_essential_agents=req.install_essential_agents if req.install_essential_agents is not None else True
     )
     return res
 
