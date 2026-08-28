@@ -53,11 +53,17 @@
 ## 🚀 使用方式
 
 ### 方式一：直接雙擊 EXE（最推薦）
-直接雙擊根目錄下的 **[`AgencySubagentsManager.exe`](file:///d:/Code/AI/%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86/AgencySubagentsManager.exe)** 即可直接使用！
+直接雙擊根目錄下的 **`AgencySubagentsManager.exe`** 即可直接使用！
 
 ### 方式二：使用 Python 原始碼執行
 ```powershell
-cd "d:\Code\AI\流程管理"
+# 1. 複製專案
+git clone https://github.com/zhanallen/agency-subagents-manager.git
+cd agency-subagents-manager
+
+# 2. 雙擊 start.bat 或手動執行
+python -m venv .venv
+.venv\Scripts\pip.exe install -r requirements.txt
 .venv\Scripts\python.exe app.py
 ```
 啟動後打開瀏覽器前往：`http://localhost:8000`
