@@ -18,12 +18,12 @@ class TestDualSync(unittest.TestCase):
     def test_01_local_rule_content_loading(self):
         """測試是否能優先自 data/rules/ 載入自訂規範"""
         content_antigravity = self.installer.get_default_rule_content("antigravity_project")
-        self.assertIn("HARD TOOL-BLOCKING INTERCEPTION", content_antigravity)
-        self.assertIn("THE 6-STAGE LOOP ENGINEERING CYCLE", content_antigravity)
-        self.assertIn("TOOL ACCESS STATE MACHINE", content_antigravity)
+        self.assertIn("MULTI-AGENT ARCHITECTURE GOVERNANCE", content_antigravity)
+        self.assertIn("THE 6-STAGE MULTI-AGENT LOOP ENGINEERING LIFECYCLE", content_antigravity)
+        self.assertIn("MULTI-AGENT GOVERNANCE STATE MACHINE", content_antigravity)
 
         content_cursor = self.installer.get_default_rule_content("cursor")
-        self.assertIn("HARD TOOL INTERCEPTION PROTOCOL (CURSOR MODE)", content_cursor)
+        self.assertIn("HARD TOOL INTERCEPTION & MULTI-AGENT GOVERNANCE PROTOCOL (CURSOR MODE)", content_cursor)
         self.assertIn("alwaysApply: true", content_cursor)
 
     def test_02_remote_rule_sync(self):
@@ -69,7 +69,7 @@ class TestDualSync(unittest.TestCase):
                 project_path=str(test_project_dir)
             )
             self.assertTrue(status["is_installed"])
-            self.assertIn("HARD TOOL-BLOCKING", status["content"])
+            self.assertIn("MULTI-AGENT ARCHITECTURE", status["content"])
 
             # 卸載
             uninstall_res = self.installer.uninstall_collaboration_rule(

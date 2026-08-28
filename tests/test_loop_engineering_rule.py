@@ -16,22 +16,24 @@ class TestLoopEngineeringRule(unittest.TestCase):
         self.installer = SubagentInstaller(str(self.root))
 
     def test_01_antigravity_rule_structure(self):
-        """Test Antigravity Hard Tool-Blocking Protocol structure and keywords"""
+        """Test Antigravity Multi-Agent Architecture Protocol structure and keywords"""
         content = self.installer.get_default_rule_content("antigravity_project")
         
         # Core Identity & Mandate
-        self.assertIn("HARD TOOL-BLOCKING INTERCEPTION", content)
+        self.assertIn("MULTI-AGENT ARCHITECTURE GOVERNANCE", content)
         self.assertIn("Chief Orchestrator & Quality Gatekeeper", content)
         self.assertIn("CONDITION-LOCKED", content)
         self.assertIn("STRICTLY PROHIBITED FROM SELF-APPROVING", content)
         
-        # State Machine & Pre-Flight Gate
-        self.assertIn("TOOL ACCESS STATE MACHINE", content)
+        # Multi-Agent State Machine & Pre-Flight Gate
+        self.assertIn("MULTI-AGENT GOVERNANCE STATE MACHINE", content)
+        self.assertIn("PHASE 0: ARCHITECTURE & ROSTER CONSULTATION", content)
+        self.assertIn("Specialist Roster Formulation", content)
         self.assertIn("MANDATORY PRE-FLIGHT CHECK", content)
         self.assertIn("SELF-REFUSE DIRECT FILE WRITING", content)
         
-        # 6 Stages with Sandbox & Visual Sign-off Gates
-        self.assertIn("Stage 1: Consult & Acceptance Criteria (AC) Formulation", content)
+        # 6 Stages with Multi-Agent Roster & Sandbox/Visual Sign-off Gates
+        self.assertIn("Stage 1: Multi-Agent Architecture & Specialist Roster Consultation (Phase 0)", content)
         self.assertIn("Stage 2: Deconstruct & Subtask Delegation", content)
         self.assertIn("Stage 3: Isolated Subagent Execution", content)
         self.assertIn("Stage 4: Empirical Sandbox & Visual Verification Gate (Zero Assumption)", content)
@@ -41,27 +43,31 @@ class TestLoopEngineeringRule(unittest.TestCase):
         # Sandbox, UI Screenshot & Independent Subagent Audits
         self.assertIn("Mandatory Visual Screenshot Review Gate", content)
         self.assertIn("Code Inspection Is NOT Visual Proof", content)
+        self.assertIn("engineering-multi-agent-systems-architect", content)
         self.assertIn("engineering-code-reviewer", content)
         self.assertIn("design-ui-finish-gate-reviewer", content)
         
         # Contrastive Few-Shot Examples, Anti-Patterns & Feedback Packet
         self.assertIn("Feedback Packet", content)
         self.assertIn("CONTRASTIVE FEW-SHOT EXAMPLES", content)
+        self.assertIn("NO_ROSTER_BYPASS", content)
         self.assertIn("NO_SELF_SIGNOFF", content)
         self.assertIn("NO_SCREENSHOT_NO_UI_DELIVERY", content)
         self.assertIn("ZERO_ASSUMPTION_SANDBOX", content)
 
     def test_02_cursor_rule_structure(self):
-        """Test Cursor MDC Hard Tool Interception structure and frontmatter"""
+        """Test Cursor MDC Multi-Agent Governance structure and frontmatter"""
         content = self.installer.get_default_rule_content("cursor")
         
         self.assertIn('globs: "*"', content)
         self.assertIn("alwaysApply: true", content)
-        self.assertIn("HARD TOOL INTERCEPTION PROTOCOL (CURSOR MODE)", content)
+        self.assertIn("HARD TOOL INTERCEPTION & MULTI-AGENT GOVERNANCE PROTOCOL (CURSOR MODE)", content)
         self.assertIn("MANDATORY PRE-FLIGHT GATE", content)
         self.assertIn("6-STAGE CLOSED-LOOP WORKFLOW", content)
+        self.assertIn("STAGE 1 - MULTI-AGENT ARCHITECTURE & ROSTER", content)
         self.assertIn("EMPIRICAL SANDBOX & VISUAL VERIFICATION GATE", content)
         self.assertIn("INDEPENDENT SUBAGENT SIGN-OFF & DELIVERY", content)
+        self.assertIn("NO_ROSTER_BYPASS", content)
         self.assertIn("NO_SELF_SIGNOFF", content)
         self.assertIn("NO_SCREENSHOT_NO_UI_DELIVERY", content)
 
@@ -89,7 +95,7 @@ class TestLoopEngineeringRule(unittest.TestCase):
                 project_path=str(temp_dir)
             )
             self.assertTrue(status_after["is_installed"])
-            self.assertIn("HARD TOOL-BLOCKING", status_after["content"])
+            self.assertIn("MULTI-AGENT ARCHITECTURE", status_after["content"])
             self.assertTrue((temp_dir / "AGENTS.md").exists())
             self.assertTrue((temp_dir / "GEMINI.md").exists())
 

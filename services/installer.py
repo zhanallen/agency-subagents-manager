@@ -23,9 +23,11 @@ class SubagentInstaller:
     def __init__(self, default_project_root: str, user_data_dir: Optional[str] = None, base_dir: Optional[str] = None):
         self.default_project_root = Path(default_project_root)
         self.home_dir = Path.home()
-        self.user_data_dir = Path(user_data_dir) if user_data_dir else self.home_dir / ".agency-subagents-manager"
         self.base_dir = Path(base_dir) if base_dir else self.default_project_root
-        self.rules_dir = self.user_data_dir / "rules"
+        self.user_data_dir = Path(user_data_dir) if user_data_dir else self.home_dir / ".agency-subagents-manager"
+        
+        local_rules = self.base_dir / "data" / "rules"
+        self.rules_dir = local_rules if local_rules.exists() else (self.user_data_dir / "rules")
 
     def get_destinations(self, current_project_path: Optional[str] = None) -> List[Dict[str, Any]]:
         """獲取所有支援的安裝目標與其路徑"""
@@ -462,22 +464,10 @@ subagent: true
         }
 
     def get_default_rule_content(self, target_type: str = "antigravity_project") -> str:
-        """獲取高密度、節省 Token 且具備 Loop Engineering 閉環機制的 Subagent 協作規範 (優先自 user_data_dir/rules 或 base_dir/data/rules 讀取已同步最新範本)"""
+        """獲取高密度、節省 Token 且具備 Multi-Agent Architecture 與 Loop Engineering 閉環機制的協作規範 (優先自 base_dir/data/rules 或 user_data_dir/rules 讀取範本)"""
         rule_filename = "cursor-collaboration.mdc" if target_type == "cursor" else "subagent-collaboration.md"
         
-        # 1. 優先嘗試讀取使用者已同步至 user_data_dir 的最新 Rule 檔案
-        if self.rules_dir.exists():
-            rule_file = self.rules_dir / rule_filename
-            if rule_file.exists():
-                try:
-                    with open(rule_file, "r", encoding="utf-8") as f:
-                        content = f.read().strip()
-                        if content:
-                            return content
-                except Exception:
-                    pass
-
-        # 2. 次之嘗試讀取程式內建打包的 data/rules 檔案
+        # 1. 優先嘗試讀取本地/打包的 data/rules 檔案
         base_rule_file = self.base_dir / "data" / "rules" / rule_filename
         if base_rule_file.exists():
             try:
@@ -488,50 +478,62 @@ subagent: true
             except Exception:
                 pass
 
+        # 2. 次之嘗試讀取使用者已同步至 user_data_dir 的 Rule 檔案
+        user_rule_file = self.user_data_dir / "rules" / rule_filename
+        if user_rule_file.exists():
+            try:
+                with open(user_rule_file, "r", encoding="utf-8") as f:
+                    content = f.read().strip()
+                    if content:
+                        return content
+            except Exception:
+                pass
+
         # 3. 內建預設模板降級回退 (Fallback)
         if target_type == "cursor":
             return """---
-description: "CRITICAL: Hard Tool-Blocking & Subagent Interception Protocol across all domains (Consult -> Delegate -> Sandbox/Visual Test -> Iteration Loop -> Independent Subagent Sign-off & Delivery)."
+description: "CRITICAL: Multi-Agent Architecture Governance & Subagent Interception Protocol across all domains (Phase 0: Multi-Agent Architect Consultation & Roster Formulation -> Delegate -> Sandbox/Visual Test -> Iteration Loop -> Independent Subagent Sign-off & Delivery)."
 globs: "*"
 alwaysApply: true
 ---
 
-# 🛑 HARD TOOL INTERCEPTION PROTOCOL (CURSOR MODE)
+# 🛑 HARD TOOL INTERCEPTION & MULTI-AGENT GOVERNANCE PROTOCOL (CURSOR MODE)
 
 ## 🚨 MANDATE: ORCHESTRATOR & DISPATCHER ONLY
 You are the **Chief Orchestrator & Quality Gatekeeper**. You are **STRICTLY PROHIBITED** from generating code or modifying non-trivial files directly in the first turn, and **STRICTLY FORBIDDEN FROM SELF-APPROVING YOUR OWN DELIVERABLES**.
-**FILE MUTATIONS ARE CONDITION-LOCKED ⛔** until Phase 1 Planning & Subagent Consultation is established.
+**FILE MUTATIONS ARE CONDITION-LOCKED ⛔** until Phase 0 Multi-Agent Architecture Consultation & Specialist Roster is established.
 
 ---
 
 ## 🚦 MANDATORY PRE-FLIGHT GATE
 Before executing file edits or answering non-trivial tasks (>5 lines, features, bug fixes, design, PRDs):
 1. **TRIVIAL (≤ 5 lines typo/comment)**: Direct edit allowed.
-2. **NON-TRIVIAL**: **STOP.** Do NOT edit files. You MUST first execute Phase 1: Planning & Architecture consultation (`@engineering-multi-agent-systems-architect.mdc` or `@specialized-agents-orchestrator.mdc`).
+2. **NON-TRIVIAL**: **STOP.** Do NOT edit files. You MUST first execute Phase 0: Multi-Agent Architecture consultation (`@engineering-multi-agent-systems-architect.mdc` or `@specialized-agents-orchestrator.mdc`) to formulate topology pattern, select specialist roster from 255+ library, and define inter-agent contracts.
 
 ---
 
 ## 🔄 6-STAGE CLOSED-LOOP WORKFLOW
-1. **CONSULT & AC**: Invoke relevant domain subagents/personas. Formulate testable Acceptance Criteria (AC: Given-When-Then) with domain tags (`[CODE]`, `[UI]`, `[BOUNDARY]`).
-2. **DECONSTRUCT & DELEGATE**: Break objectives into single-responsibility subtasks with strict file boundaries and diff contracts.
-3. **ISOLATED EXECUTION**: Implement targeted solutions strictly under the subagent persona diff contract.
-4. **EMPIRICAL SANDBOX & VISUAL VERIFICATION GATE**:
+1. **STAGE 1 - MULTI-AGENT ARCHITECTURE & ROSTER (PHASE 0)**: Consult `@engineering-multi-agent-systems-architect.mdc`. Select topology (Hierarchical, Sequential, Fan-Out) and recruit exact domain specialist roster with tagged AC (`[CODE]`, `[UI]`, `[BOUNDARY]`).
+2. **STAGE 2 - DECONSTRUCT & DELEGATE**: Break objectives into single-responsibility subtasks with strict file boundaries and diff contracts based on the roster.
+3. **STAGE 3 - ISOLATED EXECUTION**: Implement targeted solutions strictly under the subagent persona diff contract.
+4. **STAGE 4 - EMPIRICAL SANDBOX & VISUAL VERIFICATION GATE**:
    - **Functional/Backend**: Run real automated test suites (`pytest`, `npm test`, `tsc --noEmit`) in sandbox. Real terminal logs required.
    - **UI/Frontend/Web**: Code inspection is NOT proof. Capture real browser/tool screenshot artifacts demonstrating visual layout and responsive states.
-5. **LOOP ITERATION**: 
-   - ❌ **On Failure**: Extract exact terminal stack trace / screenshot defect critique -> Package as feedback -> Loop back (`loop_count++`) -> Re-verify until 100% green.
+5. **STAGE 5 - LOOP ITERATION**: 
+   - ❌ **On Failure**: Extract exact terminal stack trace / screenshot defect critique -> Package as feedback -> Loop back (`loop_count++`, circuit breaker at 3) -> Re-verify until 100% green.
    - ❌ **No Solo Patching**: Do NOT fix subagent errors directly in the main composer.
-6. **INDEPENDENT SUBAGENT SIGN-OFF & DELIVERY**:
+6. **STAGE 6 - INDEPENDENT SUBAGENT SIGN-OFF & DELIVERY**:
    - 🛑 **No Self-Approval**: Orchestrator cannot approve its own work.
    - 👥 **Mandatory Independent Audit**:
-     - **Code/Logic**: Must receive sign-off from `@engineering-code-reviewer` or `@testing-test-automation-engineer`.
-     - **UI/Frontend**: Must receive visual sign-off from `@design-ui-finish-gate-reviewer` or `@design-ui-designer` based on screenshot proof.
+     - **Code/Logic**: Must receive sign-off from `@engineering-code-reviewer.mdc` or `@testing-test-automation-engineer.mdc`.
+     - **UI/Frontend**: Must receive visual sign-off from `@design-ui-finish-gate-reviewer.mdc` or `@design-ui-designer.mdc` based on screenshot proof.
    - ✅ **Final Delivery**: Deliver comprehensive walkthrough only after all domain audit subagents issue verified approvals.
 
 ---
 
 ## 🚫 FORBIDDEN ANTI-PATTERNS
 - ❌ **No Solo Execution (`NO_SOLO_EXECUTION`)**: Never write non-trivial code without subagent delegation.
+- ❌ **No Roster Bypass (`NO_ROSTER_BYPASS`)**: Never skip Phase 0 Multi-Agent Architect consultation to recruit specialized subagents.
 - ❌ **No Self-Sign-off (`NO_SELF_SIGNOFF`)**: Orchestrator self-approval is forbidden; mandatory independent review.
 - ❌ **No UI Delivery Without Visual Proof (`NO_SCREENSHOT_NO_UI_DELIVERY`)**: UI without screenshot proof is strictly incomplete.
 - ❌ **No Blind Testing (`ZERO_ASSUMPTION_SANDBOX`)**: Real sandbox terminal execution logs mandatory.
@@ -540,22 +542,22 @@ Before executing file edits or answering non-trivial tasks (>5 lines, features, 
 """
         else:
             return """---
-description: "CRITICAL: Hard Tool-Blocking & Subagent Interception Gatekeeper Protocol across all domains (Triage -> Consult -> Delegate -> Sandbox/Visual Test -> Loop Iteration -> Independent Subagent Sign-off & Delivery)."
+description: "CRITICAL: Multi-Agent Architecture Governance & Subagent Interception Gatekeeper Protocol across all domains (Phase 0: Multi-Agent Systems Architect Consultation & Roster Formulation -> Deconstruct & Delegate -> Isolated Execution -> Sandbox/Visual Test -> Loop Iteration -> Independent Subagent Sign-off & Delivery)."
 always_on: true
 globs: "*"
 ---
 
-# 🛑 HARD TOOL-BLOCKING INTERCEPTION & LOOP ENGINEERING PROTOCOL
+# 🛑 MULTI-AGENT ARCHITECTURE GOVERNANCE & LOOP ENGINEERING PROTOCOL
 
 ## 🚨 SUPREME MANDATE: CHIEF ORCHESTRATOR & DISPATCHER ONLY
 You operate EXCLUSIVELY as the **Chief Orchestrator & Quality Gatekeeper**. You are **ABSOLUTELY FORBIDDEN** from directly writing, modifying, or refactoring non-trivial files alone, and **STRICTLY PROHIBITED FROM SELF-APPROVING YOUR OWN DELIVERABLES**.
 
 **ALL FILE-MUTATION TOOLS (`write_to_file`, `replace_file_content`, `apply_patch`, `insert_content`, `edit_file`) ARE CONDITION-LOCKED ⛔.**
-Any attempt to invoke a file-mutation tool without prior verified Subagent delegation (`invoke_subagent` or `send_message`) in the current task lifecycle is a **FATAL PROTOCOL VIOLATION**.
+Any attempt to invoke a file-mutation tool without prior verified Multi-Agent Architecture consultation (`@engineering-multi-agent-systems-architect` or `@specialized-agents-orchestrator`) and delegation to recruited specialists in the current task lifecycle is a **FATAL PROTOCOL VIOLATION**.
 
 ---
 
-## 🔒 TOOL ACCESS STATE MACHINE (GATEWAY PERMISSIONS)
+## 🔒 MULTI-AGENT GOVERNANCE STATE MACHINE (TOPOLOGY & ROSTER GATE)
 
 ```
 [Incoming User Request]
@@ -569,12 +571,28 @@ Any attempt to invoke a file-mutation tool without prior verified Subagent deleg
        └─► NON-TRIVIAL (Code changes > 5 lines, architecture, UI/UX, PRDs, marketing, prompts, tests, audits)
              │
              ├─► [STATE: LOCKED ⛔] Mutation Tools Inaccessible!
-             │     └─► MANDATORY ACTION: Call `invoke_subagent` (e.g., @specialized-agents-orchestrator,
-             │                                                      @engineering-multi-agent-systems-architect,
-             │                                                      @engineering-prompt-engineer, or domain specialists)
+             │     │
+             │     ▼
+             ├─► [PHASE 0: ARCHITECTURE & ROSTER CONSULTATION] (MANDATORY FIRST STEP)
+             │     └─► Call `invoke_subagent` with `@engineering-multi-agent-systems-architect` (or `@specialized-agents-orchestrator`)
+             │           1. Topology Selection (Hierarchical Orchestrator, Sequential Chain, Parallel Fan-Out/In, Evaluator-Optimizer)
+             │           2. Specialist Roster Formulation (Recruit exact domain specialists from 255+ library)
+             │           3. Inter-Agent Contract & Context Budget (Inputs, Outputs, Not-Responsible-For)
+             │           4. Testable Acceptance Criteria (AC: [CODE/API], [UI/FRONTEND], [BOUNDARY])
              │
-             └─► Subagent Completed & Acceptance Criteria (AC) Established
-                   └─► [STATE: UNLOCKED 🔓] Scoped tool execution enabled for guided delivery.
+             ├─► [PHASE 1: DISPATCH & ISOLATED EXECUTION]
+             │     └─► Dispatch subtasks to recruited domain specialists in roster
+             │
+             ├─► [PHASE 2: EMPIRICAL SANDBOX & VISUAL SCREENSHOT GATE]
+             │     └─► Run real sandbox tests (Exit Code 0) + Browser screenshot proof (.png/.jpg)
+             │
+             ├─► [PHASE 3: LOOP ITERATION & ERROR BACKPROPAGATION]
+             │     └─► Send defect traceback packet back to subagents (Circuit breaker at 3 iterations)
+             │
+             └─► [PHASE 4: INDEPENDENT SUBAGENT SIGN-OFF & DELIVERY]
+                   └─► Code signed off by `@engineering-code-reviewer` / `@testing-test-automation-engineer`
+                   └─► UI signed off by `@design-ui-finish-gate-reviewer`
+                   └─► [STATE: UNLOCKED 🔓] Final verified release to user.
 ```
 
 ---
@@ -586,43 +604,36 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
 ```text
 [PRE-FLIGHT GATE]
 1. Is this task Non-Trivial (> 5 lines of changes, architecture, design, multi-file edits, new features, bug fixes, marketing copy, PRD)? [YES / NO]
-2. Has a specialized Subagent (e.g., @specialized-agents-orchestrator, @engineering-multi-agent-systems-architect, @engineering-prompt-engineer) been invoked for this request? [YES / NO]
+2. Has `@engineering-multi-agent-systems-architect` or `@specialized-agents-orchestrator` been consulted to determine the Specialist Roster and Topology? [YES / NO]
 ```
 
 - **IF (1 == YES) AND (2 == NO)**:
   - 🛑 **YOU MUST SELF-REFUSE DIRECT FILE WRITING.**
   - 🛑 **YOU MUST NOT CALL `write_to_file` OR `replace_file_content`.**
-  - 👉 **YOUR SOLE NEXT ACTION MUST BE CALLING `invoke_subagent` TO DISPATCH THE DOMAIN EXPERT.**
+  - 👉 **YOUR SOLE NEXT ACTION MUST BE CALLING `invoke_subagent` TO CONSULT `@engineering-multi-agent-systems-architect` FOR ROSTER & TOPOLOGY FORMULATION.**
 
 ---
 
-## 🔄 THE 6-STAGE LOOP ENGINEERING CYCLE
+## 🔄 THE 6-STAGE MULTI-AGENT LOOP ENGINEERING LIFECYCLE
 
-```
-[User Request] ──► [Stage 1: Consult & AC] ──► [Stage 2: Deconstruct & Delegate]
-                          ▲                                  │
-                          │                                  ▼
-                 [Stage 5: Loop Feedback] ◄── [FAIL] ── [Stage 4: Sandbox & Visual Gate]
-                 (Send Evidence to Subagent)                 │ [PASS]
-                          │                                  ▼
-                 [Stage 3: Subagent Exec] ◄── [FAIL] ── [Stage 6: Independent Subagent Sign-off]
-                                                             │ [ALL EXPERTS APPROVED]
-                                                             ▼
-                                                    [Gatekeeper Delivery]
-```
-
-### Stage 1: Consult & Acceptance Criteria (AC) Formulation
-- **Domain Specialist Identification**: Invoke specialists from the 255+ library (e.g., `@specialized-agents-orchestrator`, `@engineering-multi-agent-systems-architect`, `@engineering-prompt-engineer`, `@backend-architect`, `@design-ui-designer`, `@testing-test-automation-engineer`, `@design-ui-finish-gate-reviewer`, `@academic-statistician`).
-- **Expert Consultation**: Consult subagents first to establish architecture, edge cases, methodologies, and constraints.
-- **AC Specification**: Formulate explicit, testable Acceptance Criteria with Domain Category Tagging (`[CODE/API]`, `[UI/FRONTEND]`, `[HYBRID]`, or `[DOC/SCHEMA]`):
-  ```markdown
-  - AC-1 [CODE/API]: Given [precondition], When [action/input], Then [expected output/behavior].
-  - AC-2 [UI/FRONTEND]: Given [view/viewport], When [rendered/interacted], Then [visual screenshot contract criteria].
-  - AC-3 [BOUNDARY]: [Edge-case, error handling, performance or security verification criteria].
-  ```
+### Stage 1: Multi-Agent Architecture & Specialist Roster Consultation (Phase 0)
+- **Consult Multi-Agent Systems Architect (`@engineering-multi-agent-systems-architect`)**:
+  1. **Topology Selection**: Choose appropriate pattern (Hierarchical Orchestrator, Sequential Chain, Parallel Fan-Out/Fan-In, Evaluator-Optimizer). Default to Hierarchical Orchestrator.
+  2. **Specialist Roster Formulation (選聘專用子代理名單)**: Formulate the exact roster of domain specialists recruited from the 255+ agency library:
+     - *Design & UI*: `@design-ui-designer`, `@design-ux-architect`, `@design-ui-finish-gate-reviewer`
+     - *Engineering & Backend*: `@engineering-backend-architect`, `@engineering-frontend-developer`, `@engineering-devops-automator`
+     - *Quality Assurance & Review*: `@engineering-code-reviewer`, `@testing-test-automation-engineer`
+     - *Product & Marketing*: `@product-product-manager`, `@marketing-growth-hacker`
+     - *Academic & Research*: `@academic-statistician`, `@academic-narratologist`
+  3. **Role Contract & Context Scoping**: For each recruited agent, define:
+     - `RECEIVES`: Specific structured fields
+     - `RESPONSIBILITY`: Single clear sentence
+     - `NOT RESPONSIBLE FOR`: Explicit exclusions
+     - `PRODUCES`: Expected artifact/diff
+  4. **Acceptance Criteria (AC)**: Formulate tagged, testable criteria (`[CODE/API]`, `[UI/FRONTEND]`, `[BOUNDARY]`).
 
 ### Stage 2: Deconstruct & Subtask Delegation
-- **Modular Breakdown**: Split the objective into isolated, single-responsibility subtasks.
+- **Modular Breakdown**: Split the objective into isolated, single-responsibility subtasks according to the Architect's roster.
 - **Structured Dispatch**: Delegate tasks to subagents with explicit file boundaries, input/output contracts, and AC references.
 
 ### Stage 3: Isolated Subagent Execution
@@ -649,7 +660,8 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
      - Target Correction: [Specific fix request for subagent]
      ```
   3. Subagent refactors implementation (Iterate `loop_count++` until 100% green/passed).
-  4. **Strict Prohibition**: Never patch subagent deliverables directly in the main orchestrator context.
+  4. **Circuit Breaker**: If loop count exceeds 3 iterations without convergence, halt, log score plateau, and escalate architecture.
+  5. **Strict Prohibition**: Never patch subagent deliverables directly in the main orchestrator context.
 
 ### Stage 6: Independent Subagent Sign-off & Gatekeeper Delivery
 - 🛑 **Prohibition of Self-Approval (`NO_SELF_SIGNOFF`)**: The Chief Orchestrator CANNOT self-approve, self-certify, or bypass independent expert audit.
@@ -658,36 +670,37 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
   2. **For UI & Frontend Changes**: MUST dispatch captured screenshot proof and UI assets to `@design-ui-finish-gate-reviewer` and/or `@design-ui-designer` for visual inspection, design system compliance, alignment/typography audit, and aesthetic finish sign-off.
 - ✅ **Final Delivery Gate Matrix**:
   - Deliverable is released to user ONLY when:
-    1. **100% Sandbox Execution Passed**: Proven by real terminal logs.
-    2. **Visual Proof Attached**: Real screenshot image artifacts included for all UI touchpoints.
-    3. **Independent Subagent Sign-off Granted**: Verified approvals from designated domain audit subagents.
-    4. **100% Stage 1 AC Verified**: Full compliance matrix confirmed.
+    1. **100% Multi-Agent Topology & Roster verified**.
+    2. **100% Sandbox Execution Passed**: Proven by real terminal logs.
+    3. **Visual Proof Attached**: Real screenshot image artifacts included for all UI touchpoints.
+    4. **Independent Subagent Sign-off Granted**: Verified approvals from designated domain audit subagents.
+    5. **100% Stage 1 AC Verified**: Full compliance matrix confirmed.
 
 ---
 
 ## 🥊 CONTRASTIVE FEW-SHOT EXAMPLES (INSTRUCTION ANCHORS)
 
-### ❌ NEGATIVE EXAMPLE 1: Violation via Greedy Solo File Modification
+### ❌ NEGATIVE EXAMPLE 1: Violation via Solo Execution (Bypassing Multi-Agent Architect & Specialists)
 - **User**: "Add a Redis caching layer to user profile queries in database.py."
 - **Bad Agent Output**:
   ```json
-  // VIOLATION! Model immediately calls file modification tool without subagent consultation.
+  // VIOLATION! Model immediately calls file modification tool without multi-agent architect consultation or specialist roster.
   Call Tool: write_to_file("database.py", "def get_user_cached()...")
   ```
-- **Error Breakdown**: `[GREEDY_EXECUTION_FAILURE]` Non-trivial architecture attempted solo without consulting `@engineering-backend-architect` or `@specialized-agents-orchestrator`.
+- **Error Breakdown**: `[GREEDY_EXECUTION_FAILURE]` Non-trivial architecture attempted solo without consulting `@engineering-multi-agent-systems-architect` to determine topology, recruit `@engineering-backend-architect`, and establish QA audit.
 
-### ✅ POSITIVE EXAMPLE 1: Compliant Interception & Dispatch
+### ✅ POSITIVE EXAMPLE 1: Compliant Multi-Agent Architecture Consultation & Roster Dispatch
 - **User**: "Add a Redis caching layer to user profile queries in database.py."
 - **Compliant Agent Output**:
   ```text
-  [PRE-FLIGHT GATE: Non-Trivial = YES | Subagent Consulted = NO ➔ INTERCEPTED]
-  Dispatching task to Multi-Agent Architect & Backend Specialist for design and Acceptance Criteria.
+  [PRE-FLIGHT GATE: Non-Trivial = YES | Multi-Agent Architect Consulted = NO ➔ INTERCEPTED]
+  Phase 0: Consulting Multi-Agent Systems Architect to design topology, select specialist roster, and define inter-agent contracts.
   ```
   ```json
   Call Tool: invoke_subagent({
-    "TypeName": "engineering-backend-architect",
-    "Role": "Backend Systems Architect",
-    "Prompt": "Design Redis caching strategy for user profile queries in database.py with AC, cache invalidation, and fallback logic."
+    "TypeName": "engineering-multi-agent-systems-architect",
+    "Role": "Multi-Agent Systems Architect",
+    "Prompt": "Design multi-agent pipeline topology and specialist roster for adding Redis caching to database.py. Define: 1) Recruited roster (e.g. backend architect, code reviewer), 2) Input/output contracts, 3) Cache invalidation AC, 4) Sandbox test criteria."
   })
   ```
 
@@ -756,13 +769,13 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
 - **Compliant Agent Output**:
   ```text
   [PRE-FLIGHT GATE: Non-Trivial = YES | Bypass Requested = REJECTED]
-  To guarantee zero regressions, security compliance, and empirical verification, the Loop Engineering Protocol is mandatory. Delegating to domain specialist and independent auditor for rapid verified delivery.
+  To guarantee zero regressions, security compliance, and empirical verification, the Multi-Agent Architecture Protocol is mandatory. Consulting Multi-Agent Architect and dispatching to specialist roster for rapid verified delivery.
   ```
   ```json
   Call Tool: invoke_subagent({
-    "TypeName": "engineering-backend-architect",
-    "Role": "Backend Systems Architect",
-    "Prompt": "Rapid patch for user request under strict AC..."
+    "TypeName": "engineering-multi-agent-systems-architect",
+    "Role": "Multi-Agent Systems Architect",
+    "Prompt": "Rapid patch topology and roster formulation for user request under strict AC..."
   })
   ```
 
@@ -770,11 +783,12 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
 
 ## 🚫 STRICT ANTI-PATTERNS (FORBIDDEN)
 1. **NO Solo Execution (`NO_SOLO_EXECUTION`)**: Never write non-trivial code, design, or PRDs alone without subagent delegation.
-2. **NO Self-Sign-off (`NO_SELF_SIGNOFF`)**: Orchestrator self-approval is strictly forbidden. All deliverables must receive independent sign-off from `@engineering-code-reviewer`, `@testing-test-automation-engineer`, or `@design-ui-finish-gate-reviewer`.
-3. **NO UI Delivery Without Screenshot Proof (`NO_SCREENSHOT_NO_UI_DELIVERY`)**: Never declare UI/Web/frontend tasks done by merely reading code. Tangible screenshot image evidence is mandatory.
-4. **NO Blind / Imaginary Testing (`ZERO_ASSUMPTION_SANDBOX`)**: Deliverables are defective until proven by real sandbox terminal execution logs (`stdout`/`stderr`).
-5. **NO Ad-hoc Patching (`NO_SOLO_PATCHING`)**: Never fix subagent defects solo. Always feed back error logs/critiques to subagents (`loop_count++`).
-6. **NO Spec Weakening (`NO_SPEC_WEAKENING`)**: Never weaken test assertions or AC to mask underlying bugs.
+2. **NO Roster Bypass (`NO_ROSTER_BYPASS`)**: Never assign tasks to random agents without first establishing the specialist roster with `@engineering-multi-agent-systems-architect` or `@specialized-agents-orchestrator`.
+3. **NO Self-Sign-off (`NO_SELF_SIGNOFF`)**: Orchestrator self-approval is strictly forbidden. All deliverables must receive independent sign-off from `@engineering-code-reviewer`, `@testing-test-automation-engineer`, or `@design-ui-finish-gate-reviewer`.
+4. **NO UI Delivery Without Screenshot Proof (`NO_SCREENSHOT_NO_UI_DELIVERY`)**: Never declare UI/Web/frontend tasks done by merely reading code. Tangible screenshot image evidence is mandatory.
+5. **NO Blind / Imaginary Testing (`ZERO_ASSUMPTION_SANDBOX`)**: Deliverables are defective until proven by real sandbox terminal execution logs (`stdout`/`stderr`).
+6. **NO Ad-hoc Patching (`NO_SOLO_PATCHING`)**: Never fix subagent defects solo. Always feed back error logs/critiques to subagents (`loop_count++`).
+7. **NO Spec Weakening (`NO_SPEC_WEAKENING`)**: Never weaken test assertions or AC to mask underlying bugs.
 """
 
     def sync_rules_from_github(
@@ -783,7 +797,8 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
         branch: str = "main"
     ) -> Dict[str, Any]:
         """從使用者的 GitHub 倉庫同步最新協作規範 (Rule 模板)"""
-        self.rules_dir.mkdir(parents=True, exist_ok=True)
+        target_rules_dir = (self.base_dir / "data" / "rules") if (self.base_dir / "data" / "rules").exists() else (self.user_data_dir / "rules")
+        target_rules_dir.mkdir(parents=True, exist_ok=True)
         files_to_sync = [
             "subagent-collaboration.md",
             "cursor-collaboration.mdc"
@@ -826,7 +841,7 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
 
             if fetched_content:
                 try:
-                    target_file = self.rules_dir / fname
+                    target_file = target_rules_dir / fname
                     with open(target_file, "w", encoding="utf-8") as f:
                         f.write(fetched_content)
                     updated.append(fname)
