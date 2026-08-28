@@ -242,5 +242,53 @@ class TestUpdateDetection(unittest.TestCase):
         finally:
             shutil.rmtree(temp_dir, ignore_errors=True)
 
+    def test_06_zero_directory_pollution_on_read_or_startup(self):
+        """測試在使用者未進行安裝前，任何查詢或檢測絕不自動建立 .agents、.cursor 或任何檔案資料夾"""
+        clean_temp_dir = Path(tempfile.mkdtemp(prefix="test_clean_project_"))
+        try:
+            # 1. 執行目標路徑清單查詢
+            dests = self.installer.get_destinations(current_project_path=str(clean_temp_dir))
+            self.assertTrue(len(dests) > 0)
+            self.assertFalse((clean_temp_dir / ".agents").exists())
+            self.assertFalse((clean_temp_dir / ".cursor").exists())
+
+            # 2. 執行已安裝清單查詢
+            installed_ids = self.installer.get_installed_agent_ids(
+                target_type="antigravity_project",
+                project_path=str(clean_temp_dir)
+            )
+            self.assertEqual(installed_ids, [])
+            self.assertFalse((clean_temp_dir / ".agents").exists())
+
+            # 3. 執行已安裝與更新狀態檢測
+            status = self.installer.get_installed_agents_status(
+                target_type="antigravity_project",
+                project_path=str(clean_temp_dir),
+                agent_manager=self.agent_mgr
+            )
+            self.assertEqual(status["installed_ids"], [])
+            self.assertEqual(status["updates_count"], 0)
+            self.assertFalse((clean_temp_dir / ".agents").exists())
+
+            # 4. 執行 Rule 狀態檢測
+            rule_status = self.installer.check_rule_status(
+                target_type="antigravity_project",
+                project_path=str(clean_temp_dir)
+            )
+            self.assertFalse(rule_status["is_installed"])
+            self.assertFalse((clean_temp_dir / ".agents").exists())
+
+            # 5. 透過 FastAPI 端點呼叫 get_agents 模擬網頁一打開的行為
+            api_res = asyncio.run(get_agents(
+                target_type="antigravity_project",
+                project_path=str(clean_temp_dir)
+            ))
+            self.assertTrue(api_res["success"])
+            self.assertEqual(api_res["installed_count"], 0)
+            # 確認資料夾依然完全純淨，無任何子目錄被建立
+            self.assertEqual(list(clean_temp_dir.iterdir()), [])
+        finally:
+            shutil.rmtree(clean_temp_dir, ignore_errors=True)
+
 if __name__ == "__main__":
     unittest.main()

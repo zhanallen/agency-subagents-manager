@@ -116,8 +116,14 @@ class SubagentInstaller:
             }
         ]
 
-    def _resolve_target_dir(self, target_type: str, custom_path: Optional[str] = None, project_path: Optional[str] = None) -> Path:
-        """解析目標資料夾路徑並自動建立"""
+    def _resolve_target_dir(
+        self,
+        target_type: str,
+        custom_path: Optional[str] = None,
+        project_path: Optional[str] = None,
+        create: bool = False
+    ) -> Path:
+        """解析目標資料夾路徑。僅在 create=True 時才建立資料夾"""
         proj_root = Path(project_path) if project_path else self.default_project_root
 
         if target_type == "antigravity_project":
@@ -141,7 +147,8 @@ class SubagentInstaller:
         else:
             raise ValueError(f"未知的安裝目標: {target_type}")
 
-        target_dir.mkdir(parents=True, exist_ok=True)
+        if create:
+            target_dir.mkdir(parents=True, exist_ok=True)
         return target_dir
 
     def get_installed_agent_ids(self, target_type: str, custom_path: Optional[str] = None, project_path: Optional[str] = None) -> List[str]:
@@ -339,7 +346,7 @@ subagent: true
     ) -> Dict[str, Any]:
         """安裝單個 Subagent（只寫入單一指定目標目錄，絕不重複安裝）"""
         try:
-            target_dir = self._resolve_target_dir(target_type, custom_path, project_path)
+            target_dir = self._resolve_target_dir(target_type, custom_path, project_path, create=True)
             
             ext = ".toml" if target_type == "codex" else (".mdc" if target_type == "cursor" else ".md")
             target_file = target_dir / f"{agent['id']}{ext}"
