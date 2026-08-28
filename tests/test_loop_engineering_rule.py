@@ -16,17 +16,18 @@ class TestLoopEngineeringRule(unittest.TestCase):
         self.installer = SubagentInstaller(str(self.root))
 
     def test_01_antigravity_rule_structure(self):
-        """Test Antigravity 6-Stage Loop Engineering Protocol structure and keywords"""
+        """Test Antigravity Hard Tool-Blocking Protocol structure and keywords"""
         content = self.installer.get_default_rule_content("antigravity_project")
         
         # Core Identity & Mandate
-        self.assertIn("Subagent-First Loop Engineering Protocol", content)
+        self.assertIn("HARD TOOL-BLOCKING INTERCEPTION", content)
         self.assertIn("Chief Orchestrator & Quality Gatekeeper", content)
+        self.assertIn("CONDITION-LOCKED", content)
         
-        # Decision Matrix
-        self.assertIn("Decision Matrix: When Subagents are MANDATORY", content)
-        self.assertIn("Trivial (Solo Allowed)", content)
-        self.assertIn("Non-Trivial (SUBAGENTS MANDATORY)", content)
+        # State Machine & Pre-Flight Gate
+        self.assertIn("TOOL ACCESS STATE MACHINE", content)
+        self.assertIn("MANDATORY PRE-FLIGHT CHECK", content)
+        self.assertIn("SELF-REFUSE DIRECT FILE WRITING", content)
         
         # 6 Stages
         self.assertIn("Stage 1: Consult & Acceptance Criteria (AC) Formulation", content)
@@ -36,24 +37,22 @@ class TestLoopEngineeringRule(unittest.TestCase):
         self.assertIn("Stage 5: Loop Iteration & Error Backpropagation", content)
         self.assertIn("Stage 6: Gatekeeper Acceptance & Delivery", content)
         
-        # Feedback Packet & Self Check
+        # Contrastive Few-Shot Examples & Feedback Packet
         self.assertIn("Feedback Packet", content)
-        self.assertIn("Strict Anti-Patterns & Enforcement Rules", content)
-        self.assertIn("Pre-Action Verification Protocol (Self-Check)", content)
+        self.assertIn("CONTRASTIVE FEW-SHOT EXAMPLES", content)
 
     def test_02_cursor_rule_structure(self):
-        """Test Cursor MDC Loop Engineering structure and frontmatter"""
+        """Test Cursor MDC Hard Tool Interception structure and frontmatter"""
         content = self.installer.get_default_rule_content("cursor")
         
         self.assertIn('globs: "*"', content)
         self.assertIn("alwaysApply: true", content)
-        self.assertIn("Subagent-First Loop Engineering Protocol (Cursor Mode)", content)
-        self.assertIn("Decision Matrix (Strict Triage)", content)
-        self.assertIn("6-Stage Closed-Loop Workflow", content)
-        self.assertIn("Forbidden Anti-Patterns", content)
+        self.assertIn("HARD TOOL INTERCEPTION PROTOCOL (CURSOR MODE)", content)
+        self.assertIn("MANDATORY PRE-FLIGHT GATE", content)
+        self.assertIn("6-STAGE CLOSED-LOOP WORKFLOW", content)
 
     def test_03_installer_rule_lifecycle(self):
-        """Test rule install, status check, and uninstall in a temporary project directory"""
+        """Test rule install (Triple-Lock), status check, and uninstall in a temporary project directory"""
         temp_dir = Path(tempfile.mkdtemp(prefix="test_rule_lifecycle_"))
         try:
             # Check not installed
@@ -63,20 +62,22 @@ class TestLoopEngineeringRule(unittest.TestCase):
             )
             self.assertFalse(status["is_installed"])
 
-            # Install
+            # Install (Triple-Lock)
             res = self.installer.install_collaboration_rule(
                 target_type="antigravity_project",
                 project_path=str(temp_dir)
             )
             self.assertTrue(res["success"])
 
-            # Check installed
+            # Check primary rule and root entrypoint files
             status_after = self.installer.check_rule_status(
                 target_type="antigravity_project",
                 project_path=str(temp_dir)
             )
             self.assertTrue(status_after["is_installed"])
-            self.assertIn("Subagent-First Loop Engineering Protocol", status_after["content"])
+            self.assertIn("HARD TOOL-BLOCKING", status_after["content"])
+            self.assertTrue((temp_dir / "AGENTS.md").exists())
+            self.assertTrue((temp_dir / "GEMINI.md").exists())
 
             # Uninstall
             un_res = self.installer.uninstall_collaboration_rule(
@@ -85,12 +86,14 @@ class TestLoopEngineeringRule(unittest.TestCase):
             )
             self.assertTrue(un_res["success"])
 
-            # Check not installed
+            # Check not installed and root files removed
             status_final = self.installer.check_rule_status(
                 target_type="antigravity_project",
                 project_path=str(temp_dir)
             )
             self.assertFalse(status_final["is_installed"])
+            self.assertFalse((temp_dir / "AGENTS.md").exists())
+            self.assertFalse((temp_dir / "GEMINI.md").exists())
         finally:
             shutil.rmtree(temp_dir, ignore_errors=True)
 
