@@ -43,6 +43,11 @@
 - **【完整系統提示詞 (Persona)】**：語法高亮 Markdown 檢視與一鍵複製完整 Prompt。
 - **【呼叫教學與範例 (Usage)】**：各平台叫用範本與一鍵複製。
 
+### 9. 🔄 雲端雙向智慧同步 (Auto Dual-Source Sync Engine)
+- **協作規範與在地翻譯**：自動自 [zhanallen/agency-subagents-manager](https://github.com/zhanallen/agency-subagents-manager) 同步最新 5 階段 Loop Engineering 規範模板 (`data/rules/`) 與 100% 繁中在地化翻譯庫 (`data/translations_full.json`)。
+- **專家定義與最新提示詞**：自動自原作者 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) 同步官方最新 255+ 位 AI 專家的原始 Markdown 提示詞。
+- **專案 Rule 自動升級**：一鍵雙源同步時自動為當前專案將 `.agents/rules/subagent-collaboration.md` 升級為最新雲端版本。
+
 ---
 
 ## 🚀 使用方式

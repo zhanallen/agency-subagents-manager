@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import base64
 import urllib.request
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -528,23 +529,48 @@ The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Age
         errors = []
         
         for fname in files_to_sync:
-            url = f"https://raw.githubusercontent.com/{repo_owner_repo}/{branch}/data/rules/{fname}"
+            fetched_content = None
+            
+            # 策略 1: raw.githubusercontent.com
+            raw_url = f"https://raw.githubusercontent.com/{repo_owner_repo}/{branch}/data/rules/{fname}"
             try:
                 req = urllib.request.Request(
-                    url,
+                    raw_url,
                     headers={"User-Agent": "AgencySubagentsManager-Sync/2.0"}
                 )
-                with urllib.request.urlopen(req, timeout=10) as response:
+                with urllib.request.urlopen(req, timeout=8) as response:
                     if response.status == 200:
-                        content = response.read().decode("utf-8")
-                        target_file = self.rules_dir / fname
-                        with open(target_file, "w", encoding="utf-8") as f:
-                            f.write(content)
-                        updated.append(fname)
-                    else:
-                        errors.append(f"{fname}: HTTP {response.status}")
+                        fetched_content = response.read().decode("utf-8")
             except Exception as e:
-                errors.append(f"{fname}: {str(e)}")
+                pass
+
+            # 策略 2: GitHub Contents API (備援)
+            if not fetched_content:
+                api_url = f"https://api.github.com/repos/{repo_owner_repo}/contents/data/rules/{fname}?ref={branch}"
+                try:
+                    req = urllib.request.Request(
+                        api_url,
+                        headers={"User-Agent": "AgencySubagentsManager-Sync/2.0"}
+                    )
+                    with urllib.request.urlopen(req, timeout=8) as response:
+                        if response.status == 200:
+                            data = json.loads(response.read().decode("utf-8"))
+                            if "content" in data:
+                                fetched_content = base64.b64decode(data["content"]).decode("utf-8")
+                except Exception as e:
+                    errors.append(f"{fname}: {str(e)}")
+
+            if fetched_content:
+                try:
+                    target_file = self.rules_dir / fname
+                    with open(target_file, "w", encoding="utf-8") as f:
+                        f.write(fetched_content)
+                    updated.append(fname)
+                except Exception as e:
+                    errors.append(f"{fname} 寫入失敗: {str(e)}")
+            else:
+                if not any(fname in err for err in errors):
+                    errors.append(f"{fname}: 未能自遠端取得內容")
         
         if updated:
             return {
@@ -557,7 +583,7 @@ The Main Agent MUST NEVER act as a solo executor for complex tasks. The Main Age
             return {
                 "success": False,
                 "updated_files": [],
-                "message": f"同步協作規範失敗 (將使用本機快取規範): {'; '.join(errors)}",
+                "message": f"同步協作規範失敗 (已使用本機快取規範): {'; '.join(errors)}",
                 "errors": errors
             }
 

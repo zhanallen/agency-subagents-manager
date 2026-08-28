@@ -180,8 +180,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-brand-guardian.md",
     "relative_file": "design/design-brand-guardian.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🎨",
     "color": "blue",
@@ -207,8 +207,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-image-prompt-engineer.md",
     "relative_file": "design/design-image-prompt-engineer.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "📷",
     "color": "amber",
@@ -234,8 +234,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-inclusive-visuals-specialist.md",
     "relative_file": "design/design-inclusive-visuals-specialist.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🌈",
     "color": "#4DB6AC",
@@ -261,8 +261,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-persona-walkthrough.md",
     "relative_file": "design/design-persona-walkthrough.md",
     "tags": [
-      "視覺與體驗設計",
       "Design",
+      "視覺與體驗設計",
       "Frontend"
     ],
     "emoji": "🎭",
@@ -289,8 +289,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ui-designer.md",
     "relative_file": "design/design-ui-designer.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🎨",
     "color": "purple",
@@ -316,8 +316,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ui-finish-gate-reviewer.md",
     "relative_file": "design/design-ui-finish-gate-reviewer.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🧱",
     "color": "orange",
@@ -343,8 +343,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ux-architect.md",
     "relative_file": "design/design-ux-architect.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "📐",
     "color": "purple",
@@ -370,8 +370,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ux-researcher.md",
     "relative_file": "design/design-ux-researcher.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🔬",
     "color": "green",
@@ -397,8 +397,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-visual-storyteller.md",
     "relative_file": "design/design-visual-storyteller.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🎬",
     "color": "purple",
@@ -424,8 +424,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-whimsy-injector.md",
     "relative_file": "design/design-whimsy-injector.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "✨",
     "color": "pink",
@@ -2323,8 +2323,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-3d-scene-developer.md",
     "relative_file": "gis/gis-3d-scene-developer.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🏔️",
     "color": "cyan",
@@ -2350,8 +2350,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-bim-specialist.md",
     "relative_file": "gis/gis-bim-specialist.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🏗️",
     "color": "gold",
@@ -2377,8 +2377,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-cartography-designer.md",
     "relative_file": "gis/gis-cartography-designer.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🎨",
     "color": "pink",
@@ -2404,8 +2404,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-drone-reality-mapping.md",
     "relative_file": "gis/gis-drone-reality-mapping.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🛸",
     "color": "amber",
@@ -2431,8 +2431,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-analyst.md",
     "relative_file": "gis/gis-analyst.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🖥️",
     "color": "teal",
@@ -2458,8 +2458,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-qa-engineer.md",
     "relative_file": "gis/gis-qa-engineer.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "✅",
     "color": "purple",
@@ -2485,8 +2485,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-geoai-ml-engineer.md",
     "relative_file": "gis/gis-geoai-ml-engineer.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🤖",
     "color": "green",
@@ -2512,8 +2512,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-geoprocessing-specialist.md",
     "relative_file": "gis/gis-geoprocessing-specialist.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "⚙️",
     "color": "red",
@@ -2539,8 +2539,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-solution-engineer.md",
     "relative_file": "gis/gis-solution-engineer.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🔧",
     "color": "blue",
@@ -2566,8 +2566,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-spatial-data-engineer.md",
     "relative_file": "gis/gis-spatial-data-engineer.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "📦",
     "color": "orange",
@@ -2593,8 +2593,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-spatial-data-scientist.md",
     "relative_file": "gis/gis-spatial-data-scientist.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "📊",
     "color": "indigo",
@@ -2620,8 +2620,8 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-technical-consultant.md",
     "relative_file": "gis/gis-technical-consultant.md",
     "tags": [
-      "地理資訊與空間分析",
-      "GIS"
+      "GIS",
+      "地理資訊與空間分析"
     ],
     "emoji": "🧠",
     "color": "navy",
@@ -2647,9 +2647,9 @@
     "file_path": "data\\agency-agents-repo\\gis\\gis-web-gis-developer.md",
     "relative_file": "gis/gis-web-gis-developer.md",
     "tags": [
-      "地理資訊與空間分析",
+      "GIS",
       "Backend",
-      "GIS"
+      "地理資訊與空間分析"
     ],
     "emoji": "🌐",
     "color": "blue",
@@ -2675,8 +2675,8 @@
     "file_path": "data\\agency-agents-repo\\healthcare\\healthcare-clinical-evidence-agent.md",
     "relative_file": "healthcare/healthcare-clinical-evidence-agent.md",
     "tags": [
-      "醫療與健康科技",
-      "Healthcare"
+      "Healthcare",
+      "醫療與健康科技"
     ],
     "emoji": "🩺",
     "color": "#1A5276",
@@ -2702,8 +2702,8 @@
     "file_path": "data\\agency-agents-repo\\healthcare\\healthcare-innovation-strategist.md",
     "relative_file": "healthcare/healthcare-innovation-strategist.md",
     "tags": [
-      "醫療與健康科技",
-      "Healthcare"
+      "Healthcare",
+      "醫療與健康科技"
     ],
     "emoji": "🧭",
     "color": "#1B4F72",
@@ -2729,8 +2729,8 @@
     "file_path": "data\\agency-agents-repo\\healthcare\\healthcare-sovereign-health-systems-agent.md",
     "relative_file": "healthcare/healthcare-sovereign-health-systems-agent.md",
     "tags": [
-      "醫療與健康科技",
-      "Healthcare"
+      "Healthcare",
+      "醫療與健康科技"
     ],
     "emoji": "🌍",
     "color": "#1B4F72",
@@ -2946,8 +2946,8 @@
     "relative_file": "marketing/marketing-carousel-growth-engine.md",
     "tags": [
       "行銷推廣與社群",
-      "Marketing",
-      "Backend"
+      "Backend",
+      "Marketing"
     ],
     "emoji": "🎠",
     "color": "#FF0050",
@@ -3108,8 +3108,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-email-strategist.md",
     "relative_file": "marketing/marketing-email-strategist.md",
     "tags": [
-      "Frontend",
       "行銷推廣與社群",
+      "Frontend",
       "Marketing"
     ],
     "emoji": "📧",
@@ -3164,8 +3164,8 @@
     "relative_file": "marketing/marketing-growth-hacker.md",
     "tags": [
       "行銷推廣與社群",
-      "Marketing",
-      "Backend"
+      "Backend",
+      "Marketing"
     ],
     "emoji": "🚀",
     "color": "green",
@@ -3731,8 +3731,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-creative-strategist.md",
     "relative_file": "paid-media/paid-media-creative-strategist.md",
     "tags": [
-      "Paid Media",
-      "付費媒體與廣告投放"
+      "付費媒體與廣告投放",
+      "Paid Media"
     ],
     "emoji": "✍️",
     "color": "orange",
@@ -3758,8 +3758,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-ppc-strategist.md",
     "relative_file": "paid-media/paid-media-ppc-strategist.md",
     "tags": [
-      "Paid Media",
-      "付費媒體與廣告投放"
+      "付費媒體與廣告投放",
+      "Paid Media"
     ],
     "emoji": "💰",
     "color": "orange",
@@ -3785,8 +3785,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-auditor.md",
     "relative_file": "paid-media/paid-media-auditor.md",
     "tags": [
-      "Paid Media",
-      "付費媒體與廣告投放"
+      "付費媒體與廣告投放",
+      "Paid Media"
     ],
     "emoji": "📋",
     "color": "orange",
@@ -3812,8 +3812,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-paid-social-strategist.md",
     "relative_file": "paid-media/paid-media-paid-social-strategist.md",
     "tags": [
-      "Paid Media",
-      "付費媒體與廣告投放"
+      "付費媒體與廣告投放",
+      "Paid Media"
     ],
     "emoji": "📱",
     "color": "orange",
@@ -3839,8 +3839,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-programmatic-buyer.md",
     "relative_file": "paid-media/paid-media-programmatic-buyer.md",
     "tags": [
-      "Paid Media",
-      "付費媒體與廣告投放"
+      "付費媒體與廣告投放",
+      "Paid Media"
     ],
     "emoji": "📺",
     "color": "orange",
@@ -3866,8 +3866,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-search-query-analyst.md",
     "relative_file": "paid-media/paid-media-search-query-analyst.md",
     "tags": [
-      "Paid Media",
-      "付費媒體與廣告投放"
+      "付費媒體與廣告投放",
+      "Paid Media"
     ],
     "emoji": "🔍",
     "color": "orange",
@@ -3893,8 +3893,8 @@
     "file_path": "data\\agency-agents-repo\\paid-media\\paid-media-tracking-specialist.md",
     "relative_file": "paid-media/paid-media-tracking-specialist.md",
     "tags": [
-      "Paid Media",
       "付費媒體與廣告投放",
+      "Paid Media",
       "Backend"
     ],
     "emoji": "📡",
@@ -3921,8 +3921,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-behavioral-nudge-engine.md",
     "relative_file": "product/product-behavioral-nudge-engine.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🧠",
     "color": "#FF8A65",
@@ -3948,8 +3948,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-feedback-synthesizer.md",
     "relative_file": "product/product-feedback-synthesizer.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🔍",
     "color": "blue",
@@ -3975,8 +3975,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-manager.md",
     "relative_file": "product/product-manager.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🧭",
     "color": "blue",
@@ -4002,8 +4002,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-sprint-prioritizer.md",
     "relative_file": "product/product-sprint-prioritizer.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🎯",
     "color": "green",
@@ -4029,8 +4029,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-trend-researcher.md",
     "relative_file": "product/product-trend-researcher.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🔭",
     "color": "purple",
@@ -4705,9 +4705,9 @@
     "file_path": "data\\agency-agents-repo\\security\\security-architect.md",
     "relative_file": "security/security-architect.md",
     "tags": [
+      "Backend",
       "Security",
-      "資訊安全與防護",
-      "Backend"
+      "資訊安全與防護"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -4976,8 +4976,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\accounts-payable-agent.md",
     "relative_file": "specialized/accounts-payable-agent.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "💸",
     "color": "green",
@@ -5003,8 +5003,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\agentic-identity-trust.md",
     "relative_file": "specialized/agentic-identity-trust.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔐",
     "color": "#2d5a27",
@@ -5030,8 +5030,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\agents-orchestrator.md",
     "relative_file": "specialized/agents-orchestrator.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🎛️",
     "color": "cyan",
@@ -5057,8 +5057,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\healthcare-aging-parent-care-companion.md",
     "relative_file": "specialized/healthcare-aging-parent-care-companion.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🧡",
     "color": "#0D9488",
@@ -5084,8 +5084,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\automation-governance-architect.md",
     "relative_file": "specialized/automation-governance-architect.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "⚙️",
     "color": "cyan",
@@ -5111,8 +5111,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\business-strategist.md",
     "relative_file": "specialized/business-strategist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "♟️",
     "color": "indigo",
@@ -5138,8 +5138,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\change-management-consultant.md",
     "relative_file": "specialized/change-management-consultant.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔄",
     "color": "amber",
@@ -5165,9 +5165,9 @@
     "file_path": "data\\agency-agents-repo\\specialized\\chief-financial-officer.md",
     "relative_file": "specialized/chief-financial-officer.md",
     "tags": [
-      "特殊專家與領域顧問",
       "Specialized",
-      "Backend"
+      "Backend",
+      "特殊專家與領域顧問"
     ],
     "emoji": "💼",
     "color": "navy",
@@ -5193,8 +5193,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-chief-of-staff.md",
     "relative_file": "specialized/specialized-chief-of-staff.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🧭",
     "color": "#6B7280",
@@ -5220,8 +5220,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-civil-engineer.md",
     "relative_file": "specialized/specialized-civil-engineer.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏗️",
     "color": "yellow",
@@ -5247,8 +5247,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-codebase-archaeologist.md",
     "relative_file": "specialized/specialized-codebase-archaeologist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏺",
     "color": "amber",
@@ -5274,8 +5274,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\corporate-training-designer.md",
     "relative_file": "specialized/corporate-training-designer.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "📚",
     "color": "orange",
@@ -5301,8 +5301,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-cultural-intelligence-strategist.md",
     "relative_file": "specialized/specialized-cultural-intelligence-strategist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🌍",
     "color": "#FFA000",
@@ -5328,8 +5328,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\customer-service.md",
     "relative_file": "specialized/customer-service.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🎧",
     "color": "teal",
@@ -5355,8 +5355,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\customer-success-manager.md",
     "relative_file": "specialized/customer-success-manager.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🌟",
     "color": "green",
@@ -5382,8 +5382,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\data-consolidation-agent.md",
     "relative_file": "specialized/data-consolidation-agent.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🗄️",
     "color": "#38a169",
@@ -5409,8 +5409,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\data-privacy-officer.md",
     "relative_file": "specialized/data-privacy-officer.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔐",
     "color": "purple",
@@ -5436,8 +5436,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-developer-advocate.md",
     "relative_file": "specialized/specialized-developer-advocate.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🗣️",
     "color": "purple",
@@ -5463,8 +5463,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-document-generator.md",
     "relative_file": "specialized/specialized-document-generator.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "📄",
     "color": "blue",
@@ -5490,8 +5490,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\esg-sustainability-officer.md",
     "relative_file": "specialized/esg-sustainability-officer.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🌱",
     "color": "green",
@@ -5517,8 +5517,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-fedramp-rmf-compliance.md",
     "relative_file": "specialized/specialized-fedramp-rmf-compliance.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -5544,8 +5544,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-french-consulting-market.md",
     "relative_file": "specialized/specialized-french-consulting-market.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🇫🇷",
     "color": "#002395",
@@ -5571,8 +5571,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\government-digital-presales-consultant.md",
     "relative_file": "specialized/government-digital-presales-consultant.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏛️",
     "color": "#8B0000",
@@ -5598,8 +5598,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\grant-writer.md",
     "relative_file": "specialized/grant-writer.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "📝",
     "color": "purple",
@@ -5625,8 +5625,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\hr-onboarding.md",
     "relative_file": "specialized/hr-onboarding.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🤝",
     "color": "green",
@@ -5652,8 +5652,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\healthcare-customer-service.md",
     "relative_file": "specialized/healthcare-customer-service.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏥",
     "color": "teal",
@@ -5679,8 +5679,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\healthcare-marketing-compliance.md",
     "relative_file": "specialized/healthcare-marketing-compliance.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "⚕️",
     "color": "#2E8B57",
@@ -5706,8 +5706,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\hospitality-guest-services.md",
     "relative_file": "specialized/hospitality-guest-services.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏨",
     "color": "teal",
@@ -5733,8 +5733,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\identity-graph-operator.md",
     "relative_file": "specialized/identity-graph-operator.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🕸️",
     "color": "#C5A572",
@@ -5760,8 +5760,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-korean-business-navigator.md",
     "relative_file": "specialized/specialized-korean-business-navigator.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🇰🇷",
     "color": "#003478",
@@ -5787,8 +5787,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\lsp-index-engineer.md",
     "relative_file": "specialized/lsp-index-engineer.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔎",
     "color": "orange",
@@ -5814,8 +5814,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\language-translator.md",
     "relative_file": "specialized/language-translator.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🌐",
     "color": "teal",
@@ -5841,8 +5841,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\legal-billing-time-tracking.md",
     "relative_file": "specialized/legal-billing-time-tracking.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "⏱️",
     "color": "green",
@@ -5868,8 +5868,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\legal-client-intake.md",
     "relative_file": "specialized/legal-client-intake.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "📋",
     "color": "blue",
@@ -5895,8 +5895,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\legal-document-review.md",
     "relative_file": "specialized/legal-document-review.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "⚖️",
     "color": "blue",
@@ -5922,8 +5922,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\loan-officer-assistant.md",
     "relative_file": "specialized/loan-officer-assistant.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏦",
     "color": "blue",
@@ -5949,8 +5949,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\ma-integration-manager.md",
     "relative_file": "specialized/ma-integration-manager.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🤝",
     "color": "indigo",
@@ -5976,8 +5976,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-mcp-builder.md",
     "relative_file": "specialized/specialized-mcp-builder.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔌",
     "color": "indigo",
@@ -6003,8 +6003,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\medical-billing-coding-specialist.md",
     "relative_file": "specialized/medical-billing-coding-specialist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏥",
     "color": "blue",
@@ -6030,8 +6030,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-model-qa.md",
     "relative_file": "specialized/specialized-model-qa.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔬",
     "color": "#B22222",
@@ -6057,8 +6057,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\operations-manager.md",
     "relative_file": "specialized/operations-manager.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "⚙️",
     "color": "slate",
@@ -6084,8 +6084,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\organizational-psychologist.md",
     "relative_file": "specialized/organizational-psychologist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🧠",
     "color": "teal",
@@ -6111,8 +6111,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\personal-growth-mentor.md",
     "relative_file": "specialized/personal-growth-mentor.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🌱",
     "color": "teal",
@@ -6138,8 +6138,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-pricing-analyst.md",
     "relative_file": "specialized/specialized-pricing-analyst.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "💰",
     "color": "gold",
@@ -6165,8 +6165,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\real-estate-buyer-seller.md",
     "relative_file": "specialized/real-estate-buyer-seller.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🏠",
     "color": "teal",
@@ -6192,8 +6192,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\recruitment-specialist.md",
     "relative_file": "specialized/recruitment-specialist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🎯",
     "color": "blue",
@@ -6219,8 +6219,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\report-distribution-agent.md",
     "relative_file": "specialized/report-distribution-agent.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "📤",
     "color": "#d69e2e",
@@ -6246,8 +6246,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\resume-tailor.md",
     "relative_file": "specialized/resume-tailor.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🧾",
     "color": "teal",
@@ -6273,8 +6273,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\retail-customer-returns.md",
     "relative_file": "specialized/retail-customer-returns.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🛒",
     "color": "amber",
@@ -6300,8 +6300,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\sales-data-extraction-agent.md",
     "relative_file": "specialized/sales-data-extraction-agent.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "📊",
     "color": "#2b6cb0",
@@ -6327,8 +6327,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\sales-outreach.md",
     "relative_file": "specialized/sales-outreach.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🎯",
     "color": "amber",
@@ -6354,8 +6354,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-salesforce-architect.md",
     "relative_file": "specialized/specialized-salesforce-architect.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "☁️",
     "color": "#00A1E0",
@@ -6381,8 +6381,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-strategy-duel-agent.md",
     "relative_file": "specialized/specialized-strategy-duel-agent.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "⚔️",
     "color": "#1e90ff",
@@ -6408,8 +6408,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\study-abroad-advisor.md",
     "relative_file": "specialized/study-abroad-advisor.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🎓",
     "color": "#1B4D3E",
@@ -6435,8 +6435,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\supply-chain-strategist.md",
     "relative_file": "specialized/supply-chain-strategist.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🔗",
     "color": "blue",
@@ -6462,8 +6462,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\specialized-workflow-architect.md",
     "relative_file": "specialized/specialized-workflow-architect.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🗺️",
     "color": "orange",
@@ -6489,8 +6489,8 @@
     "file_path": "data\\agency-agents-repo\\specialized\\zk-steward.md",
     "relative_file": "specialized/zk-steward.md",
     "tags": [
-      "特殊專家與領域顧問",
-      "Specialized"
+      "Specialized",
+      "特殊專家與領域顧問"
     ],
     "emoji": "🗃️",
     "color": "teal",
@@ -6516,8 +6516,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-analytics-reporter.md",
     "relative_file": "support/support-analytics-reporter.md",
     "tags": [
-      "Support",
-      "客戶支援與服務"
+      "客戶支援與服務",
+      "Support"
     ],
     "emoji": "📊",
     "color": "teal",
@@ -6543,8 +6543,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-executive-summary-generator.md",
     "relative_file": "support/support-executive-summary-generator.md",
     "tags": [
-      "Support",
-      "客戶支援與服務"
+      "客戶支援與服務",
+      "Support"
     ],
     "emoji": "📝",
     "color": "purple",
@@ -6570,8 +6570,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-finance-tracker.md",
     "relative_file": "support/support-finance-tracker.md",
     "tags": [
-      "Support",
-      "客戶支援與服務"
+      "客戶支援與服務",
+      "Support"
     ],
     "emoji": "💰",
     "color": "green",
@@ -6597,8 +6597,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-infrastructure-maintainer.md",
     "relative_file": "support/support-infrastructure-maintainer.md",
     "tags": [
-      "Support",
-      "客戶支援與服務"
+      "客戶支援與服務",
+      "Support"
     ],
     "emoji": "🏢",
     "color": "orange",
@@ -6624,8 +6624,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-legal-compliance-checker.md",
     "relative_file": "support/support-legal-compliance-checker.md",
     "tags": [
-      "Support",
-      "客戶支援與服務"
+      "客戶支援與服務",
+      "Support"
     ],
     "emoji": "⚖️",
     "color": "red",
@@ -6651,8 +6651,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-support-responder.md",
     "relative_file": "support/support-support-responder.md",
     "tags": [
-      "Support",
-      "客戶支援與服務"
+      "客戶支援與服務",
+      "Support"
     ],
     "emoji": "💬",
     "color": "blue",
@@ -6678,9 +6678,9 @@
     "file_path": "data\\agency-agents-repo\\testing\\testing-api-tester.md",
     "relative_file": "testing/testing-api-tester.md",
     "tags": [
+      "Backend",
       "Testing",
-      "測試與品質保證 (QA)",
-      "Backend"
+      "測試與品質保證 (QA)"
     ],
     "emoji": "🔌",
     "color": "purple",
