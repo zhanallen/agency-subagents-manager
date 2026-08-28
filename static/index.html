@@ -85,6 +85,11 @@
           <span class="text-zinc-600">·</span>
           <span id="installed-count-badge" class="font-mono font-semibold text-emerald-400">0</span>
           <span>已安裝</span>
+          <span id="updates-header-badge" class="hidden items-center gap-1">
+            <span class="text-zinc-600">·</span>
+            <span id="updates-count-badge" class="font-mono font-bold text-amber-400">0</span>
+            <span class="text-amber-400 font-medium">可更新</span>
+          </span>
         </div>
 
         <!-- 協作 Rule 狀態呼吸燈按鈕 -->
@@ -268,6 +273,11 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                 <span>已安裝</span>
                 <span id="pill-count-installed" class="segmented-badge">0</span>
+              </div>
+              <div onclick="setStatusFilter('updates')" id="status-filter-updates" class="segmented-item">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                <span>可更新</span>
+                <span id="pill-count-updates" class="segmented-badge text-amber-300">0</span>
               </div>
               <div onclick="setStatusFilter('favorites')" id="status-filter-favorites" class="segmented-item">
                 <span class="text-amber-400">⭐</span>

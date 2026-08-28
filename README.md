@@ -63,12 +63,13 @@
 - **節省 60%~70% Token**：以高密度英文控制語料減少上下文消耗。
 - **閉環驗證機制**：包含 `Consult` ➔ `Delegate` ➔ `Execute` ➔ `Automated Test Gate` ➔ `Iteration Loop` 5 大階段，杜絕 AI 盲目交付未經測試的代碼。
 
-### 2. 🔄 雲端雙向智慧同步 (Auto Dual-Source Sync Engine)
+### 2. 🔄 雲端雙向智慧同步與更新比對引擎 (Dual-Source Sync & Diff Engine)
 - **協作規範與在地翻譯**：自動自 [zhanallen/agency-subagents-manager](https://github.com/zhanallen/agency-subagents-manager) 同步最新規範模板 (`data/rules/`) 與 100% 繁中翻譯字典 (`data/translations_full.json`)。
 - **專家定義與最新提示詞**：自動自原作者官方倉庫 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) 同步最新 255+ 位 AI 專家的原始 Markdown 提示詞。
-- **專案 Rule 自動升級**：同步完成時，若當前專案已安裝 Rule，系統會自動將專案內的規範升級為最新版。
+- **本地安裝差異比對與更新提示**：同步後自動比對專案中已安裝之子代理與協作規範。若發現雲端有更新或本地內容不同，將自動標註「`🔄 有新版本`」並提供「`🔄 一鍵更新`」與專屬「**可更新**」篩選分頁！
 
 ### 3. 🎨 極簡現代介面與防截斷排版 (Linear/Vercel-style)
+- **可更新專屬分段控制器**：分段篩選器支援 `[全部] [已安裝] [可更新 🔄] [⭐ 收藏]`，快速聚焦待升級項目。
 - **卡片防截斷排版**：徹底解決長英文 Slug（如 `@engineering-inclusive-visuals-specialist`）與職稱被擠壓遮擋問題。
 - **底部浮動操作 Dock**：批次管理按鈕平時收合，僅在選取專家時優雅滑入。
 - **常用星標收藏 (Favorites)** 與 **專案歷史切換器 (MRU)**。

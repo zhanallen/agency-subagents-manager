@@ -317,9 +317,10 @@ class AgentManager:
         query: str = "",
         division: str = "all",
         installed_ids: Optional[List[str]] = None,
-        filter_status: str = "all"
+        filter_status: str = "all",
+        updates_map: Optional[Dict[str, bool]] = None
     ) -> List[Dict[str, Any]]:
-        """搜尋與多維度篩選 Agent（支援中英文雙向匹配）"""
+        """搜尋與多維度篩選 Agent（支援中英文雙向匹配，以及可更新狀態篩選）"""
         query = query.strip().lower()
         results = []
 
@@ -328,9 +329,13 @@ class AgentManager:
                 continue
 
             is_installed = (installed_ids is not None) and (agent["id"] in installed_ids)
+            has_update = bool(updates_map and updates_map.get(agent["id"]))
+
             if filter_status == "installed" and not is_installed:
                 continue
             if filter_status == "uninstalled" and is_installed:
+                continue
+            if filter_status in ["updates", "update", "has_update"] and not has_update:
                 continue
 
             if query:

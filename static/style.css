@@ -200,6 +200,14 @@ html:not(.dark) .segmented-item.active {
   background-color: rgba(99, 102, 241, 0.04);
 }
 
+.agent-card.has-update {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.agent-card.has-update:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+}
+
 /* 防截斷文字專用類別 */
 .agent-slug {
   font-family: var(--font-mono);

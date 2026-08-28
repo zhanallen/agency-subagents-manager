@@ -152,6 +152,65 @@ class SubagentInstaller:
             print(f"Error checking installed agents: {e}")
             return []
 
+    def get_installed_agents_status(
+        self,
+        target_type: str,
+        custom_path: Optional[str] = None,
+        project_path: Optional[str] = None,
+        agent_manager: Optional[Any] = None
+    ) -> Dict[str, Any]:
+        """檢查指定目標目錄中已安裝的 Agent 清單及其是否需要更新 (has_update)"""
+        try:
+            target_dir = self._resolve_target_dir(target_type, custom_path, project_path)
+            if not target_dir.exists():
+                return {
+                    "installed_ids": [],
+                    "updates_map": {},
+                    "updates_count": 0,
+                    "agents_with_updates": []
+                }
+
+            installed_ids = []
+            updates_map = {}
+            agents_with_updates = []
+
+            for item in target_dir.iterdir():
+                if item.is_file() and item.suffix in [".md", ".mdc", ".toml"]:
+                    agent_id = item.stem
+                    installed_ids.append(agent_id)
+                    
+                    has_update = False
+                    if agent_manager:
+                        agent = agent_manager.get_agent(agent_id)
+                        if agent:
+                            try:
+                                with open(item, "r", encoding="utf-8", errors="ignore") as f:
+                                    local_content = f.read().replace("\r\n", "\n").strip()
+                                expected_content = self._convert_to_subagent_format(agent, target_type).replace("\r\n", "\n").strip()
+                                if local_content != expected_content:
+                                    has_update = True
+                            except Exception as ex:
+                                print(f"Error checking update for agent {agent_id}: {ex}")
+                    
+                    updates_map[agent_id] = has_update
+                    if has_update:
+                        agents_with_updates.append(agent_id)
+
+            return {
+                "installed_ids": installed_ids,
+                "updates_map": updates_map,
+                "updates_count": len(agents_with_updates),
+                "agents_with_updates": agents_with_updates
+            }
+        except Exception as e:
+            print(f"Error checking installed agents status: {e}")
+            return {
+                "installed_ids": [],
+                "updates_map": {},
+                "updates_count": 0,
+                "agents_with_updates": []
+            }
+
     def _convert_to_subagent_format(self, agent: Dict[str, Any], target_type: str) -> str:
         """依據官方規範生成 Subagent 檔案內容（100% 保持與官方來源相同的英文提示詞主體）"""
         name_en = agent.get("name_en", "")
@@ -645,20 +704,28 @@ Before calling file editing or bash execution tools for non-trivial tasks, the O
             return proj_root / ".agents" / "rules" / "subagent-collaboration.md"
 
     def check_rule_status(self, target_type: str = "antigravity_project", project_path: Optional[str] = None) -> Dict[str, Any]:
-        """檢查協作 Rule 是否已安裝於目前目標專案"""
+        """檢查協作 Rule 是否已安裝於目前目標專案，以及是否有新版本可更新"""
         try:
             rule_path = self.get_rule_file_path(target_type, project_path)
             exists = rule_path.exists()
             content = ""
+            has_update = False
             if exists:
                 try:
-                    with open(rule_path, "r", encoding="utf-8") as f:
+                    with open(rule_path, "r", encoding="utf-8", errors="ignore") as f:
                         content = f.read()
+                    
+                    latest_content = self.get_default_rule_content(target_type)
+                    norm_current = content.replace("\r\n", "\n").strip()
+                    norm_latest = latest_content.replace("\r\n", "\n").strip()
+                    if norm_current != norm_latest:
+                        has_update = True
                 except Exception:
                     pass
             return {
                 "success": True,
                 "is_installed": exists,
+                "has_update": has_update,
                 "file_path": str(rule_path),
                 "file_name": rule_path.name,
                 "content": content
@@ -667,6 +734,7 @@ Before calling file editing or bash execution tools for non-trivial tasks, the O
             return {
                 "success": False,
                 "is_installed": False,
+                "has_update": False,
                 "file_path": "",
                 "message": str(e)
             }

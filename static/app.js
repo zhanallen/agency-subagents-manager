@@ -13,7 +13,7 @@ const state = {
   
   // 當前篩選與操作狀態
   currentDivision: 'all',
-  currentStatusFilter: 'all', // 'all' | 'installed' | 'favorites'
+  currentStatusFilter: 'all', // 'all' | 'installed' | 'updates' | 'favorites'
   currentTagFilter: '',
   currentSort: 'favorite_first', // 'favorite_first' | 'installed_first' | 'name_asc' | 'division'
   searchQuery: '',
@@ -24,7 +24,9 @@ const state = {
   // 視窗與彈窗狀態
   activeModalAgent: null,
   activeModalTab: 'overview',
-  ruleStatus: { is_installed: false, file_path: '', content: '' }
+  ruleStatus: { is_installed: false, has_update: false, file_path: '', content: '' },
+  updatesCount: 0,
+  agentsWithUpdates: []
 };
 
 // 預設專家推薦組合包 (Preset Packs)
@@ -178,6 +180,8 @@ async function loadAgents() {
 
     if (data.success) {
       state.agents = data.agents;
+      state.updatesCount = data.updates_count || 0;
+      state.agentsWithUpdates = data.agents_with_updates || [];
       
       // 更新統計數字
       const totalCount = data.total;
@@ -189,6 +193,20 @@ async function loadAgents() {
       const installedBadge = document.getElementById('installed-count-badge');
       if (installedBadge) installedBadge.textContent = installedCount;
 
+      // 更新頂部更新指示
+      const updatesHeaderBadge = document.getElementById('updates-header-badge');
+      const updatesCountBadge = document.getElementById('updates-count-badge');
+      if (updatesHeaderBadge && updatesCountBadge) {
+        updatesCountBadge.textContent = state.updatesCount;
+        if (state.updatesCount > 0) {
+          updatesHeaderBadge.classList.remove('hidden');
+          updatesHeaderBadge.classList.add('inline-flex');
+        } else {
+          updatesHeaderBadge.classList.add('hidden');
+          updatesHeaderBadge.classList.remove('inline-flex');
+        }
+      }
+
       const divAll = document.getElementById('div-count-all');
       if (divAll) divAll.textContent = totalCount;
       
@@ -197,6 +215,9 @@ async function loadAgents() {
       
       const pillInst = document.getElementById('pill-count-installed');
       if (pillInst) pillInst.textContent = state.agents.filter(a => a.is_installed).length;
+
+      const pillUpdates = document.getElementById('pill-count-updates');
+      if (pillUpdates) pillUpdates.textContent = state.updatesCount;
       
       const pillFav = document.getElementById('pill-count-favorites');
       if (pillFav) pillFav.textContent = state.agents.filter(a => state.favorites.has(a.id)).length;
@@ -220,9 +241,11 @@ function applyFilterAndRender() {
     list = list.filter(a => a.division_id === state.currentDivision);
   }
 
-  // 2. 狀態分段控制器過濾 (All / Installed / Favorites)
+  // 2. 狀態分段控制器過濾 (All / Installed / Updates / Favorites)
   if (state.currentStatusFilter === 'installed') {
     list = list.filter(a => a.is_installed);
+  } else if (state.currentStatusFilter === 'updates') {
+    list = list.filter(a => a.is_installed && a.has_update);
   } else if (state.currentStatusFilter === 'favorites') {
     list = list.filter(a => state.favorites.has(a.id));
   }
@@ -351,24 +374,50 @@ function renderAgentsGrid(agents) {
     const isFav = state.favorites.has(agent.id);
     const card = document.createElement('div');
     
-    card.className = `agent-card group ${isSelected ? 'selected' : ''}`;
+    const hasUpdate = Boolean(agent.is_installed && agent.has_update);
+    card.className = `agent-card group ${isSelected ? 'selected' : ''} ${hasUpdate ? 'has-update' : ''}`;
     card.setAttribute('data-agent-id', agent.id);
 
     // 操作按鈕
-    const actionBtn = agent.is_installed
-      ? `<button onclick="event.stopPropagation(); uninstallSingleAgent('${agent.id}')" class="px-2.5 py-1 rounded-lg bg-rose-600/10 hover:bg-rose-600/20 text-rose-300 border border-rose-600/20 text-xs font-medium transition flex items-center gap-1">
-           <i data-lucide="trash-2" class="w-3 h-3"></i>
-           <span>卸載</span>
-         </button>`
-      : `<button onclick="event.stopPropagation(); installSingleAgent('${agent.id}')" class="px-3 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm flex items-center gap-1">
-           <i data-lucide="download" class="w-3 h-3"></i>
-           <span>安裝</span>
-         </button>`;
+    let actionBtn = '';
+    if (agent.is_installed) {
+      if (agent.has_update) {
+        actionBtn = `
+          <button onclick="event.stopPropagation(); installSingleAgent('${agent.id}')" class="px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold transition shadow-sm flex items-center gap-1 shadow-amber-900/30" title="更新至最新定義">
+            <i data-lucide="refresh-cw" class="w-3 h-3"></i>
+            <span>更新</span>
+          </button>
+          <button onclick="event.stopPropagation(); uninstallSingleAgent('${agent.id}')" class="p-1 rounded-lg bg-rose-600/10 hover:bg-rose-600/20 text-rose-300 border border-rose-600/20 transition" title="卸載此子代理">
+            <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+          </button>
+        `;
+      } else {
+        actionBtn = `
+          <button onclick="event.stopPropagation(); uninstallSingleAgent('${agent.id}')" class="px-2.5 py-1 rounded-lg bg-rose-600/10 hover:bg-rose-600/20 text-rose-300 border border-rose-600/20 text-xs font-medium transition flex items-center gap-1">
+            <i data-lucide="trash-2" class="w-3 h-3"></i>
+            <span>卸載</span>
+          </button>
+        `;
+      }
+    } else {
+      actionBtn = `
+        <button onclick="event.stopPropagation(); installSingleAgent('${agent.id}')" class="px-3 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm flex items-center gap-1">
+          <i data-lucide="download" class="w-3 h-3"></i>
+          <span>安裝</span>
+        </button>
+      `;
+    }
 
     // 標籤 Chips
     const tagsHtml = (agent.tags || []).slice(0, 3).map(tag => 
       `<span onclick="event.stopPropagation(); setTagFilter('${tag}')" class="px-2 py-0.5 rounded-md bg-white/[0.03] hover:bg-white/[0.08] hover:text-zinc-200 border border-white/[0.05] text-[10px] text-zinc-400 font-medium cursor-pointer transition">#${tag}</span>`
     ).join('');
+
+    const statusBadge = agent.is_installed
+      ? (agent.has_update 
+          ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 flex-shrink-0" title="雲端定義已更新"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>可更新</span>` 
+          : `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" title="已安裝 (最新版)"></span>`)
+      : '';
 
     card.innerHTML = `
       <div class="p-4 sm:p-5 flex flex-col gap-3 flex-1 min-w-0">
@@ -390,7 +439,7 @@ function renderAgentsGrid(agents) {
                 <h3 class="font-semibold text-sm text-zinc-100 group-hover:text-indigo-300 transition break-words">
                   ${highlightText(agent.name_zh, state.searchQuery)}
                 </h3>
-                ${agent.is_installed ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" title="已安裝"></span>' : ''}
+                ${statusBadge}
               </div>
               <!-- 英文 Slug：加入 break-all 防截斷 -->
               <p class="agent-slug mt-0.5 break-all select-all">@${highlightText(agent.id, state.searchQuery)}</p>
@@ -789,21 +838,28 @@ async function checkRuleStatus() {
     const data = await res.json();
     if (data.success) {
       state.ruleStatus = data;
-      updateRuleStatusUI(data.is_installed);
+      updateRuleStatusUI(data.is_installed, data.has_update);
     }
   } catch (err) {
     console.error('檢查協作 Rule 失敗', err);
   }
 }
 
-function updateRuleStatusUI(isInstalled) {
+function updateRuleStatusUI(isInstalled, hasUpdate) {
   // 頂部 Indicator
   const topIndicator = document.getElementById('top-rule-indicator');
   if (topIndicator) {
     if (isInstalled) {
-      topIndicator.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+      if (hasUpdate) {
+        topIndicator.className = 'w-2 h-2 rounded-full bg-amber-400 animate-pulse';
+        topIndicator.parentElement.setAttribute('title', '協作規範有新版本可升級');
+      } else {
+        topIndicator.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+        topIndicator.parentElement.setAttribute('title', 'Subagent 專家協作規範 (最新版)');
+      }
     } else {
       topIndicator.className = 'w-2 h-2 rounded-full bg-zinc-500';
+      topIndicator.parentElement.setAttribute('title', 'Subagent 專家協作規範 (未啟用)');
     }
   }
 
@@ -814,10 +870,17 @@ function updateRuleStatusUI(isInstalled) {
 
   if (sidebarBadge && btnRuleAction && btnRuleText) {
     if (isInstalled) {
-      sidebarBadge.className = 'text-[10px] text-emerald-400 font-mono font-semibold';
-      sidebarBadge.textContent = '🟢 已啟用';
-      btnRuleAction.className = 'flex-1 py-1 px-2.5 rounded-lg bg-rose-600/15 hover:bg-rose-600/25 text-rose-300 border border-rose-600/30 text-xs font-medium transition flex items-center justify-center gap-1';
-      btnRuleText.textContent = '停用協作 Rule';
+      if (hasUpdate) {
+        sidebarBadge.className = 'text-[10px] text-amber-400 font-mono font-semibold';
+        sidebarBadge.textContent = '🟠 發現新版本';
+        btnRuleAction.className = 'flex-1 py-1 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold transition flex items-center justify-center gap-1 shadow-sm shadow-amber-900/30';
+        btnRuleText.textContent = '升級協作 Rule';
+      } else {
+        sidebarBadge.className = 'text-[10px] text-emerald-400 font-mono font-semibold';
+        sidebarBadge.textContent = '🟢 已啟用';
+        btnRuleAction.className = 'flex-1 py-1 px-2.5 rounded-lg bg-rose-600/15 hover:bg-rose-600/25 text-rose-300 border border-rose-600/30 text-xs font-medium transition flex items-center justify-center gap-1';
+        btnRuleText.textContent = '停用協作 Rule';
+      }
     } else {
       sidebarBadge.className = 'text-[10px] text-zinc-500 font-mono';
       sidebarBadge.textContent = '⚪ 未啟用';
@@ -828,7 +891,7 @@ function updateRuleStatusUI(isInstalled) {
 }
 
 async function toggleQuickRuleInstall() {
-  if (state.ruleStatus.is_installed) {
+  if (state.ruleStatus.is_installed && !state.ruleStatus.has_update) {
     await uninstallCollaborationRule();
   } else {
     await installCollaborationRule();
@@ -904,9 +967,15 @@ async function openRuleModal() {
     previewEl.innerHTML = marked.parse(content);
 
     if (state.ruleStatus.is_installed) {
-      statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> <span class="text-emerald-300 font-medium">Loop Engineering 規範已啟用</span>`;
-      actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-600/30 text-xs font-medium transition';
-      actionBtn.innerHTML = `<i data-lucide="trash-2" class="w-3.5 h-3.5"></i> <span>移除協作 Rule</span>`;
+      if (state.ruleStatus.has_update) {
+        statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> <span class="text-amber-300 font-medium">發現新版本（專案內規範與最新範本不同）</span>`;
+        actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold transition shadow-sm shadow-amber-900/40';
+        actionBtn.innerHTML = `<i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> <span>一鍵升級為最新規範</span>`;
+      } else {
+        statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> <span class="text-emerald-300 font-medium">Loop Engineering 規範已啟用 (最新版)</span>`;
+        actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-600/30 text-xs font-medium transition';
+        actionBtn.innerHTML = `<i data-lucide="trash-2" class="w-3.5 h-3.5"></i> <span>移除協作 Rule</span>`;
+      }
     } else {
       statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-zinc-500"></span> <span class="text-zinc-400 font-medium">尚未安裝</span>`;
       actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm';
@@ -925,7 +994,7 @@ function closeRuleModal() {
 }
 
 function toggleModalRuleInstall() {
-  if (state.ruleStatus.is_installed) {
+  if (state.ruleStatus.is_installed && !state.ruleStatus.has_update) {
     uninstallCollaborationRule();
   } else {
     installCollaborationRule();
@@ -1141,9 +1210,15 @@ async function openDetailModal(agentId) {
     const actionBtn = document.getElementById('modal-action-btn');
 
     if (agent.is_installed) {
-      statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> <span class="text-emerald-300 font-medium">已安裝為 Subagent</span>`;
-      actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-rose-600/15 hover:bg-rose-600/25 text-rose-300 border border-rose-600/25 text-xs font-medium transition';
-      actionBtn.innerHTML = `<i data-lucide="trash-2" class="w-3.5 h-3.5"></i> <span>解除安裝</span>`;
+      if (agent.has_update) {
+        statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> <span class="text-amber-300 font-medium">已安裝（發現新版本可更新）</span>`;
+        actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold transition shadow-sm shadow-amber-900/40';
+        actionBtn.innerHTML = `<i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> <span>立即更新至最新版</span>`;
+      } else {
+        statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> <span class="text-emerald-300 font-medium">已安裝為 Subagent (最新版)</span>`;
+        actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-rose-600/15 hover:bg-rose-600/25 text-rose-300 border border-rose-600/25 text-xs font-medium transition';
+        actionBtn.innerHTML = `<i data-lucide="trash-2" class="w-3.5 h-3.5"></i> <span>解除安裝</span>`;
+      }
     } else {
       statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-zinc-500"></span> <span class="text-zinc-400 font-medium">尚未安裝</span>`;
       actionBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm';
@@ -1189,7 +1264,7 @@ function toggleModalFavorite() {
 
 function toggleModalAgentInstall() {
   if (!state.activeModalAgent) return;
-  if (state.activeModalAgent.is_installed) {
+  if (state.activeModalAgent.is_installed && !state.activeModalAgent.has_update) {
     uninstallSingleAgent(state.activeModalAgent.id);
   } else {
     installSingleAgent(state.activeModalAgent.id);
@@ -1416,17 +1491,18 @@ async function syncGithub() {
       body: JSON.stringify({
         user_repo: 'zhanallen/agency-subagents-manager',
         author_repo_url: 'https://github.com/msitarzewski/agency-agents.git',
-        update_project_rule: true,
+        update_project_rule: false,
         project_path: state.projectPath,
         target_type: state.targetType
       })
     });
     const data = await res.json();
     if (data.success) {
-      if (data.rule_updated_in_project) {
-        showToast('✅ 雙向同步完成！當前專案的協作規範已自動升級為最新版！', 'success');
+      const totalUpdates = data.total_updates_count || 0;
+      if (totalUpdates > 0) {
+        showToast(`⚡ ${data.message}`, 'warning');
       } else {
-        showToast(data.message || '✅ 雲端雙向同步完成！', 'success');
+        showToast(`✅ ${data.message}`, 'success');
       }
       await loadDivisions();
       await loadAgents();
@@ -1452,7 +1528,9 @@ async function silentSyncCheck() {
       body: JSON.stringify({
         user_repo: 'zhanallen/agency-subagents-manager',
         author_repo_url: 'https://github.com/msitarzewski/agency-agents.git',
-        update_project_rule: false
+        update_project_rule: false,
+        project_path: state.projectPath,
+        target_type: state.targetType
       })
     });
     const data = await res.json();
@@ -1461,6 +1539,7 @@ async function silentSyncCheck() {
       // 若拉取到新資料則無干擾刷新清單
       await loadDivisions();
       await loadAgents();
+      await checkRuleStatus();
     }
   } catch (e) {
     console.log('背景檢查更新跳過 (離線或網路不通)');
