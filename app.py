@@ -101,6 +101,13 @@ class SyncRequest(BaseModel):
     project_path: Optional[str] = None
     target_type: Optional[str] = "antigravity_project"
 
+class UpdateAllRequest(BaseModel):
+    target_type: str = "antigravity_project"
+    custom_path: Optional[str] = None
+    project_path: Optional[str] = None
+    update_rule: Optional[bool] = True
+    update_agents: Optional[bool] = True
+
 @app.get("/api/browse-folder")
 async def browse_folder():
     """呼叫原生資料夾選擇視窗"""
@@ -395,6 +402,80 @@ async def check_updates(
         "rule_is_installed": rule_status.get("is_installed", False),
         "rule_has_update": rule_status.get("has_update", False),
         "total_updates_count": agent_status["updates_count"] + (1 if rule_status.get("has_update") else 0)
+    }
+
+@app.post("/api/updates/apply-all")
+async def apply_all_updates(req: UpdateAllRequest):
+    """一鍵更新所有過期的 Subagent 與協作規範"""
+    # 1. 檢測可更新項目
+    agent_status = installer.get_installed_agents_status(
+        target_type=req.target_type,
+        custom_path=req.custom_path,
+        project_path=req.project_path,
+        agent_manager=agent_manager
+    )
+    agents_with_updates = agent_status["agents_with_updates"]
+    
+    updated_agents = []
+    failed_agents = []
+    
+    # 2. 批次更新所有過期的 Subagents
+    if req.update_agents and agents_with_updates:
+        agents_to_install = []
+        for aid in agents_with_updates:
+            agent = agent_manager.get_agent(aid)
+            if agent:
+                agents_to_install.append(agent)
+        
+        if agents_to_install:
+            batch_res = installer.install_batch(
+                agents=agents_to_install,
+                target_type=req.target_type,
+                custom_path=req.custom_path,
+                project_path=req.project_path
+            )
+            for item in batch_res.get("details", []):
+                if item.get("success"):
+                    updated_agents.append(item.get("agent_id"))
+                else:
+                    failed_agents.append(item.get("agent_id"))
+    
+    # 3. 更新協作規範 Rule (若有更新且已啟用)
+    rule_updated = False
+    rule_status = installer.check_rule_status(
+        target_type=req.target_type,
+        project_path=req.project_path
+    )
+    if req.update_rule and rule_status.get("is_installed") and rule_status.get("has_update"):
+        rule_res = installer.install_collaboration_rule(
+            target_type=req.target_type,
+            project_path=req.project_path,
+            agent_manager=agent_manager,
+            install_essential_agents=False
+        )
+        if rule_res.get("success"):
+            rule_updated = True
+            
+    total_updated = len(updated_agents) + (1 if rule_updated else 0)
+    
+    msg_parts = []
+    if updated_agents:
+        msg_parts.append(f"{len(updated_agents)} 位子代理")
+    if rule_updated:
+        msg_parts.append("協作規範 Rule")
+        
+    if total_updated > 0:
+        msg = f"🎉 成功一鍵更新 {' 與 '.join(msg_parts)} 至最新版本！"
+    else:
+        msg = "所有已安裝的子代理與協作規範皆已是最新版，無需更新。"
+        
+    return {
+        "success": True,
+        "total_updated": total_updated,
+        "updated_agents": updated_agents,
+        "failed_agents": failed_agents,
+        "rule_updated": rule_updated,
+        "message": msg
     }
 
 # 協作工作流規範 (Rule) 相關 API

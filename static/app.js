@@ -224,9 +224,37 @@ async function loadAgents() {
 
       applyFilterAndRender();
       updateSelectedUI();
+      updateAlertBanner();
     }
   } catch (err) {
     showToast('載入專家清單失敗', 'error');
+  }
+}
+
+// 待更新提示橫幅與數值更新
+function updateAlertBanner() {
+  const banner = document.getElementById('updates-alert-banner');
+  const countEl = document.getElementById('updates-banner-count');
+  const descEl = document.getElementById('updates-banner-desc');
+  
+  if (!banner) return;
+  
+  const ruleUpdate = state.ruleStatus && state.ruleStatus.is_installed && state.ruleStatus.has_update;
+  const totalUpdates = (state.updatesCount || 0) + (ruleUpdate ? 1 : 0);
+  
+  if (totalUpdates > 0) {
+    banner.classList.remove('hidden');
+    banner.classList.add('flex');
+    if (countEl) countEl.textContent = `${totalUpdates} 項待更新`;
+    
+    const parts = [];
+    if (state.updatesCount > 0) parts.push(`${state.updatesCount} 位子代理`);
+    if (ruleUpdate) parts.push('協作規範 (Rule)');
+    
+    if (descEl) descEl.textContent = `檢測到 ${parts.join(' 與 ')} 存在新版本，點擊「一鍵更新全部」即可快速完成升級。`;
+  } else {
+    banner.classList.add('hidden');
+    banner.classList.remove('flex');
   }
 }
 
@@ -839,6 +867,7 @@ async function checkRuleStatus() {
     if (data.success) {
       state.ruleStatus = data;
       updateRuleStatusUI(data.is_installed, data.has_update);
+      updateAlertBanner();
     }
   } catch (err) {
     console.error('檢查協作 Rule 失敗', err);
@@ -1154,6 +1183,58 @@ async function uninstallSelected() {
     await loadAgents();
   } catch (err) {
     showToast('批次卸載發生錯誤', 'error');
+  }
+}
+
+// 一鍵更新全部過期項目 (All Outdated Subagents & Rule)
+async function updateAllOutdated() {
+  const btnHeader = document.getElementById('btn-header-update-all');
+  const btnBanner = document.getElementById('btn-banner-update-all');
+  
+  if (btnHeader) {
+    btnHeader.disabled = true;
+    btnHeader.innerHTML = `<i data-lucide="loader" class="w-3 h-3 animate-spin"></i><span>更新中...</span>`;
+  }
+  if (btnBanner) {
+    btnBanner.disabled = true;
+    btnBanner.innerHTML = `<i data-lucide="loader" class="w-3.5 h-3.5 animate-spin"></i><span>正在一鍵更新...</span>`;
+  }
+  lucide.createIcons();
+
+  showToast('正在執行一鍵更新所有可更新的子代理與協作規範...', 'info');
+
+  try {
+    const res = await fetch('/api/updates/apply-all', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        target_type: state.targetType,
+        project_path: state.projectPath,
+        custom_path: state.customPath,
+        update_rule: true,
+        update_agents: true
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      showToast(data.message, data.total_updated > 0 ? 'success' : 'info');
+      await loadAgents();
+      await checkRuleStatus();
+    } else {
+      showToast(data.message || '更新失敗', 'error');
+    }
+  } catch (err) {
+    showToast('連線異常，一鍵更新失敗', 'error');
+  } finally {
+    if (btnHeader) {
+      btnHeader.disabled = false;
+      btnHeader.innerHTML = `<i data-lucide="sparkles" class="w-3 h-3 text-amber-400"></i><span>一鍵更新</span>`;
+    }
+    if (btnBanner) {
+      btnBanner.disabled = false;
+      btnBanner.innerHTML = `<i data-lucide="sparkles" class="w-3.5 h-3.5"></i><span>一鍵更新全部</span>`;
+    }
+    lucide.createIcons();
   }
 }
 
