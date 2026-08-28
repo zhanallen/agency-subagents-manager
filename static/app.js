@@ -107,11 +107,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await checkRuleStatus();
   renderPresetPacks();
   lucide.createIcons();
-
-  // 啟動 3 秒後非同步在背景檢查雲端更新 (雙向同步最新規範與專家庫)
-  setTimeout(() => {
-    silentSyncCheck();
-  }, 3000);
 });
 
 // ==========================================================================

@@ -36,9 +36,11 @@ from fastapi.middleware.cors import CORSMiddleware
 if getattr(sys, 'frozen', False):
     BASE_DIR = Path(sys._MEIPASS)
     APP_DIR = Path(os.path.dirname(sys.executable))
+    USER_DATA_DIR = Path.home() / ".agency-subagents-manager"
 else:
     BASE_DIR = Path(__file__).resolve().parent
     APP_DIR = BASE_DIR
+    USER_DATA_DIR = BASE_DIR / "data"
 
 sys.path.insert(0, str(BASE_DIR))
 
@@ -56,8 +58,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-agent_manager = AgentManager(str(BASE_DIR))
-installer = SubagentInstaller(str(APP_DIR))
+agent_manager = AgentManager(str(BASE_DIR), user_data_dir=str(USER_DATA_DIR))
+installer = SubagentInstaller(str(APP_DIR), user_data_dir=str(USER_DATA_DIR), base_dir=str(BASE_DIR))
 
 # Pydantic 請求模型
 class InstallRequest(BaseModel):

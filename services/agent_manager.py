@@ -149,11 +149,20 @@ DIVISIONS_CONFIG = {
 class AgentManager:
     """負責管理、解析、搜尋與快取 Agency Agents 的專家資料（支援 100% 繁體中文 UI 呈現，保留原生提示詞）"""
     
-    def __init__(self, workspace_root: str):
+    def __init__(self, workspace_root: str, user_data_dir: Optional[str] = None):
         self.workspace_root = Path(workspace_root)
-        self.repo_dir = self.workspace_root / "data" / "agency-agents-repo"
-        self.cache_file = self.workspace_root / "data" / "agents_database.json"
-        self.translations_file = self.workspace_root / "data" / "translations_full.json"
+        self.user_data_dir = Path(user_data_dir) if user_data_dir else Path.home() / ".agency-subagents-manager"
+        
+        # 優先讀取使用者已同步之獨立資料目錄，若無則讀取程式內建打包目錄
+        user_repo = self.user_data_dir / "agency-agents-repo"
+        self.repo_dir = user_repo if user_repo.exists() else self.workspace_root / "data" / "agency-agents-repo"
+        
+        user_cache = self.user_data_dir / "agents_database.json"
+        self.cache_file = user_cache if user_cache.exists() else self.workspace_root / "data" / "agents_database.json"
+        
+        user_trans = self.user_data_dir / "translations_full.json"
+        self.translations_file = user_trans if user_trans.exists() else self.workspace_root / "data" / "translations_full.json"
+        
         self.translations_map: Dict[str, Dict[str, str]] = {}
         self.agents: List[Dict[str, Any]] = []
         self.agents_map: Dict[str, Dict[str, Any]] = {}
@@ -162,10 +171,22 @@ class AgentManager:
         self.load_agents()
 
     def load_translations(self):
-        """載入繁體中文翻譯字典庫"""
-        if self.translations_file.exists():
+        """載入繁體中文翻譯字典庫 (唯讀載入，啟動時不建立任何資料夾)"""
+        # 1. 優先檢查使用者獨立資料目錄
+        user_trans = self.user_data_dir / "translations_full.json"
+        if user_trans.exists():
             try:
-                with open(self.translations_file, "r", encoding="utf-8") as f:
+                with open(user_trans, "r", encoding="utf-8") as f:
+                    self.translations_map = json.load(f)
+                    return
+            except Exception:
+                pass
+        
+        # 2. 次之檢查內建打包字典
+        builtin_trans = self.workspace_root / "data" / "translations_full.json"
+        if builtin_trans.exists():
+            try:
+                with open(builtin_trans, "r", encoding="utf-8") as f:
                     self.translations_map = json.load(f)
             except Exception as e:
                 print(f"Failed to load translations: {e}")
@@ -232,6 +253,11 @@ class AgentManager:
                     if "security" in name_en.lower():
                         tags.append("Security")
 
+                    try:
+                        file_path = str(file.relative_to(self.workspace_root))
+                    except ValueError:
+                        file_path = str(file)
+
                     agent_item = {
                         "id": slug,
                         "slug": slug,
@@ -250,7 +276,7 @@ class AgentManager:
                         "name_en": name_en,
                         "description_en": desc_en,
                         "vibe_en": vibe_en,
-                        "file_path": str(file.relative_to(self.workspace_root)),
+                        "file_path": file_path,
                         "relative_file": f"{div_id}/{file.name}",
                         "tags": list(set(tags)),
                         "emoji": emoji,
@@ -316,6 +342,7 @@ class AgentManager:
         self,
         query: str = "",
         division: str = "all",
+        tags: Optional[List[str]] = None,
         installed_ids: Optional[List[str]] = None,
         filter_status: str = "all",
         updates_map: Optional[Dict[str, bool]] = None
@@ -326,6 +353,9 @@ class AgentManager:
 
         for agent in self.agents:
             if division != "all" and agent["division_id"] != division:
+                continue
+
+            if tags and not any(t in agent.get("tags", []) for t in tags):
                 continue
 
             is_installed = (installed_ids is not None) and (agent["id"] in installed_ids)
@@ -349,6 +379,7 @@ class AgentManager:
                     or query in agent.get("division_name_zh", "").lower()
                     or query in agent.get("division_name_en", "").lower()
                     or any(query in tag.lower() for tag in agent.get("tags", []))
+                    or query in agent.get("raw_markdown", "").lower()
                 )
                 if not match:
                     continue
@@ -362,7 +393,7 @@ class AgentManager:
         repo_owner_repo: str = "zhanallen/agency-subagents-manager",
         branch: str = "main"
     ) -> Dict[str, Any]:
-        """從使用者的 GitHub 倉庫同步最新的繁體中文在地化字典 (translations_full.json)"""
+        """從使用者的 GitHub 倉庫同步最新的繁體中文在地化字典 (儲存至獨立 user_data_dir，不污染程式目錄)"""
         url = f"https://raw.githubusercontent.com/{repo_owner_repo}/{branch}/data/translations_full.json"
         try:
             req = urllib.request.Request(
@@ -374,9 +405,11 @@ class AgentManager:
                     raw_data = response.read().decode("utf-8")
                     parsed = json.loads(raw_data)
                     if isinstance(parsed, dict) and len(parsed) > 0:
-                        self.translations_file.parent.mkdir(parents=True, exist_ok=True)
-                        with open(self.translations_file, "w", encoding="utf-8") as f:
+                        target_file = self.user_data_dir / "translations_full.json"
+                        target_file.parent.mkdir(parents=True, exist_ok=True)
+                        with open(target_file, "w", encoding="utf-8") as f:
                             f.write(raw_data)
+                        self.translations_file = target_file
                         self.translations_map = parsed
                         return {
                             "success": True,
@@ -391,15 +424,15 @@ class AgentManager:
         self,
         repo_url: str = "https://github.com/msitarzewski/agency-agents.git"
     ) -> Dict[str, Any]:
-        """從 GitHub 官方倉庫 (msitarzewski/agency-agents) 同步最新的專家定義"""
+        """從 GitHub 官方倉庫 (msitarzewski/agency-agents) 同步最新的專家定義 (儲存至獨立 user_data_dir)"""
         try:
-            if not self.repo_dir.exists():
-                self.repo_dir.mkdir(parents=True, exist_ok=True)
+            target_repo = self.user_data_dir / "agency-agents-repo"
+            target_repo.mkdir(parents=True, exist_ok=True)
 
             # 若無 .git，先初始化並綁定 remote
-            if not (self.repo_dir / ".git").exists():
-                subprocess.run(["git", "init"], cwd=str(self.repo_dir), capture_output=True, text=True, timeout=10)
-                subprocess.run(["git", "remote", "add", "origin", repo_url], cwd=str(self.repo_dir), capture_output=True, text=True, timeout=10)
+            if not (target_repo / ".git").exists():
+                subprocess.run(["git", "init"], cwd=str(target_repo), capture_output=True, text=True, timeout=10)
+                subprocess.run(["git", "remote", "add", "origin", repo_url], cwd=str(target_repo), capture_output=True, text=True, timeout=10)
 
             # 嘗試拉取 main 或 master 分支
             res = subprocess.run(

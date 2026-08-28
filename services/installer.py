@@ -20,10 +20,12 @@ ESSENTIAL_COLLABORATION_AGENT_IDS = [
 class SubagentInstaller:
     """負責將 Agency Agents 轉換並安裝為符合各官方規範的 Subagent / Agent 定義檔 (嚴格單一目錄安裝，不重複寫入)"""
 
-    def __init__(self, default_project_root: str):
+    def __init__(self, default_project_root: str, user_data_dir: Optional[str] = None, base_dir: Optional[str] = None):
         self.default_project_root = Path(default_project_root)
         self.home_dir = Path.home()
-        self.rules_dir = self.default_project_root / "data" / "rules"
+        self.user_data_dir = Path(user_data_dir) if user_data_dir else self.home_dir / ".agency-subagents-manager"
+        self.base_dir = Path(base_dir) if base_dir else self.default_project_root
+        self.rules_dir = self.user_data_dir / "rules"
 
     def get_destinations(self, current_project_path: Optional[str] = None) -> List[Dict[str, Any]]:
         """獲取所有支援的安裝目標與其路徑"""
@@ -460,10 +462,12 @@ subagent: true
         }
 
     def get_default_rule_content(self, target_type: str = "antigravity_project") -> str:
-        """獲取高密度、節省 Token 且具備 Loop Engineering 閉環機制的 Subagent 協作規範 (優先自 data/rules 讀取已同步最新範本)"""
-        # 1. 優先嘗試讀取本機已同步的最新 Rule 檔案
+        """獲取高密度、節省 Token 且具備 Loop Engineering 閉環機制的 Subagent 協作規範 (優先自 user_data_dir/rules 或 base_dir/data/rules 讀取已同步最新範本)"""
+        rule_filename = "cursor-collaboration.mdc" if target_type == "cursor" else "subagent-collaboration.md"
+        
+        # 1. 優先嘗試讀取使用者已同步至 user_data_dir 的最新 Rule 檔案
         if self.rules_dir.exists():
-            rule_file = self.rules_dir / ("cursor-collaboration.mdc" if target_type == "cursor" else "subagent-collaboration.md")
+            rule_file = self.rules_dir / rule_filename
             if rule_file.exists():
                 try:
                     with open(rule_file, "r", encoding="utf-8") as f:
@@ -473,7 +477,18 @@ subagent: true
                 except Exception:
                     pass
 
-        # 2. 內建預設模板降級回退 (Fallback)
+        # 2. 次之嘗試讀取程式內建打包的 data/rules 檔案
+        base_rule_file = self.base_dir / "data" / "rules" / rule_filename
+        if base_rule_file.exists():
+            try:
+                with open(base_rule_file, "r", encoding="utf-8") as f:
+                    content = f.read().strip()
+                    if content:
+                        return content
+            except Exception:
+                pass
+
+        # 3. 內建預設模板降級回退 (Fallback)
         if target_type == "cursor":
             return """---
 description: "CRITICAL: Hard Tool-Blocking & Subagent Interception Protocol across all domains (Consult -> Delegate -> Sandbox/Visual Test -> Iteration Loop -> Independent Subagent Sign-off & Delivery)."
