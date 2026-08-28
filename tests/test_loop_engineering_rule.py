@@ -122,10 +122,13 @@ class TestLoopEngineeringRule(unittest.TestCase):
                 install_essential_agents=True
             )
             self.assertTrue(res["success"])
-            self.assertEqual(res.get("essential_count", 0), 3)
+            self.assertEqual(res.get("essential_count", 0), 6)
             self.assertIn("specialized-agents-orchestrator", res.get("installed_essential_agents", []))
             self.assertIn("engineering-multi-agent-systems-architect", res.get("installed_essential_agents", []))
             self.assertIn("engineering-prompt-engineer", res.get("installed_essential_agents", []))
+            self.assertIn("engineering-code-reviewer", res.get("installed_essential_agents", []))
+            self.assertIn("testing-test-automation-engineer", res.get("installed_essential_agents", []))
+            self.assertIn("design-ui-finish-gate-reviewer", res.get("installed_essential_agents", []))
 
             # Verify files on disk
             installed_ids = self.installer.get_installed_agent_ids(

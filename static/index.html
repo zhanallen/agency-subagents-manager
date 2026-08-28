@@ -560,7 +560,7 @@
           <i data-lucide="info" class="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5"></i>
           <div>
             <strong>為什麼採用通用英文 Loop Engineering 規範與自動配置？</strong><br>
-            英文語料密度高，可為每次互動**節省 60%~70% Token**；規範全面涵蓋程式碼、視覺設計、產品管理、行銷增長與研究等跨領域任務，啟用時會**自動配置核心多代理架構三人組**（總編排師 `specialized-agents-orchestrator`、多代理架構師 `engineering-multi-agent-systems-architect` 與提示詞工程師 `engineering-prompt-engineer`），確保 Main Agent 遵循「諮詢 ➔ 委派 ➔ 驗證 ➔ 迭代閉環」之原則。
+            英文語料密度高，可為每次互動**節省 60%~70% Token**；規範全面涵蓋程式碼、視覺設計、產品管理、行銷增長與研究等跨領域任務，啟用時會**自動配置 6 位核心多代理架構與 QA 審查專家**（總編排師 `specialized-agents-orchestrator`、多代理架構師 `engineering-multi-agent-systems-architect`、提示詞工程師 `engineering-prompt-engineer`、代碼審查員 `engineering-code-reviewer`、測試工程師 `testing-test-automation-engineer` 與 UI 收尾審查員 `design-ui-finish-gate-reviewer`），落實「諮詢 ➔ 委派 ➔ 沙箱實測 / UI 截圖 ➔ 獨立審核簽核」之嚴密閉環！
           </div>
         </div>
 
@@ -727,10 +727,10 @@
         <div class="space-y-2">
           <h3 class="font-bold text-white text-sm flex items-center gap-2">
             <span class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs">3</span>
-            跨領域協作工作流規範 (Rule) 與核心架構組配置
+            跨領域協作工作流規範 (Rule) 與核心架構及 QA 審核門禁配置
           </h3>
           <p class="text-slate-300 leading-relaxed bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
-            點擊「一鍵啟用 Rule」後，專案將寫入通用英文協作規範 <code class="text-indigo-300">.agents/rules/subagent-collaboration.md</code> 並**自動配置核心架構三人組**（總編排師、多代理系統架構師與提示詞工程師）。這套規則涵蓋程式開發、設計、產品、行銷與研究等多元場景，強制 Main Agent 不得獨攬非單行微調任務，遇到複雜需求時必須先主動向對應領域的 Subagent 諮詢、拆解任務指派並進行測試驗證，確保產出品質！
+            點擊「一鍵啟用 Rule」後，專案將寫入通用英文協作規範 <code class="text-indigo-300">.agents/rules/subagent-collaboration.md</code> 並**自動配置 6 位核心架構與 QA 審核門禁專家**（總編排師、多代理系統架構師、提示詞工程師、代碼審查專家、測試工程師、UI 門禁審查專家）。這套規則涵蓋程式開發、設計、產品、行銷與研究等多元場景，強制 Main Agent 不得獨攬非單行微調任務，遇到複雜需求時必須先主動向對應領域的 Subagent 諮詢、拆解任務指派，並在交付前進行沙箱實測、UI 截圖與獨立審查簽核，確保 100% 產出品質！
           </p>
         </div>
       </div>

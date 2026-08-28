@@ -7,9 +7,14 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 ESSENTIAL_COLLABORATION_AGENT_IDS = [
-    "specialized-agents-orchestrator",              # 總編排師與品質守門人 (跨領域執行與排程)
+    # 1. 核心編排與多代理治理 (Governance & Orchestration)
+    "specialized-agents-orchestrator",              # 總編排師與品質守門人 (動態任務拆解、排程與閉環驗收)
     "engineering-multi-agent-systems-architect",    # 多代理系統架構師 (代理拓撲、容錯機制與系統架構)
-    "engineering-prompt-engineer"                   # 提示詞工程師 (提示詞架構與角色約束力調優)
+    "engineering-prompt-engineer",                   # 提示詞工程師 (提示詞架構與角色約束力調優)
+    # 2. 品質審查與實證驗收門禁 (Quality Assurance & Independent Verification)
+    "engineering-code-reviewer",                    # 資深代碼審查專家 (Stage 6 獨立代碼品質、安全弱點與架構審查)
+    "testing-test-automation-engineer",             # 自動化測試工程師 (Stage 4/6 沙箱測試套件、E2E 流程與確定性測試)
+    "design-ui-finish-gate-reviewer"                # UI 視覺收尾門禁審查專家 (Stage 4/6 多視口截圖審核與視覺驗收)
 ]
 
 class SubagentInstaller:
@@ -957,7 +962,7 @@ Before invoking **ANY** tool or returning output for a user request, you **MUST*
 
             rule_display_name = rule_path.relative_to(rule_path.parent.parent.parent) if len(rule_path.parts) > 3 else rule_path.name
             if installed_agents:
-                msg = f"成功建立協作規範（{rule_display_name} 及根目錄入口），並已自動配置核心編排師、多代理系統架構師與提示詞工程師！"
+                msg = f"成功建立協作規範（{rule_display_name} 及根目錄入口），並已自動配置核心架構師、提示詞工程師與 QA/Review 審查門禁專家（共 {len(installed_agents)} 位）！"
             else:
                 msg = f"成功建立協作規範：{rule_display_name}"
 

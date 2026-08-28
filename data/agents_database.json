@@ -18,8 +18,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-anthropologist.md",
     "relative_file": "academic/academic-anthropologist.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "🌍",
     "color": "#D97706",
@@ -45,8 +45,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-geographer.md",
     "relative_file": "academic/academic-geographer.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "🗺️",
     "color": "#059669",
@@ -72,8 +72,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-historian.md",
     "relative_file": "academic/academic-historian.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "📚",
     "color": "#B45309",
@@ -99,8 +99,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-narratologist.md",
     "relative_file": "academic/academic-narratologist.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "📜",
     "color": "#8B5CF6",
@@ -126,8 +126,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-psychologist.md",
     "relative_file": "academic/academic-psychologist.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "🧠",
     "color": "#EC4899",
@@ -153,8 +153,8 @@
     "file_path": "data\\agency-agents-repo\\academic\\academic-statistician.md",
     "relative_file": "academic/academic-statistician.md",
     "tags": [
-      "學術研究",
-      "Academic"
+      "Academic",
+      "學術研究"
     ],
     "emoji": "📊",
     "color": "#8B5CF6",
@@ -180,8 +180,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-brand-guardian.md",
     "relative_file": "design/design-brand-guardian.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🎨",
     "color": "blue",
@@ -207,8 +207,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-image-prompt-engineer.md",
     "relative_file": "design/design-image-prompt-engineer.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "📷",
     "color": "amber",
@@ -234,8 +234,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-inclusive-visuals-specialist.md",
     "relative_file": "design/design-inclusive-visuals-specialist.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🌈",
     "color": "#4DB6AC",
@@ -261,9 +261,9 @@
     "file_path": "data\\agency-agents-repo\\design\\design-persona-walkthrough.md",
     "relative_file": "design/design-persona-walkthrough.md",
     "tags": [
+      "Design",
       "視覺與體驗設計",
-      "Frontend",
-      "Design"
+      "Frontend"
     ],
     "emoji": "🎭",
     "color": "#10B981",
@@ -289,8 +289,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ui-designer.md",
     "relative_file": "design/design-ui-designer.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🎨",
     "color": "purple",
@@ -316,8 +316,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ui-finish-gate-reviewer.md",
     "relative_file": "design/design-ui-finish-gate-reviewer.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🧱",
     "color": "orange",
@@ -343,8 +343,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ux-architect.md",
     "relative_file": "design/design-ux-architect.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "📐",
     "color": "purple",
@@ -370,8 +370,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-ux-researcher.md",
     "relative_file": "design/design-ux-researcher.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🔬",
     "color": "green",
@@ -397,8 +397,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-visual-storyteller.md",
     "relative_file": "design/design-visual-storyteller.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "🎬",
     "color": "purple",
@@ -424,8 +424,8 @@
     "file_path": "data\\agency-agents-repo\\design\\design-whimsy-injector.md",
     "relative_file": "design/design-whimsy-injector.md",
     "tags": [
-      "視覺與體驗設計",
-      "Design"
+      "Design",
+      "視覺與體驗設計"
     ],
     "emoji": "✨",
     "color": "pink",
@@ -506,8 +506,8 @@
     "relative_file": "engineering/engineering-api-platform-engineer.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "🔌",
     "color": "#0D9488",
@@ -534,8 +534,8 @@
     "relative_file": "engineering/engineering-autonomous-optimization-architect.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "⚡",
     "color": "#673AB7",
@@ -562,8 +562,8 @@
     "relative_file": "engineering/engineering-backend-architect.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "🏗️",
     "color": "blue",
@@ -1049,8 +1049,8 @@
     "relative_file": "engineering/engineering-frontend-developer.md",
     "tags": [
       "Engineering",
-      "Frontend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Frontend"
     ],
     "emoji": "🖥️",
     "color": "cyan",
@@ -1482,8 +1482,8 @@
     "relative_file": "engineering/engineering-privacy-engineer.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "🕵️",
     "color": "#7E22CE",
@@ -1807,8 +1807,8 @@
     "relative_file": "engineering/engineering-technical-writer.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "📚",
     "color": "teal",
@@ -1889,8 +1889,8 @@
     "relative_file": "engineering/engineering-voice-ai-integration-engineer.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "🎙️",
     "color": "violet",
@@ -1917,8 +1917,8 @@
     "relative_file": "engineering/engineering-wechat-mini-program-developer.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "💬",
     "color": "green",
@@ -1972,8 +1972,8 @@
     "relative_file": "engineering/engineering-wordpress-performance.md",
     "tags": [
       "Engineering",
-      "Backend",
-      "軟體與系統工程"
+      "軟體與系統工程",
+      "Backend"
     ],
     "emoji": "⚡",
     "color": "purple",
@@ -2161,8 +2161,8 @@
     "file_path": "data\\agency-agents-repo\\game-development\\economy-designer.md",
     "relative_file": "game-development/economy-designer.md",
     "tags": [
-      "遊戲開發與引擎",
-      "Game Development"
+      "Game Development",
+      "遊戲開發與引擎"
     ],
     "emoji": "💰",
     "color": "green",
@@ -2188,8 +2188,8 @@
     "file_path": "data\\agency-agents-repo\\game-development\\game-audio-engineer.md",
     "relative_file": "game-development/game-audio-engineer.md",
     "tags": [
-      "遊戲開發與引擎",
-      "Game Development"
+      "Game Development",
+      "遊戲開發與引擎"
     ],
     "emoji": "🎵",
     "color": "indigo",
@@ -2215,8 +2215,8 @@
     "file_path": "data\\agency-agents-repo\\game-development\\game-designer.md",
     "relative_file": "game-development/game-designer.md",
     "tags": [
-      "遊戲開發與引擎",
-      "Game Development"
+      "Game Development",
+      "遊戲開發與引擎"
     ],
     "emoji": "🎮",
     "color": "yellow",
@@ -2242,8 +2242,8 @@
     "file_path": "data\\agency-agents-repo\\game-development\\level-designer.md",
     "relative_file": "game-development/level-designer.md",
     "tags": [
-      "遊戲開發與引擎",
-      "Game Development"
+      "Game Development",
+      "遊戲開發與引擎"
     ],
     "emoji": "🗺️",
     "color": "teal",
@@ -2269,8 +2269,8 @@
     "file_path": "data\\agency-agents-repo\\game-development\\narrative-designer.md",
     "relative_file": "game-development/narrative-designer.md",
     "tags": [
-      "遊戲開發與引擎",
-      "Game Development"
+      "Game Development",
+      "遊戲開發與引擎"
     ],
     "emoji": "📖",
     "color": "red",
@@ -2296,8 +2296,8 @@
     "file_path": "data\\agency-agents-repo\\game-development\\technical-artist.md",
     "relative_file": "game-development/technical-artist.md",
     "tags": [
-      "遊戲開發與引擎",
-      "Game Development"
+      "Game Development",
+      "遊戲開發與引擎"
     ],
     "emoji": "🎨",
     "color": "pink",
@@ -2675,8 +2675,8 @@
     "file_path": "data\\agency-agents-repo\\healthcare\\healthcare-clinical-evidence-agent.md",
     "relative_file": "healthcare/healthcare-clinical-evidence-agent.md",
     "tags": [
-      "Healthcare",
-      "醫療與健康科技"
+      "醫療與健康科技",
+      "Healthcare"
     ],
     "emoji": "🩺",
     "color": "#1A5276",
@@ -2702,8 +2702,8 @@
     "file_path": "data\\agency-agents-repo\\healthcare\\healthcare-innovation-strategist.md",
     "relative_file": "healthcare/healthcare-innovation-strategist.md",
     "tags": [
-      "Healthcare",
-      "醫療與健康科技"
+      "醫療與健康科技",
+      "Healthcare"
     ],
     "emoji": "🧭",
     "color": "#1B4F72",
@@ -2729,8 +2729,8 @@
     "file_path": "data\\agency-agents-repo\\healthcare\\healthcare-sovereign-health-systems-agent.md",
     "relative_file": "healthcare/healthcare-sovereign-health-systems-agent.md",
     "tags": [
-      "Healthcare",
-      "醫療與健康科技"
+      "醫療與健康科技",
+      "Healthcare"
     ],
     "emoji": "🌍",
     "color": "#1B4F72",
@@ -2756,8 +2756,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-aeo-foundations.md",
     "relative_file": "marketing/marketing-aeo-foundations.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🏗️",
     "color": "#059669",
@@ -2783,8 +2783,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-ai-citation-strategist.md",
     "relative_file": "marketing/marketing-ai-citation-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🔮",
     "color": "#6D28D9",
@@ -2810,8 +2810,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-agentic-search-optimizer.md",
     "relative_file": "marketing/marketing-agentic-search-optimizer.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🤖",
     "color": "#0891B2",
@@ -2837,8 +2837,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-app-store-optimizer.md",
     "relative_file": "marketing/marketing-app-store-optimizer.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📱",
     "color": "blue",
@@ -2864,8 +2864,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-baidu-seo-specialist.md",
     "relative_file": "marketing/marketing-baidu-seo-specialist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🇨🇳",
     "color": "blue",
@@ -2891,8 +2891,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-bilibili-content-strategist.md",
     "relative_file": "marketing/marketing-bilibili-content-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎬",
     "color": "pink",
@@ -2918,8 +2918,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-book-co-author.md",
     "relative_file": "marketing/marketing-book-co-author.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📘",
     "color": "#8B5E3C",
@@ -2945,9 +2945,9 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-carousel-growth-engine.md",
     "relative_file": "marketing/marketing-carousel-growth-engine.md",
     "tags": [
-      "Marketing",
       "行銷推廣與社群",
-      "Backend"
+      "Backend",
+      "Marketing"
     ],
     "emoji": "🎠",
     "color": "#FF0050",
@@ -2973,8 +2973,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-china-ecommerce-operator.md",
     "relative_file": "marketing/marketing-china-ecommerce-operator.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🛒",
     "color": "red",
@@ -3000,8 +3000,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-china-market-localization-strategist.md",
     "relative_file": "marketing/marketing-china-market-localization-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🇨🇳",
     "color": "#E60012",
@@ -3027,8 +3027,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-content-creator.md",
     "relative_file": "marketing/marketing-content-creator.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "✍️",
     "color": "teal",
@@ -3054,8 +3054,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-cross-border-ecommerce.md",
     "relative_file": "marketing/marketing-cross-border-ecommerce.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🌏",
     "color": "blue",
@@ -3081,8 +3081,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-douyin-strategist.md",
     "relative_file": "marketing/marketing-douyin-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎵",
     "color": "#000000",
@@ -3108,9 +3108,9 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-email-strategist.md",
     "relative_file": "marketing/marketing-email-strategist.md",
     "tags": [
+      "行銷推廣與社群",
       "Marketing",
-      "Frontend",
-      "行銷推廣與社群"
+      "Frontend"
     ],
     "emoji": "📧",
     "color": "green",
@@ -3136,8 +3136,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-global-podcast-strategist.md",
     "relative_file": "marketing/marketing-global-podcast-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎙️",
     "color": "purple",
@@ -3163,9 +3163,9 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-growth-hacker.md",
     "relative_file": "marketing/marketing-growth-hacker.md",
     "tags": [
-      "Marketing",
       "行銷推廣與社群",
-      "Backend"
+      "Backend",
+      "Marketing"
     ],
     "emoji": "🚀",
     "color": "green",
@@ -3191,8 +3191,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-instagram-curator.md",
     "relative_file": "marketing/marketing-instagram-curator.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📸",
     "color": "#E4405F",
@@ -3218,8 +3218,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-kuaishou-strategist.md",
     "relative_file": "marketing/marketing-kuaishou-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎥",
     "color": "orange",
@@ -3245,8 +3245,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-linkedin-content-creator.md",
     "relative_file": "marketing/marketing-linkedin-content-creator.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "💼",
     "color": "#0A66C2",
@@ -3272,8 +3272,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-livestream-commerce-coach.md",
     "relative_file": "marketing/marketing-livestream-commerce-coach.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎙️",
     "color": "#E63946",
@@ -3299,8 +3299,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-multi-platform-publisher.md",
     "relative_file": "marketing/marketing-multi-platform-publisher.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📡",
     "color": "#FF6B35",
@@ -3326,8 +3326,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-pr-communications-manager.md",
     "relative_file": "marketing/marketing-pr-communications-manager.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📣",
     "color": "blue",
@@ -3353,8 +3353,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-podcast-strategist.md",
     "relative_file": "marketing/marketing-podcast-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎧",
     "color": "purple",
@@ -3380,8 +3380,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-private-domain-operator.md",
     "relative_file": "marketing/marketing-private-domain-operator.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🔒",
     "color": "#1A73E8",
@@ -3407,8 +3407,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-reddit-community-builder.md",
     "relative_file": "marketing/marketing-reddit-community-builder.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "💬",
     "color": "#FF4500",
@@ -3434,8 +3434,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-seo-specialist.md",
     "relative_file": "marketing/marketing-seo-specialist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🔍",
     "color": "#4285F4",
@@ -3461,8 +3461,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-short-video-editing-coach.md",
     "relative_file": "marketing/marketing-short-video-editing-coach.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎬",
     "color": "#7B2D8E",
@@ -3488,8 +3488,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-social-media-strategist.md",
     "relative_file": "marketing/marketing-social-media-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📣",
     "color": "blue",
@@ -3515,8 +3515,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-tiktok-strategist.md",
     "relative_file": "marketing/marketing-tiktok-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎵",
     "color": "#000000",
@@ -3542,8 +3542,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-twitter-engager.md",
     "relative_file": "marketing/marketing-twitter-engager.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🐦",
     "color": "#1DA1F2",
@@ -3569,8 +3569,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-video-optimization-specialist.md",
     "relative_file": "marketing/marketing-video-optimization-specialist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🎬",
     "color": "red",
@@ -3596,8 +3596,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-wechat-official-account.md",
     "relative_file": "marketing/marketing-wechat-official-account.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "📱",
     "color": "#09B83E",
@@ -3623,8 +3623,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-weibo-strategist.md",
     "relative_file": "marketing/marketing-weibo-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🔥",
     "color": "#FF8200",
@@ -3650,8 +3650,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-x-twitter-intelligence-analyst.md",
     "relative_file": "marketing/marketing-x-twitter-intelligence-analyst.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🛰️",
     "color": "#111111",
@@ -3677,8 +3677,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-xiaohongshu-specialist.md",
     "relative_file": "marketing/marketing-xiaohongshu-specialist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🌸",
     "color": "#FF1B6D",
@@ -3704,8 +3704,8 @@
     "file_path": "data\\agency-agents-repo\\marketing\\marketing-zhihu-strategist.md",
     "relative_file": "marketing/marketing-zhihu-strategist.md",
     "tags": [
-      "Marketing",
-      "行銷推廣與社群"
+      "行銷推廣與社群",
+      "Marketing"
     ],
     "emoji": "🧠",
     "color": "#0084FF",
@@ -3921,8 +3921,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-behavioral-nudge-engine.md",
     "relative_file": "product/product-behavioral-nudge-engine.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🧠",
     "color": "#FF8A65",
@@ -3948,8 +3948,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-feedback-synthesizer.md",
     "relative_file": "product/product-feedback-synthesizer.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🔍",
     "color": "blue",
@@ -3975,8 +3975,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-manager.md",
     "relative_file": "product/product-manager.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🧭",
     "color": "blue",
@@ -4002,8 +4002,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-sprint-prioritizer.md",
     "relative_file": "product/product-sprint-prioritizer.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🎯",
     "color": "green",
@@ -4029,8 +4029,8 @@
     "file_path": "data\\agency-agents-repo\\product\\product-trend-researcher.md",
     "relative_file": "product/product-trend-researcher.md",
     "tags": [
-      "產品管理與規劃",
-      "Product"
+      "Product",
+      "產品管理與規劃"
     ],
     "emoji": "🔭",
     "color": "purple",
@@ -4488,8 +4488,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-ai-generated-code-auditor.md",
     "relative_file": "security/security-ai-generated-code-auditor.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🔎",
     "color": "#4F46E5",
@@ -4515,8 +4515,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-appsec-engineer.md",
     "relative_file": "security/security-appsec-engineer.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🔐",
     "color": "#059669",
@@ -4542,8 +4542,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-blockchain-security-auditor.md",
     "relative_file": "security/security-blockchain-security-auditor.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -4569,8 +4569,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-cloud-security-architect.md",
     "relative_file": "security/security-cloud-security-architect.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "☁️",
     "color": "#3b82f6",
@@ -4596,8 +4596,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-compliance-auditor.md",
     "relative_file": "security/security-compliance-auditor.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "📋",
     "color": "orange",
@@ -4623,8 +4623,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-incident-responder.md",
     "relative_file": "security/security-incident-responder.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🚨",
     "color": "#f59e0b",
@@ -4651,8 +4651,8 @@
     "relative_file": "security/security-penetration-tester.md",
     "tags": [
       "Testing",
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🗡️",
     "color": "#dc2626",
@@ -4678,8 +4678,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-secrets-credential-engineer.md",
     "relative_file": "security/security-secrets-credential-engineer.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🔑",
     "color": "#B45309",
@@ -4705,9 +4705,9 @@
     "file_path": "data\\agency-agents-repo\\security\\security-architect.md",
     "relative_file": "security/security-architect.md",
     "tags": [
-      "Security",
       "Backend",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🛡️",
     "color": "red",
@@ -4733,8 +4733,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-senior-secops.md",
     "relative_file": "security/security-senior-secops.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🛡️",
     "color": "#E67E22",
@@ -4760,8 +4760,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-threat-detection-engineer.md",
     "relative_file": "security/security-threat-detection-engineer.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🎯",
     "color": "#7b2d8e",
@@ -4787,8 +4787,8 @@
     "file_path": "data\\agency-agents-repo\\security\\security-threat-intelligence-analyst.md",
     "relative_file": "security/security-threat-intelligence-analyst.md",
     "tags": [
-      "Security",
-      "資訊安全與防護"
+      "資訊安全與防護",
+      "Security"
     ],
     "emoji": "🔍",
     "color": "#7c3aed",
@@ -4814,8 +4814,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\terminal-integration-specialist.md",
     "relative_file": "spatial-computing/terminal-integration-specialist.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🖥️",
     "color": "green",
@@ -4841,8 +4841,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\xr-cockpit-interaction-specialist.md",
     "relative_file": "spatial-computing/xr-cockpit-interaction-specialist.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🕹️",
     "color": "orange",
@@ -4868,8 +4868,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\xr-immersive-developer.md",
     "relative_file": "spatial-computing/xr-immersive-developer.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🌐",
     "color": "neon-cyan",
@@ -4895,8 +4895,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\xr-interface-architect.md",
     "relative_file": "spatial-computing/xr-interface-architect.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🫧",
     "color": "neon-green",
@@ -4922,8 +4922,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\macos-spatial-metal-engineer.md",
     "relative_file": "spatial-computing/macos-spatial-metal-engineer.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🍎",
     "color": "metallic-blue",
@@ -4949,8 +4949,8 @@
     "file_path": "data\\agency-agents-repo\\spatial-computing\\visionos-spatial-engineer.md",
     "relative_file": "spatial-computing/visionos-spatial-engineer.md",
     "tags": [
-      "空間運算 (XR/VR/AR)",
-      "Spatial Computing"
+      "Spatial Computing",
+      "空間運算 (XR/VR/AR)"
     ],
     "emoji": "🥽",
     "color": "indigo",
@@ -6516,8 +6516,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-analytics-reporter.md",
     "relative_file": "support/support-analytics-reporter.md",
     "tags": [
-      "客戶支援與服務",
-      "Support"
+      "Support",
+      "客戶支援與服務"
     ],
     "emoji": "📊",
     "color": "teal",
@@ -6543,8 +6543,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-executive-summary-generator.md",
     "relative_file": "support/support-executive-summary-generator.md",
     "tags": [
-      "客戶支援與服務",
-      "Support"
+      "Support",
+      "客戶支援與服務"
     ],
     "emoji": "📝",
     "color": "purple",
@@ -6570,8 +6570,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-finance-tracker.md",
     "relative_file": "support/support-finance-tracker.md",
     "tags": [
-      "客戶支援與服務",
-      "Support"
+      "Support",
+      "客戶支援與服務"
     ],
     "emoji": "💰",
     "color": "green",
@@ -6597,8 +6597,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-infrastructure-maintainer.md",
     "relative_file": "support/support-infrastructure-maintainer.md",
     "tags": [
-      "客戶支援與服務",
-      "Support"
+      "Support",
+      "客戶支援與服務"
     ],
     "emoji": "🏢",
     "color": "orange",
@@ -6624,8 +6624,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-legal-compliance-checker.md",
     "relative_file": "support/support-legal-compliance-checker.md",
     "tags": [
-      "客戶支援與服務",
-      "Support"
+      "Support",
+      "客戶支援與服務"
     ],
     "emoji": "⚖️",
     "color": "red",
@@ -6651,8 +6651,8 @@
     "file_path": "data\\agency-agents-repo\\support\\support-support-responder.md",
     "relative_file": "support/support-support-responder.md",
     "tags": [
-      "客戶支援與服務",
-      "Support"
+      "Support",
+      "客戶支援與服務"
     ],
     "emoji": "💬",
     "color": "blue",
@@ -6679,8 +6679,8 @@
     "relative_file": "testing/testing-api-tester.md",
     "tags": [
       "Testing",
-      "測試與品質保證 (QA)",
-      "Backend"
+      "Backend",
+      "測試與品質保證 (QA)"
     ],
     "emoji": "🔌",
     "color": "purple",
